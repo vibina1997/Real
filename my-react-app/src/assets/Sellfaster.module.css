@@ -1,0 +1,53 @@
+.sellfaster {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 65%; /* Adjust height ratio */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.card-img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  object-fit: cover; 
+}
+
+
+.card-img-wrapper img:hover {
+  transform: scale(1.08);
+  transition: 0.4s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+  .sellfaster {
+    font-size: 22px;
+  }
+}
+.buttonone{
+  background-color: rgb(21, 50, 86);
+  border-radius: 11px;
+}
+.buttontwo{
+  background-color: aliceblue;
+  border-radius: 11px;
+}
+
+.sebutton {
+  border-radius: 11px;
+background-color: rgb(21, 50, 86);
+}
+.buttontwo{
+
+    background-color: aliceblue;
+  border-radius: 11px;
+}

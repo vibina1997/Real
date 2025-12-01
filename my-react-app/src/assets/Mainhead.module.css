@@ -1,0 +1,121 @@
+/* -----------------------------------------
+   LIGHT BACKGROUND + SOFT GLASS OVERLAY
+----------------------------------------- */
+.rSection {
+  background: linear-gradient(135deg, #062f4f, #d6eaf3); /* very light clean background */
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft light overlay + glass feel */
+.rSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.40);   /* brighter overlay */
+  backdrop-filter: blur(8px);              /* stronger glass blur */
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 0;
+}
+
+/* Make all content appear above overlay */
+.rSection * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* -----------------------------------------
+   GLASS SEARCH BOX
+----------------------------------------- */
+.sBox {
+  background: rgba(255, 255, 255, 0.30);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.07);
+  padding: 15px;
+}
+
+
+/* -----------------------------------------
+   GLASS INPUTS & SELECTS
+----------------------------------------- */
+.slect {
+  background: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(200, 200, 200, 0.5) !important;
+  color: #020d0b !important;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.slect option {
+  color: #000;
+}
+
+
+/* -----------------------------------------
+   GLASS BUTTON
+----------------------------------------- */
+.archBtn {
+  background: rgba(255, 255, 255, 0.35) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 10px 0;
+  color: #114d44 !important;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease;
+}
+
+.archBtn:hover {
+  background: rgba(255, 255, 255, 0.55) !important;
+  transform: translateY(-2px);
+}
+
+
+/* -----------------------------------------
+   HEADING
+----------------------------------------- */
+.thead {
+  font-size: 34px;
+  font-weight: 800;
+  color: #0c0c0c;
+  margin: 0;
+  line-height: 1.2;
+}
+
+
+/* -----------------------------------------
+   RIGHT IMAGE
+----------------------------------------- */
+.tImage {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
+}
+
+
+/* -----------------------------------------
+   RESPONSIVE
+----------------------------------------- */
+@media (max-width: 767px) {
+  .thead {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .tImage {
+    margin-top: 20px;
+  }
+
+  .sBox {
+    margin-top: 25px;
+  }
+}
