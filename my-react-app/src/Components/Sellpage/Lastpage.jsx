@@ -4,7 +4,7 @@ import sstatoo from '../../assets/Lastpage.module.css'
 
 import homecard from "../../assets/Imges/homeimagecard.jpg";
 import sideimage from "../../assets/Imges/home.jpg";
-import sideimag from "../../assets/Imges/Apartment.jpg";
+import sideimag from "../../assets/Imges/apartment.jpg";
 
 
 const cardsdata = [
