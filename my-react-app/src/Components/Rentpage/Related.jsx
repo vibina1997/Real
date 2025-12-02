@@ -96,7 +96,7 @@ const Related = () => {
 
         {/* RIGHT SIDE */}
         <div className="col-lg-5">
-          <img src={Sideimag} className={`img-fluid rounded-4 mb-3 ${styles.bigImg}`} />
+          <img src={sideimage} className={`img-fluid rounded-4 mb-3 ${styles.bigImg}`} />
 
           <div className="row g-3 mb-3">
             {[1, 2, 3].map((a) => (
