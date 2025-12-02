@@ -5,7 +5,7 @@ import styles from '../../assets/Related.module.css'
       
 import homecard from "../../assets/Imges/homeimagecard.jpg";
 import sideimage from "../../assets/Imges/home.jpg";
-import Sidemoo from "../../assets/Imges/Apartment.jpg";
+import Sidemoo from "../../assets/Imges/apartment.jpg";
 
 
 const cards = [
