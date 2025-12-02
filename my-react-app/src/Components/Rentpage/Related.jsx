@@ -5,7 +5,7 @@ import styles from '../../assets/Related.module.css'
       
 import homecard from "../../assets/Imges/homeimagecard.jpg";
 import sideimage from "../../assets/Imges/home.jpg";
-import Sideimag from "../../assets/Imges/Apartment.jpg";
+import Sidemoo from "../../assets/Imges/Apartment.jpg";
 
 
 const cards = [
@@ -101,7 +101,7 @@ const Related = () => {
           <div className="row g-3 mb-3">
             {[1, 2, 3].map((a) => (
               <div className="col-4" key={a}>
-                <img src={Sideimag} className={`img-fluid rounded-3 ${styles.smallImg}`} />
+                <img src={Sidemoo} className={`img-fluid rounded-3 ${styles.smallImg}`} />
               </div>
             ))}
           </div>
