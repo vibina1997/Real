@@ -43,6 +43,7 @@
     width: auto;
   }
 }
+
 .buttons{
    background-color:#f9fafa; 
   border: none;
@@ -58,12 +59,10 @@
    background-color: #5b8d8a;
 }
 .navlink a {
-  color: white;       /* text white */
-  font-weight: bold;   /* bold text */
+  color: white;       
+  font-weight: bold;  
   text-decoration: none;
-  margin: 0 15px; /* optional: remove underline */
+  margin: 0 15px; 
 }
 
-.navlink li:hover {
-  color: #7791a6;     /* optional hover color */
-}
+
