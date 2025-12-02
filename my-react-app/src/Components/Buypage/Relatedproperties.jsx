@@ -1,7 +1,7 @@
 import React from 'react'
 import homecard from '../../assets/Imges/homeimagecard.jpg'
 import sideimage from'../../assets/Imges/home.jpg'
-import sideimag from '../../assets/Imges/Apartment.jpg'
+import sideimag from '../../assets/Imges/apartment.jpg'
 const RelatedProperties = () => {
   const cards = [
     { 
