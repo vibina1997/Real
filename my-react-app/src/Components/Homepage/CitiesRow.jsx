@@ -29,7 +29,7 @@ const CitiesRow = () => {
       <div className="text-center mb-5  continer">
         <h2 className="fw-bold text-align: start ">Find Properties in These Cities</h2>
         <p className="text-muted">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Explore top real estate locations across major cities.
         </p>
       </div>
 
