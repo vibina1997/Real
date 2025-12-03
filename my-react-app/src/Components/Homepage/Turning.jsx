@@ -6,13 +6,13 @@ import turning from "../../assets/Turning.module.css";
 
 const Turning = () => {
   return (
-    <section className="turning-section container mt-3 py-5">
+    <section className={`container mt-3 py-5 ${turning.turningSection}`}>
       <div className="row align-items-center">
 
-        {/* LEFT IMAGES */}
+       
         <div className="col-md-6 d-flex gap-3">
 
-          {/* LEFT SMALL IMAGE + STAT CARD */}
+          
           <div className={turning.leftImages}>
             <img
               src={family}
@@ -29,7 +29,7 @@ const Turning = () => {
             </div>
           </div>
 
-          {/* RIGHT LARGE IMAGE */}
+          
           <img
             src={whiteimg}
             alt="house"
@@ -37,7 +37,7 @@ const Turning = () => {
           />
         </div>
 
-        {/* RIGHT SIDE CONTENT */}
+       
         <div className="col-md-6">
           <h2 className={turning.title}>Turning Property Dreams into Reality</h2>
 

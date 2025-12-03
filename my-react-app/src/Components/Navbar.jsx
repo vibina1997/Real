@@ -1,66 +1,52 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import styles from '../assets/Navbar.module.css';
 
 
 
-   
-
-
-
- 
-
+import { useState } from "react";
 
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className={`navbar navbar-expand-lg navbarCustom sticky-top ${styles.navbarCustom}`}>
+    <nav className={`navbar navbar-expand-lg navbar-dark sticky-top ${styles.navbarCustom}`}>
       <div className="container">
 
-        <Link className={`navbar-brand text-light ${styles.navBrand}`} to="/">
+        {/* Logo */}
+        <Link className={`navbar-brand ${styles.navBrand}`} to="/">
           HomeRetro
         </Link>
 
+        {/* Mobile Toggler */}
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#nav"
+          onClick={() => setIsOpen(!isOpen)}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="nav">
+        {/* Menu */}
+        <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
 
-          <ul className="navbar-nav mx-auto gap-3 align-items-center">
-            <li className={styles.navlink}>
-              <Link to="/">Home</Link>
-            </li>
-            <li className={styles.navlink}>
-              <Link to="/buy">Sell</Link>
-            </li>
-            <li className={styles.navlink}>
-              <Link to="/rent">Rent</Link>
-            </li>
-            <li className={styles.navlink}>
-              <Link to="/sell">Buy</Link>
-            </li>
-           
-            <li className={styles.navlink}>
-              <Link to="/agency">Agency</Link>
-            </li>
-            <li className={styles.navlink}>
-              <Link to="/contact">Contact</Link>
-            </li>
+          {/* Center Links */}
+          <ul className="navbar-nav mx-auto gap-5">
+            <li className="nav-item"><Link className={styles.navLink} to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
+            <li className="nav-item"><Link className={styles.navLink} to="/buy" onClick={() => setIsOpen(false)}>Buy</Link></li>
+            <li className="nav-item"><Link className={styles.navLink} to="/sell" onClick={() => setIsOpen(false)}>Sell</Link></li>
+            <li className="nav-item"><Link className={styles.navLink} to="/rent" onClick={() => setIsOpen(false)}>Rent</Link></li>
+            <li className="nav-item"><Link className={styles.navLink} to="/agency" onClick={() => setIsOpen(false)}>Agency</Link></li>
+            <li className="nav-item"><Link className={styles.navLink} to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
           </ul>
 
-          <div className="d-grid gap-3 d-md-flex g-2">
-            <Link to="/Signupoo">
+          {/* Right Buttons */}
+          <div className="d-grid gap-3 d-md-flex">
+            <Link to="/signin" onClick={() => setIsOpen(false)}>
               <button className={styles.button}>Signin</button>
             </Link>
-
-            <Link to="/Signi">
+            <Link to="/signup" onClick={() => setIsOpen(false)}>
               <button className={styles.buttons}>SignUp</button>
             </Link>
           </div>
@@ -72,4 +58,14 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+   
+
+
+
+ 
+
+
 

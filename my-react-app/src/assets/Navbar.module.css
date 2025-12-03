@@ -1,68 +1,79 @@
-.navlink a:hover {
-  color: #feffff; 
-  transform: scale(1.05);
+
+.navbarCustom {
+  background-color: #011824;
+  box-shadow: 0 2px 8px rgba(23, 52, 48, 0.12);
 }
 
 
 .navBrand {
   font-size: 26px;
   font-weight: 700;
-  color:#fcfdfd; 
-
+  color: #ffffff !important;
 }
 
-
-
-.navlink a:hover {
-  color:#b8e3d0; 
-}
-.navlink a {
+/* NAV LINKS */
+.navLink {
   text-decoration: none;
-  color: #093924; 
+  color: #ffffff;
   font-size: 16px;
   font-weight: 600;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
-.navbarCustom {
-  background-color: #011824;
-  box-shadow: 0 2px 8px rgba(23, 52, 48, 0.12);
-  z-index: 1000;
+
+.navLink:hover {
+  color: #b8e3d0;
+  transform: scale(1.05);
 }
+
+/* BUTTONS */
 .button {
-  background-color: #5b7586;    
+  background-color: #5b7586;
   color: #fff;
   border: none;
   padding: 8px 20px;
   border-radius: 6px;
   font-weight: 600;
-  width: 100%;
+  width: 120px;
 }
 
-@media (min-width: 768px) {
-  .button {
-    width: auto;
-  }
-}
-
-.buttons{
-   background-color:#f9fafa; 
+.buttons {
+  background-color: #f9fafa;
+  color: #011824;
   border: none;
   padding: 8px 20px;
   border-radius: 6px;
   font-weight: 600;
-  width: 100%;
-}
-.button:hover{
-  background-color: #5b8d8a;
-}
-.buttons:hover{
-   background-color: #5b8d8a;
-}
-.navlink a {
-  color: white;       
-  font-weight: bold;  
-  text-decoration: none;
-  margin: 0 15px; 
+  width: 120px;
 }
 
+.button:hover,
+.buttons:hover {
+  background-color: #5b8d8a;
+  color: #fff;
+}
+
+/* Make toggler icon white */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .navLink {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .button,
+  .buttons {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .navBrand {
+    font-size: 22px;
+  }
+}
 

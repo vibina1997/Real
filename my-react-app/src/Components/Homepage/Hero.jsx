@@ -3,12 +3,15 @@ import forimage from "../../assets/Imges/forimage.jpg";
 
 import styles from "../../assets/Hero.module.css";
 
+
+
+
 const Hero = () => {
   return (
     <section className={`${styles.hero} position-relative`}>
       <div className="container">
 
-        {/* ⭐ HERO HEADING */}
+        {/* Heading */}
         <div className="row text-center text-md-start pt-5">
           <div className="col-md-8 mx-auto">
             <h1 className={`${styles.herosec} text-light fw-bold`}>
@@ -21,13 +24,13 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* 🔍 INPUT SECTION */}
+        
         <div className={`${styles.inputese} mt-4`}>
           <div className="p-4 rounded shadow-sm bg-white bg-opacity-25">
             <div className="row g-3">
 
               {/* Keyword */}
-              <div className="col-12 col-md-3 position-relative">
+              <div className="col-12 col-sm-6 col-md-3 position-relative">
                 <p className="mb-1 text-white">Keyword</p>
                 <input
                   type="text"
@@ -38,7 +41,7 @@ const Hero = () => {
               </div>
 
               {/* Status */}
-              <div className="col-12 col-md-3">
+              <div className="col-12 col-sm-6 col-md-3">
                 <p className="mb-1 text-white">Status</p>
                 <select className="form-select">
                   <option>Status</option>
@@ -48,8 +51,8 @@ const Hero = () => {
                 </select>
               </div>
 
-              {/* Type */}
-              <div className="col-12 col-md-3">
+              
+              <div className="col-12 col-sm-6 col-md-3">
                 <p className="mb-1 text-white">Type</p>
                 <select className="form-select">
                   <option>Type</option>
@@ -60,8 +63,8 @@ const Hero = () => {
                 </select>
               </div>
 
-              {/* Buttons */}
-              <div className="col-12 col-md-3 d-flex gap-3 mt-3 mt-md-4 flex-wrap">
+              
+              <div className="col-12 col-sm-6 col-md-3 d-flex gap-2">
                 <button className={`${styles.fillte} flex-fill`}>Filter</button>
                 <button className={`${styles.serch} flex-fill`}>Search</button>
               </div>
@@ -70,7 +73,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* ⭐ POPULAR SEARCHES */}
+        
         <div className={`popular-search mt-4 ${styles.popular}`}>
           <div className="d-flex align-items-center gap-2 flex-wrap justify-content-center">
             <h6 className="text-light mb-3">Popular Search:</h6>
@@ -85,10 +88,6 @@ const Hero = () => {
     </section>
   );
 };
+
 export default Hero;
-
-
-
-
-
 

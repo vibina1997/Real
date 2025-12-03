@@ -2,9 +2,11 @@
 
 
 
+.turningSection {
+  padding: 40px 0;
+}
 
-
-
+/* Left image wrapper */
 .leftImages {
   position: relative;
   display: flex;
@@ -12,7 +14,7 @@
   gap: 15px;
 }
 
-
+/* Small Image */
 .imgSmall {
   width: 220px;
   height: 260px;
@@ -20,6 +22,7 @@
   border-radius: 12px;
 }
 
+/* Large Image */
 .imgLarge {
   width: 300px;
   height: 360px;
@@ -27,11 +30,12 @@
   border-radius: 12px;
 }
 
+/* Stats card */
 .statsCard {
   position: absolute;
   bottom: -20px;
   left: 20px;
-  background:#011824;
+  background: #011824;
   color: #fff;
   padding: 15px 20px;
   width: 140px;
@@ -39,12 +43,12 @@
   text-align: center;
 }
 
-
+/* Icon circle */
 .iconBox {
   width: 40px;
   height: 40px;
   background: #fff;
-  color:#000608;
+  color: #000608;
   border-radius: 50%;
   margin: 0 auto 10px;
   display: flex;
@@ -67,7 +71,6 @@
   max-width: 450px;
 }
 
-
 .featureItem {
   margin-bottom: 10px;
   font-size: 16px;
@@ -79,4 +82,87 @@
 .featureItem i {
   color: #86a4b3;
   font-size: 20px;
+}
+
+@media (max-width: 991px) {
+  .imgSmall {
+    width: 180px;
+    height: 220px;
+  }
+
+  .imgLarge {
+    width: 240px;
+    height: 300px;
+  }
+
+  .statsCard {
+    width: 130px;
+    padding: 12px 16px;
+    bottom: -15px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .turningSection {
+    text-align: center;
+  }
+
+  .leftImages {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .imgSmall,
+  .imgLarge {
+    width: 45%;
+    height: auto;
+  }
+
+  .statsCard {
+    left: 10px;
+    bottom: -10px;
+    width: 120px;
+    padding: 10px 14px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    margin: 10px auto;
+    max-width: 90%;
+  }
+
+  .featureItem {
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .imgSmall,
+  .imgLarge {
+    width: 48%;
+  }
+
+  .statsCard {
+    width: 100px;
+    padding: 8px 10px;
+    left: 5px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .featureItem {
+    font-size: 14px;
+  }
 }
