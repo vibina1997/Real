@@ -11,7 +11,7 @@ const Hero = () => {
     <section className={`${styles.hero} position-relative`}>
       <div className="container">
 
-        {/* Heading */}
+       
         <div className="row text-center text-md-start pt-5">
           <div className="col-md-8 mx-auto">
             <h1 className={`${styles.herosec} text-light fw-bold`}>
@@ -29,7 +29,7 @@ const Hero = () => {
           <div className="p-4 rounded shadow-sm bg-white bg-opacity-25">
             <div className="row g-3">
 
-              {/* Keyword */}
+             
               <div className="col-12 col-sm-6 col-md-3 position-relative">
                 <p className="mb-1 text-white">Keyword</p>
                 <input
@@ -40,7 +40,7 @@ const Hero = () => {
                 <i className={`bi bi-search ${styles.inputIcon}`}></i>
               </div>
 
-              {/* Status */}
+              
               <div className="col-12 col-sm-6 col-md-3">
                 <p className="mb-1 text-white">Status</p>
                 <select className="form-select">

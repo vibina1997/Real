@@ -1,0 +1,30 @@
+        .Adduserform{
+        width: 25%;
+        margin: 50opx auto;
+        background-color: antiquewhite;
+        padding:40px ;
+        border-radius:10px ;
+        box-shadow: 1px 1px 8px ;
+
+        }
+
+.Adduserform .INputegroup{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Adduserform .INputegroup label{
+    margin-top: 1opx;
+}
+.Adduserform .INputegroup input{
+    margin-top: 5px;
+padding:10px ;
+
+}
+
+
+.ssbutton{
+    background-color: rgb(26, 56, 87);
+    margin-top: 10px;
+    
+}

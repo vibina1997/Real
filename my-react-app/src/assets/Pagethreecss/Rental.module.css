@@ -8,7 +8,7 @@
 .title {
   font-size: 34px;
   font-weight: 800;
-  color: #114d44;
+  color: #0d2e44;
   margin: 0;
   line-height: 1.15;
 }
@@ -41,7 +41,7 @@
 }
 
 .searchBtn {
-  background: #0f524a;
+  background: rgb(17, 43, 78);
   color: white;
   border: none;
   padding: 8px 20px;

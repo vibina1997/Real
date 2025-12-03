@@ -6,7 +6,7 @@
   padding: 40px 0;
 }
 
-/* Left image wrapper */
+
 .leftImages {
   position: relative;
   display: flex;
@@ -14,7 +14,6 @@
   gap: 15px;
 }
 
-/* Small Image */
 .imgSmall {
   width: 220px;
   height: 260px;
@@ -30,7 +29,7 @@
   border-radius: 12px;
 }
 
-/* Stats card */
+
 .statsCard {
   position: absolute;
   bottom: -20px;
@@ -43,7 +42,7 @@
   text-align: center;
 }
 
-/* Icon circle */
+
 .iconBox {
   width: 40px;
   height: 40px;

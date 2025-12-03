@@ -19,7 +19,7 @@ const Navbar = () => {
           HomeRetro
         </Link>
 
-        {/* Mobile Toggler */}
+        
         <button
           className="navbar-toggler"
           type="button"
@@ -31,7 +31,7 @@ const Navbar = () => {
         {/* Menu */}
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
 
-          {/* Center Links */}
+          
           <ul className="navbar-nav mx-auto gap-5">
             <li className="nav-item"><Link className={styles.navLink} to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
             <li className="nav-item"><Link className={styles.navLink} to="/buy" onClick={() => setIsOpen(false)}>Buy</Link></li>
@@ -41,13 +41,13 @@ const Navbar = () => {
             <li className="nav-item"><Link className={styles.navLink} to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
           </ul>
 
-          {/* Right Buttons */}
+          
           <div className="d-grid gap-3 d-md-flex">
             <Link to="/signin" onClick={() => setIsOpen(false)}>
               <button className={styles.button}>Signin</button>
             </Link>
             <Link to="/signup" onClick={() => setIsOpen(false)}>
-              <button className={styles.buttons}>SignUp</button>
+              <button className={styles.buttons}>Signup</button>
             </Link>
           </div>
 
