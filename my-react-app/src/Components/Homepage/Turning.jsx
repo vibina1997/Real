@@ -4,75 +4,59 @@ import whiteimg from "../../assets/Imges/Realhome.jpg";
 
 import turning from "../../assets/Turning.module.css";
 
+
+import subo from "../../assets/Imges/subimage.jpg"
+import tatoo from "../../assets/Imges/subimoo.jpg"
+
 const Turning = () => {
   return (
-    <div className="mt-3 py-4">
-    <section className={`container mt-3 py-5 ${turning.turningSection}`}>
+    <section className={`container ${turning.sectionWrapper}`}>
       <div className="row align-items-center">
 
-       
-        <div className="col-md-6 d-flex gap-3">
+        {/* LEFT SIDE */}
+        <div className="col-md-6 d-flex gap-4">
 
-          
-          <div className={turning.leftImages}>
-            <img
-              src={family}
-              alt="family"
-              className={turning.imgSmall}
-            />
+          {/* Small Image + Stats */}
+          <div className={turning.leftColumn}>
+            <img src={subo} className={turning.smallImage} alt="family" />
 
             <div className={turning.statsCard}>
               <p className={turning.iconBox}>
                 <i className="bi bi-house-door-fill"></i>
               </p>
-              <h5>Properties For Sale</h5>
-              <p>14K</p>
+              <h5 className={turning.statsTitle}>Properties</h5>
+              <p className={turning.statsValue}>14K+</p>
             </div>
           </div>
 
-          
-          <img
-            src={whiteimg}
-            alt="house"
-            className={turning.imgLarge}
-          />
+          {/* Main Image (correctly placed inside LEFT column) */}
+          <img src={tatoo} className={turning.mainImage} alt="home" />
+
         </div>
 
-       
+        {/* RIGHT SIDE */}
         <div className="col-md-6">
-          <h2 className={turning.title}>Turning Property Dreams into Reality</h2>
+          <h2 className={turning.title}>Turning Property Dreams Into Reality</h2>
 
-          <p className={turning.subtitle}>
-            Discover exclusive listings and trusted agents who make buying,
-            selling, or renting effortless.
+          <p className={turning.subText}>
+            Explore premium homes and trusted listings that help you find the
+            perfect property with ease. Buy, rent, or invest — all in one place.
           </p>
 
           <ul className="list-unstyled">
-            <li className={turning.featureItem}>
-              <i className="bi bi-check-circle-fill"></i> 100% Secure
-            </li>
-            <li className={turning.featureItem}>
-              <i className="bi bi-check-circle-fill"></i> Wide Range of Properties
-            </li>
-            <li className={turning.featureItem}>
-              <i className="bi bi-check-circle-fill"></i> Buy or Rent Homes
-            </li>
-            <li className={turning.featureItem}>
-              <i className="bi bi-check-circle-fill"></i> Trusted by Thousands
-            </li>
+            <li className={turning.point}><i className="bi bi-check-circle-fill"></i> Secure & Verified</li>
+            <li className={turning.point}><i className="bi bi-check-circle-fill"></i> Wide Property Selection</li>
+            <li className={turning.point}><i className="bi bi-check-circle-fill"></i> Buy / Rent Options</li>
+            <li className={turning.point}><i className="bi bi-check-circle-fill"></i> Trusted Agents</li>
           </ul>
 
-        
-    <button className={`${turning.buttonHover} mt-3`}>
-      Learn More
-    </button>
-
+          <button className={`${turning.ctaButton} mt-3`}>Learn More</button>
         </div>
 
       </div>
     </section>
-    </div>
   );
 };
+
 
 export default Turning;

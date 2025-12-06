@@ -30,7 +30,7 @@ const Steps = () => {
     <div className={stepso.bgSection} style={{ backgroundImage: `url(${nature})` }}>
       <div className={`py-5 text-center ${stepso.stepsContainer}`}>
         <h2 className={`mb-3 ${stepso.heading}`}>Find Your Perfect Place in 3 Easy Steps</h2>
-        <p className={`mb-5 text-muted  ${stepso.subheading}`}>
+        <p className={`mb-5  ${stepso.subheading}`}>
           Your trusted real estate partner for buying, selling, and renting across Kerala.
         </p>
 
@@ -39,7 +39,7 @@ const Steps = () => {
             <Col key={index} md={4} className="mb-4">
               <div className={stepso.iconWrapper}>{step.icon}</div>
               <h5 className={stepso.stepTitle}>{step.title}</h5>
-              <p className={`text-muted ${stepso.stepDesc}`}>{step.description}</p>
+              <p className={` ${stepso.stepDesc}`}>{step.description}</p>
             </Col>
           ))}
         </Row>

@@ -1,8 +1,16 @@
 import React from "react";
 import styles from "../../assets/FeaturedProperties.module.css";
-import houses from "../../assets/Imges/House.jpg";
+
+
+import lighthe from "../../assets/Imges/lighthesd.jpg"
 import white from "../../assets/Imges/whitehouse.jpg"
-import housew from "../../assets/Imges/housewhite.jpg"
+
+import mainoo from "../../assets/Imges/mainchome.jpg"
+
+import choppp from "../../assets/Imges/choopoo.jpg"
+import roomcoo from "../../assets/Imges/roomlight.jpg"
+
+
 const cardData = [
   {
     id: 1,
@@ -17,7 +25,7 @@ const cardData = [
   },
   {
     id: 2,
-    img: housew,
+    img: lighthe,
     type: "Villa",
     price: "₹1,20,000",
     location: "12 Palm Street, Wayanad, Kerala – 673121",
@@ -28,7 +36,7 @@ const cardData = [
   },
   {
     id: 3,
-    img: houses,
+    img: roomcoo,
     type: "Condominium",
     price: "₹75,000",
     location: "78 Lakeview Ave, Alappuzha, Kerala – 688001",
@@ -39,7 +47,7 @@ const cardData = [
   },
   {
     id: 4,
-    img: houses,
+    img: mainoo,
     type: "Townhouse",
     price: "₹60,500",
     location: "34 River Road, Thrissur, Kerala – 680001",
@@ -50,7 +58,7 @@ const cardData = [
   },
   {
     id: 5,
-    img: houses,
+    img: choppp ,
     type: "Penthouse",
     price: "₹2,50,000",
     location: "90 Skyline Blvd, Kozhikode, Kerala – 673001",
@@ -61,7 +69,7 @@ const cardData = [
   },
   {
     id: 6,
-    img: houses,
+    img: choppp ,
     type: "Studio Apartment",
     price: "₹30,000",
     location: "56 Garden St, Kannur, Kerala – 670001",
@@ -89,7 +97,7 @@ const FeaturedProperties = () => {
           <div className={`${styles.cardBox} animateCard`}>
 
             <div className={styles.imageContainer}>
-              <img src={white} alt="Property" className={styles.cardImage} />
+              <img src={card.img} alt="Property" className={styles.cardImage} />
 
               <div className={styles.tagButtons}>
                 <button className={styles.buyBtn}>For Buy</button>
