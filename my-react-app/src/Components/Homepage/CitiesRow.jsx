@@ -1,81 +1,85 @@
-import React from "react";
 
 
+import React, { useState } from "react";
+import city from '../../assets/CitiesRow.module.css'
 
-import one from '../../assets/Imges/keralaone.jpg';
-import two from '../../assets/Imges/keralathree.jpg';
-import three from '../../assets/Imges/keralafor.jpg';
-
-import styles from "../../assets/CitiesRow.module.css";
-
-
-
-const cities = [
-  { name: "Wayanad", img: one, properties: 5 },
-  { name: "Kannur", img: two, properties: 3 },
-  { name: "Kozhikode", img: three, properties: 4 },
-  { name: "Kochi", img: one, properties: 1 },
-  { name: "Trivandrum", img: two, properties: 2 },
+import cityon from '../../assets/Imges/cityone.jpg'
+import citytw from '../../assets/Imges/citytwo.jpg'
+import citytr from '../../assets/Imges/citythree.jpg'
+import cityf from '../../assets/Imges/cityfore.jpg'
+import { div } from "framer-motion/client";
+const cards = [
+  { id: 1, 
+    img: cityon,
+     title: "Kerala-wayanad",
+      price: "$1,500/mo" },
+  { id: 2,
+     img: citytw,
+      title: "Kerala-kkochi", 
+      price: "$1,200/mo" },
+  { id: 3, 
+    img: citytr,
+     title: "Kerala-palakkad",
+      price: "$1,300/mo" },
+  { id: 4,
+     img: cityf,
+      title: "Kearala-kochi",
+       price: "$1,800/mo" },
   
+];
 
- 
+const cardbox = [
+  { id: 1, img: cityon, title: "Kerala - Wayanad", price: "$1,500/mo" },
+  { id: 2, img: citytw, title: "Kerala - Kochi", price: "$1,200/mo" },
+  { id: 3, img: citytr, title: "Kerala - Palakkad", price: "$1,300/mo" },
+  { id: 4, img: cityf, title: "Kerala - Kollam", price: "$1,800/mo" },
 ];
 
 const CitiesRow = () => {
+  const [active, setActive] = useState(1);
+
+  const next = () => setActive((prev) => (prev + 1) % cards.length);
+  const prev = () => setActive((prev) => (prev - 1 + cards.length) % cards.length);
+
   return (
-    <div className="container mt-5 py-5">
+  <div className="mt-3 py-4">
+    <div className={city.wrapper}>
+      <div className={city.panel}>
+        <h5 className={city.subTitle}>Featured</h5>
+        <h2 className={city.title}>Find Properties in These Cities</h2>
+        <p className={city.desc}>Check out some of the most in-demand spaces</p>
 
-      
-      <div className="text-center mb-5  continer">
-        <h2 className="fw-bold text-align: start ">Find Properties in These Cities</h2>
-        <p className="text-muted">
-          Explore top real estate locations across major cities.
-        </p>
+        <div className={city.carousel}>
+          {cardbox.map((card, index) => {
+            let position = index - active;
+
+            if (position < 0) position += cards.length;
+            if (position > 2) position -= cards.length;
+
+            return (
+              <div key={card.id} className={`${city.card} ${city["pos" + position]}`}>
+                <img src={card.img} alt={card.title} className={city.cardImg} />
+
+               
+                <div className={city.cardInfo}>
+                  <h4 className={city.cardTitle}>{card.title}</h4>
+                  <p className={city.cardPrice}>{card.price}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className={city.dots}>
+          <span onClick={prev} className={city.dot}></span>
+          <span onClick={next} className={city.dot}></span>
+        </div>
       </div>
-
-      <div className='container'>
-
-     
-      <div className="d-flex flex-wrap justify-content-center gap-5 mt-3">
-        {cities.map((city, index) => (
-  
-          <div key={index} className={styles.Container}>
-            
-            <img
-              className={styles.cardImg}
-              src={city.img}
-              alt={city.name}
-            />
-
-            <div className={styles.cardparat}>
-              <h6>{city.name}</h6>
-              <p>{city.properties} properties</p>
-            </div>
-
-          </div>
-        ))}
-      </div>
- </div>
+    </div>
     </div>
   );
 };
 
-
+ 
 export default CitiesRow;
-
-  //   <div className={styles.citiesContainer}>
-  //     {cities.map((city, index) => (
-  //       <div className={styles.cityCard} key={index}>
-
-  //         <img src={city.img} alt={city.name} className={styles.cityImg} />
-
-  //         <div className={styles.cityInfo}>
-  //           <h5>{city.name}</h5>
-  //           <p>{city.properties} properties</p>
-  //         </div>
-
-  //       </div>
-  //     ))}
-  //   </div>
-  // );
 

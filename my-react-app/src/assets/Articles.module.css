@@ -1,95 +1,71 @@
 
-.mainboo {
-  background-color:#d6e7ef;
-  padding: 40px 0;
+.wrapper {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
 
 .heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
   text-align: center;
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 35px;
 }
 
-
-.articleContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 35px;
-  justify-content: center;
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .card {
-  width: calc(25% - 30px);
-  min-width: 250px;
-  border-radius: 14px;
-  background: #fff;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
-  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 }
 
+.imageWrapper {
+  position: relative;
+}
 
 .image {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-bottom: 1px solid #eee;
 }
 
+.readButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 0.5rem 1rem;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
 
 .cardBody {
-  padding: 15px;
+  padding: 1rem;
 }
 
 .typeDate {
-  font-size: 14px;
-  color: gray;
-  margin-bottom: 8px;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.5rem;
 }
 
 .cardTitle {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
 }
-
-
-.readMore {
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  color:#093924;
-  transition: 0.3s;
-  display: inline-block;
-}
-
-.readMore:hover {
-  color: #74b397;
-  transform: translateX(4px);
-}
-
-
-@media (max-width: 992px) {
-  .card {
-    width: calc(33.33% - 30px);
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-    width: calc(50% - 30px);
-  }
-}
-
-@media (max-width: 576px) {
-  .card {
-    width: 100%;
-  }
-}
-

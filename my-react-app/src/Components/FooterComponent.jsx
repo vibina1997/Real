@@ -1,6 +1,6 @@
 
 import React from 'react';
-import footer from '../assets/FooterComponent.module.css';
+import styles from '../assets/FooterComponent.module.css';
 import { Link } from "react-router-dom";
 
  
@@ -9,121 +9,92 @@ import { Link } from "react-router-dom";
 
 const FooterComponent = () => {
   return (
-    <footer className={`${footer.footerSection} pt-5 pb-3`}>
 
-    
+
+
+
+    <footer className={styles.footerSection}>
       <div className="container">
-        <div className="row">
 
-          <div className="col-md-6 mb-4">
-            <div className="fw-bold ">
-            <h3 >HomeRtro</h3>
-          </div>
-            
-            {/* <img
-              src="/logo.png"
-              alt="logo"
-              width="140"
-              className="mb-3"
-            /> */}
-            <p className="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet pellentesque tempor.
+        {/* ---------- TOP GRID ---------- */}
+        <div className="row g-4">
+
+          {/* Logo + About */}
+          <div className="col-md-4">
+            <h4 className={styles.brand}>HomeRetro</h4>
+            <p className="text-light mt-2">
+              We help you find the best properties in your area with trusted agents.
             </p>
-            <p className="text-muted">
-              Ut quis elit eget leo condimentum pellentesque. Donec accumsan.
-            </p>
-          </div>
 
-
-<div className="col-md-3 mb-4">
-  
-
-  <ul className="list-unstyled d-flex flex-column gap-2">
-    <li>
-      <Link className={footer.navLink} to="/" onClick={() => setIsOpen(false)}>
-        Home
-      </Link>
-    </li>
-
-    <li>
-      <Link className={footer.navLink} to="/buy" onClick={() => setIsOpen(false)}>
-        Buy
-      </Link>
-    </li>
-
-    <li>
-      <Link className={footer.navLink} to="/sell" onClick={() => setIsOpen(false)}>
-        Sell
-      </Link>
-    </li>
-
-    <li>
-      <Link className={footer.navLink} to="/rent" onClick={() => setIsOpen(false)}>
-        Rent
-      </Link>
-    </li>
-
-    <li>
-      <Link className={footer.navLink} to="/agency" onClick={() => setIsOpen(false)}>
-        Agency
-      </Link>
-    </li>
-
-    <li>
-      <Link className={footer.navLink} to="/contact" onClick={() => setIsOpen(false)}>
-        Contact
-      </Link>
-    </li>
-  </ul>
-</div>
-
-          
-          <div className="col-md-3 mb-4">
-            <div className={`d-flex ${footer.searchBox}`}>
-              <input type="text" className="form-control" placeholder="Search..." />
-              <button className="btn btn-primary ms-2">Search</button>
-            </div>
-
-            <div className={`d-flex gap-3 mt-3 ${footer.socialIcons}`}>
+            {/* Social Icons */}
+            <div className={`d-flex gap-3 mt-3 ${styles.socialIcons}`}>
               <i className="bi bi-facebook"></i>
               <i className="bi bi-twitter"></i>
               <i className="bi bi-instagram"></i>
               <i className="bi bi-youtube"></i>
             </div>
           </div>
+
+          {/* Quick Links */}
+          <div className="col-md-3">
+            <h6 className={styles.footerTitle}>Quick Links</h6>
+
+            <ul className={styles.linkList}>
+              <li><Link className={styles.navLink} to="/">Home</Link></li>
+              <li><Link className={styles.navLink} to="/buy">Buy</Link></li>
+              <li><Link className={styles.navLink} to="/sell">Sell</Link></li>
+              <li><Link className={styles.navLink} to="/rent">Rent</Link></li>
+              <li><Link className={styles.navLink} to="/agency">Agency</Link></li>
+              <li><Link className={styles.navLink} to="/contact">Contact</Link></li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div className="col-md-5">
+            <h6 className={styles.footerTitle}>Stay Updated</h6>
+
+            <div className={`d-flex ${styles.searchBox}`}>
+              <input type="text" placeholder="Enter your email" />
+              <button>Subscribe</button>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      
-      <div className={`container my-5 ${footer.contactStrip}`}>
-        <div className={footer.contactBox}>
-          <span className="me-3 fw-semibold">Need Help?</span>
+      {/* ---------- CONTACT STRIP ---------- */}
+      <div className={`container ${styles.contactStrip}`}>
+        <div className={styles.contactBox}>
+          <h6 className="fw-semibold">Need Help?</h6>
 
-          <div className={footer.contactItem}>
+          <div className={styles.contactItem}>
             <i className="bi bi-telephone-fill"></i>
-            <span>1-800-555-4321</span>
+            <span>+91 98765 43210</span>
           </div>
 
-          <div className={footer.contactItem}>
+          <div className={styles.contactItem}>
             <i className="bi bi-whatsapp"></i>
-            <span>1-800-555-4321</span>
+            <span>+91 98765 43210</span>
           </div>
 
-          <div className={footer.contactItem}>
+          <div className={styles.contactItem}>
             <i className="bi bi-envelope-fill"></i>
-            <span>hello@yoursite.com</span>
+            <span>support@yourbrand.com</span>
           </div>
         </div>
       </div>
 
-      {/* COPYRIGHT */}
-      <div className="text-center text-muted small">
-        © 2023. All rights reserved. Designed by Inspiry Themes
-      </div>
+      {/* ---------- COPYRIGHT ---------- */}
+      <p className="text-center text-light mt-4 mb-0 small">
+        © 2025 YourBrand. All Rights Reserved.
+      </p>
 
     </footer>
   );
 };
+
+
+
 
 export default FooterComponent;
 

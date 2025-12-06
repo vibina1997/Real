@@ -1,54 +1,63 @@
 import React from 'react'
 import catego from '../../assets/Categories.module.css';
 import { div } from 'framer-motion/client';
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 
 
 
 
 
-const citiesdata = [
-  { id:1, name:"Town House", count:"2 properties", icon:"bi bi-house-door-fill" },
-  { id:2, name:"Morden villa", count:"10 properties", icon:"bi bi-building" },
-  { id:3, name:"Apartment", count:"3 properties", icon:"bi bi-building-fill" },
-  { id:4, name:"Office", count:"7 properties", icon:"bi bi-briefcase-fill" },
-  { id:5, name:"Single Family", count:"6 properties", icon:"bi bi-house-door-fill" }
+const categories = [
+  { title: "Town House", count: "2 Properties", icon: "bi-house-door" },
+  { title: "Modern Villa", count: "10 Properties", icon: "bi-house" },
+  { title: "Apartment", count: "3 Properties", icon: "bi-building" },
+  { title: "Office", count: "3 Properties", icon: "bi-building-check" },
+  { title: "Single Family", count: "5 Properties", icon: "bi-people" },
 ];
 
-
-  
-  const Categories = () => {
+const Categories = () => {
   return (
-    <div className="container mt-3 py-5">
-      <div className={catego.maincateco}>
+    <div className='mt-3 py-4'>
+    <section className={catego.wrapper}>
+      <Container>
+        
+        {/* Header */}
+        <Row className="align-items-center mb-4">
+          <Col>
+            <h3 className={catego.title}>Featured Categories</h3>
+            <p className={catego.subtitle}>
+              Buy, sell, or rent properties effortlessly with expert guidance
+              and verified listings you can trust.
+            </p>
+          </Col>
+          <Col xs="auto">
+            <span className={catego.viewAll}>View All Categories →</span>
+          </Col>
+        </Row>
 
-        <h3 className="text-light container">Featured Categories</h3>
-        <p className="text-light container">
-          Buy, sell, or rent properties effortlessly with expert guidance and verified listings you can trust.
-        </p>
-
-        <div className="d-flex flex-wrap gap-3 justify-content-center mt-4">
-          {citiesdata.map((city, index) => (
-            <div
-              key={index}
-              className={`shadow-sm ${catego['city-card']}`}
-            >
-              <div className={catego.cityimage}>
-                <i className={city.icon} style={{ fontSize: "32px" }}></i>
+        {/* Cards */}
+        <Row className={catego.cardRow}>
+          {categories.map((item, index) => (
+            <Col key={index} lg={2} md={4} sm={6} xs={6}>
+              <div className={catego.cityCard}>
+                <div className={catego.cityIcon}>
+                  <i className={`bi ${item.icon}`}></i>
+                </div>
+                <p className={catego.cardTitle}>{item.title}</p>
+                <small className={catego.cardCount}>{item.count}</small>
               </div>
-
-              <p>{city.name}</p>
-              <small>{city.count}</small>
-            </div>
+            </Col>
           ))}
-        </div>
+        </Row>
 
-      </div>
+      </Container>
+    </section>
     </div>
   );
 };
 
-
+;
 
  
 

@@ -1,84 +1,110 @@
 
-.whyworksection {
-  padding: 70px 0;
+
+.heroSection {
+  padding: 60px 0;
+  background: #fafafa;
 }
 
-.whyworktitle {
-  font-size: 32px;
+/* Left text */
+.title {
+  font-size: 34px;
   font-weight: 700;
-  margin-bottom: 20px;
+  line-height: 1.05;
+  margin-bottom: 16px;
+  color: #10221b;
 }
 
-.whyworkintro {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 25px;
-  line-height: 1.6;
+.lead {
+  color: #6b6b6b;
+  max-width: 520px;
 }
 
-
-.whyworkfeatures {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  margin-top: 20px;
+/* small blocks */
+.smallTitle {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #0b2a22;
 }
 
-.feature {
-  width: 48%;
-  background: #f0f3f6;
-  padding: 20px;
-  border-radius: 10px;
+.smallText {
+  font-size: 13px;
+  color: #6b6b6b;
 }
 
-.feature h5 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 5px;
+/* CTA */
+.ctaBtn {
+  margin-top: 18px;
+  border-radius: 8px;
+  padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-
-.whyworkcta {
-  background:rgb(17, 43, 78);
-  color: #ffffff;
-  padding: 10px 25px;
-  border-radius: 6px;
+/* Image card */
+.imageCard {
+  width: 320px;
+  border-radius: 14px;
+  overflow: visible; /* allow badge overflow */
   border: none;
-  cursor: pointer;
-  transition: 0.3s;
+  box-shadow: 0 12px 30px rgba(3, 18, 13, 0.08);
+  position: relative;
+  background: transparent;
 }
 
-.whyworkcta:hover {
-  background: #093820;
+/* wrap to preserve rounding */
+.cardImageWrap {
+  border-radius: 14px;
+  overflow: hidden;
 }
 
-
-.whyworkimg {
-  max-width: 100%;
-  height: auto;
-  border-radius: 20px;
+.cardImage {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
 }
 
-
-@media (max-width: 768px) {
-  .whyworkfeatures {
-    flex-direction: column;
-  }
-
-  .feature {
-    width: 100%;
-    
-  }
-
-  .whyworktitle,
-  .whyworkintro {
-    text-align: center;
-  }
-
-  .whyworkcta {
-    display: block;
-    margin: 0 auto;
-    margin-top: 20px;
-  }
+/* stat badge positioned bottom-left overlapping the card */
+.statBadge {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  background: rgba(7, 49, 43, 0.95);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 6px 18px rgba(2, 18, 16, 0.15);
 }
 
+.statBadge i {
+  font-size: 20px;
+  opacity: 0.95;
+}
+
+.statLabel {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.statNumber {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* RESPONSIVE tweaks */
+@media (max-width: 991px) {
+  .cardImage { height: 360px; width: 100%; }
+  .imageCard { width: 280px; }
+}
+
+@media (max-width: 767px) {
+  /* stack columns vertically and center image */
+  .imageCard { width: 100%; max-width: 520px; }
+  .cardImage { height: 300px; }
+  .lead { max-width: 100%; }
+}

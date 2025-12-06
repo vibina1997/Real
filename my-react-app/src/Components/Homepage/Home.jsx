@@ -15,9 +15,11 @@ const   Home = () => {
       <CitiesRow/>
       <FeaturedProperties/>
       <Steps/>
-      <WhyWork/>
-      < Categories/>
       <Turning/>
+      < Categories/>
+
+      <WhyWork/>
+      
 <Article/>
       
     </div>

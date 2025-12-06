@@ -1,87 +1,126 @@
 
+/* ---------------- MAIN FOOTER -------------- */
 .footerSection {
-  background: #d7eff4;
-  padding-top: 40px;
-  padding-bottom: 20px;
+background: linear-gradient(135deg, #4a332a, #0D4715);
+
+  padding: 60px 0 20px;
+  color: #ffffffd9;
+  font-size: 15px;
 }
 
+/* brand / logo */
+.brand {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* Section Titles */
+.footerTitle {
+  font-weight: 600;
+  color: #f8f8f8;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* ---------------- LINKS -------------- */
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
 .navLink {
-  color: #1b1b1b;
+  color: #e8e8e8;
   text-decoration: none;
-  font-size: 15px;
   transition: 0.3s;
 }
 
 .navLink:hover {
-  color: #396036; 
+  color: #c79841;
+  padding-left: 4px;
 }
 
+/* ---------------- SOCIAL ICONS -------------- */
+.socialIcons i {
+  font-size: 22px;
+  transition: 0.3s;
+  opacity: 0.9;
+  cursor: pointer;
+}
 
+.socialIcons i:hover {
+  transform: translateY(-4px);
+  opacity: 1;
+  color: #c79841;
+}
+
+/* ---------------- NEWLETTER BOX -------------- */
 .searchBox input {
-  border-radius: 50px;
-  padding: 8px 15px;
+  flex: 1;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px 0 0 50px;
+  outline: none;
 }
 
 .searchBox button {
-  border-radius: 50px;
-  padding: 8px 18px;
-}
-
-.socialIcons i {
-  font-size: 20px;
-  color: #090909;
+  background: #c79841;
+  border: none;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 0 50px 50px 0;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.socialIcons i:hover {
-  color: #090909;
+.searchBox button:hover {
+  background: #d8a54d;
 }
 
-
+/* ---------------- CONTACT STRIP -------------- */
 .contactStrip {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .contactBox {
-  background: #b2c4e2;
-  border-radius: 50px;
-  padding: 42px 25px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 25px 30px;
 
   display: flex;
   align-items: center;
-  gap: 161px;
-
+  justify-content: space-between;
+  gap: 20px;
   flex-wrap: wrap;
+  color: #fff;
 }
 
 .contactItem {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .contactItem i {
-  color: #0d0e0f;
   font-size: 18px;
+  color: #ffdfa7;
 }
 
+/* ---------------- RESPONSIVE -------------- */
 @media (max-width: 768px) {
   .contactBox {
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
-    padding: 20px;
   }
-}
-.footerSection {
-  background-image: url("../assets/Imges/footeer.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 50px;
-  padding-bottom: 30px;
+
+  .searchBox input {
+    width: 100%;
+  }
 }
 

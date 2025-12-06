@@ -1,64 +1,50 @@
-import React from 'react'
-import steps from '../../assets/Steps.module.css';
+import React from "react";
+import stepso from "../../assets/Steps.module.css";
+import { Container, Row, Col } from "react-bootstrap";
+import { div } from "framer-motion/client";
+
+const steps = [
+  {
+    icon: <i className="bi bi-search" style={{ fontSize: "40px",  }}></i>,
+    title: "Find Your Dream Home",
+    description:
+      "Discover modern homes, luxury apartments, and plots that match your lifestyle.",
+  },
+  {
+    icon: <i className="bi bi-people" style={{ fontSize: "40px",  }}></i>,
+    title: "Expert Guidance",
+    description:
+      "Experienced agents helping you discover premium properties and achieve the best real estate deals.",
+  },
+  {
+    icon: <i className="bi bi-house" style={{ fontSize: "40px",  }}></i>,
+    title: "Start Your New Beginning",
+    description:
+      "Get personalized support for buying, selling, or renting properties with ease.",
+  },
+];
+
 const Steps = () => {
   return (
-  <div className={`container mt-3 py-5 ${steps['citycard']}`}>
+    <div className="mt-3 py-4">
+    <div className={`py-5 text-center ${stepso.stepsContainer}`}>
+      <h2 className={`mb-3 ${stepso.heading}`}>Find Your Perfect Place in 3 Easy Steps</h2>
+      <p className={`mb-5 text-muted ${stepso.subheading}`}>
+        Your trusted real estate partner for buying, selling, and renting across Kerala.
+      </p>
 
-  <div className={steps.maincan}>
-    <div className="container py-5 mt-3">
-      
-      <div className="text-center mb-4">
-        <h3 className="fw-bold">Find Your Perfect Place in 3 Easy Steps</h3>
-        <p className="text-muted">
-          Your trusted real estate partner for buying, selling and renting across Kerala.
-        </p>
-      </div>
-
-      <div className="row g-4 text-center mt-3">
-
-       
-        <div className="col-12 col-md-4 d-flex flex-column align-items-center">
-          <div className={steps.iconCircle}>
-            <i className="bi bi-house-door-fill"></i>
-          </div>
-
-          <div>
-            <h5>Find Real Estate</h5>
-            <p>Discover modern homes, luxury apartments and plots that match your lifestyle.</p>
-          </div>
-        </div>
-
-       
-        <div className="col-12 col-md-4 d-flex flex-column align-items-center">
-          <div className={steps.iconCircle}>
-            <i className="bi bi-people"></i>
-          </div>
-
-          <div>
-            <h5>Your Expert Real Estate Guides</h5>
-            <p>Experienced agents helping you discover premium properties and achieve the best deals.</p>
-          </div>
-        </div>
-
-      
-        <div className="col-12 col-md-4 d-flex flex-column align-items-center">
-          <div className={steps.iconCircle}>
-            <i className="bi bi-house-lock"></i>
-          </div>
-
-          <div>
-            <h5>Your New Beginning Starts Here</h5>
-            <p>We guide you through every stage — search, select and secure your new home effortlessly.</p>
-          </div>
-        </div>
-
-      </div>
-
+      <Row>
+        {steps.map((step, index) => (
+          <Col key={index} md={4} className="mb-4">
+            <div className={stepso.iconWrapper}>{step.icon}</div>
+            <h5 className={stepso.stepTitle}>{step.title}</h5>
+            <p className={`text-muted ${stepso.stepDesc}`}>{step.description}</p>
+          </Col>
+        ))}
+      </Row>
     </div>
-  </div>
-</div>
-  )}
+    </div>
+  );
+};
 
 export default Steps;
-
-

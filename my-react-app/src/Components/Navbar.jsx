@@ -1,4 +1,5 @@
 import React from "react";
+import heroo from '../Components/Homepage/Hero.jsx'
 import { Link } from "react-router-dom";
 import styles from '../assets/Navbar.module.css';
 
@@ -11,15 +12,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark sticky-top ${styles.navbarCustom}`}>
-      <div className="container">
+    <nav className={`navbar navbar-expand-lg  sticky-top ${styles.navbarCustom}`}>
+      <div className="container-fluid">
 
         {/* Logo */}
         <Link className={`navbar-brand ${styles.navBrand}`} to="/">
           HomeRetro
         </Link>
 
-        
+        {/* Toggle button */}
         <button
           className="navbar-toggler"
           type="button"
@@ -31,7 +32,6 @@ const Navbar = () => {
         {/* Menu */}
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
 
-          
           <ul className="navbar-nav mx-auto gap-5">
             <li className="nav-item"><Link className={styles.navLink} to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
             <li className="nav-item"><Link className={styles.navLink} to="/buy" onClick={() => setIsOpen(false)}>Buy</Link></li>
@@ -41,7 +41,7 @@ const Navbar = () => {
             <li className="nav-item"><Link className={styles.navLink} to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
           </ul>
 
-          
+          {/* Buttons */}
           <div className="d-grid gap-3 d-md-flex">
             <Link to="/signin" onClick={() => setIsOpen(false)}>
               <button className={styles.button}>Signin</button>
@@ -56,6 +56,8 @@ const Navbar = () => {
     </nav>
   );
 };
+
+
 
 export default Navbar;
 

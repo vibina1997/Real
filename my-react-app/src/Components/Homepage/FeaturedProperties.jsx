@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "../../assets/FeaturedProperties.module.css";
 import houses from "../../assets/Imges/House.jpg";
+import white from "../../assets/Imges/whitehouse.jpg"
+import housew from "../../assets/Imges/housewhite.jpg"
 const cardData = [
   {
     id: 1,
-    img: houses,
+    img: white,
     type: "Apartment",
     price: "₹43,657",
     location: "245/12 MG Road, Kochi, Ernakulam, Kerala – 682016",
@@ -15,7 +17,7 @@ const cardData = [
   },
   {
     id: 2,
-    img: houses,
+    img: housew,
     type: "Villa",
     price: "₹1,20,000",
     location: "12 Palm Street, Wayanad, Kerala – 673121",
@@ -72,7 +74,9 @@ const cardData = [
 
 const FeaturedProperties = () => {
   return (
-<div className="container mt-3 py-5">
+    <div>
+    <section className={styles.sectionb}>
+<div className="container mt-3 py-4">
   <div className={styles.feature}>
 
     <h2 className={styles.head}>Featured Properties</h2>
@@ -85,7 +89,7 @@ const FeaturedProperties = () => {
           <div className={`${styles.cardBox} animateCard`}>
 
             <div className={styles.imageContainer}>
-              <img src={houses} alt="Property" className={styles.cardImage} />
+              <img src={white} alt="Property" className={styles.cardImage} />
 
               <div className={styles.tagButtons}>
                 <button className={styles.buyBtn}>For Buy</button>
@@ -113,6 +117,10 @@ const FeaturedProperties = () => {
     </div>
 
   </div>
+  
+  </div>
+  </section>
 </div>
+
   )}
 export default FeaturedProperties;

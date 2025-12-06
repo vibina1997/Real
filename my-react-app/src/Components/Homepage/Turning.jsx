@@ -6,6 +6,7 @@ import turning from "../../assets/Turning.module.css";
 
 const Turning = () => {
   return (
+    <div className="mt-3 py-4">
     <section className={`container mt-3 py-5 ${turning.turningSection}`}>
       <div className="row align-items-center">
 
@@ -66,6 +67,7 @@ const Turning = () => {
 
       </div>
     </section>
+    </div>
   );
 };
 

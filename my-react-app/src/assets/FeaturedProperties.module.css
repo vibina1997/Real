@@ -54,7 +54,7 @@
 }
 
 .buyBtn {
-  background: #011824;
+  background: #42534b;
   border: none;
   color: #fff;
   padding: 4px 10px;
@@ -63,7 +63,7 @@
 }
 
 .featureBtn {
-  background: rgb(17, 43, 78);;
+  background: #CA7842;
   border: none;
   padding: 4px 10px;
   font-size: 12px;
@@ -106,4 +106,8 @@
   .cardBox {
     border-radius: 10px;
   }
+}
+.sectionb{
+  background-color:#ffffff ;
+ 
 }
