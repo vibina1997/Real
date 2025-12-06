@@ -1,13 +1,12 @@
-/* GLASS NAVBAR */
-/* FULL WIDTH GLASS NAVBAR */
+
 .navbarCustom {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
-  width: 100%;               /* full width */
-  border-radius: 0;          /* remove rounded edges */
-  margin: 0;                 /* remove all spacing */
+  width: 100%;              
+  border-radius: 0;         
+  margin: 0;                 
   padding: 12px 25px;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* subtle border line */
@@ -15,7 +14,7 @@
 }
 
 
-/* BRAND */
+
 .navBrand {
   font-size: 28px;
   font-weight: 700;
@@ -23,7 +22,7 @@
   letter-spacing: 1px;
 }
 
-/* LINKS */
+
 .navLink {
   text-decoration: none;
   color: #0d2617;
@@ -38,7 +37,7 @@
 
 
 .button {
-  background: rgba(179, 89, 89, 0.15);
+  background: #628141;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   color: #fff;
@@ -49,14 +48,24 @@
   transition: 0.3s;
 }
 
+.button:hover {
+  background-color: #E67E22;
+  color: #fff;
+}
+
+
 .buttons {
-  background: #ffffff;
-  color: #000;
+  background: #628141;
+  color: #ffffff;
   padding: 8px 22px;
   border-radius: 10px;
   font-weight: 600;
   border: none;
   transition: 0.3s;
+}
+.buttons:hover {
+  background-color: #E67E22;
+  color: #fff;
 }
 
 .button:hover,
@@ -65,16 +74,16 @@
   opacity: 0.9;
 }
 
-/* TOGGLER */
+
 .navbar-toggler-icon {
   filter: invert(1);
 }
 
-/* MOBILE */
+
 @media (max-width: 992px) {
   .navbarCustom {
     width: 100%;
-    border-radius: 0;            /* no radius on mobile */
+    border-radius: 0;           
     margin: 0;
   }
 

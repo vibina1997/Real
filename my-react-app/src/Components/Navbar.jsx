@@ -15,12 +15,12 @@ const Navbar = () => {
     <nav className={`navbar navbar-expand-lg  sticky-top ${styles.navbarCustom}`}>
       <div className="container-fluid">
 
-        {/* Logo */}
+    
         <Link className={`navbar-brand ${styles.navBrand}`} to="/">
           HomeRetro
         </Link>
 
-        {/* Toggle button */}
+       
         <button
           className="navbar-toggler"
           type="button"
@@ -41,7 +41,7 @@ const Navbar = () => {
             <li className="nav-item"><Link className={styles.navLink} to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
           </ul>
 
-          {/* Buttons */}
+         
           <div className="d-grid gap-3 d-md-flex">
             <Link to="/signin" onClick={() => setIsOpen(false)}>
               <button className={styles.button}>Signin</button>

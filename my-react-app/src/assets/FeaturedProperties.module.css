@@ -3,7 +3,7 @@
   font-weight: 700;
 }
 
-/* CARD CONTAINER */
+
 .cardBox {
   border-radius: 12px;
   overflow: hidden;
@@ -12,13 +12,13 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Lift Animation */
+
 .cardBox:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.25);
 }
 
-/* Fade-in Animation */
+
 .animateCard {
   opacity: 0;
   transform: translateY(20px);
@@ -32,7 +32,7 @@
   }
 }
 
-/* IMAGE WRAPPER */
+
 .imageContainer {
   position: relative;
   height: 220px;
@@ -44,7 +44,7 @@
   object-fit: cover;
 }
 
-/* TAG BUTTONS */
+
 .tagButtons {
   position: absolute;
   top: 12px;
@@ -54,12 +54,16 @@
 }
 
 .buyBtn {
-  background: #42534b;
+  background: #628141;
   border: none;
   color: #fff;
   padding: 4px 10px;
   font-size: 12px;
   border-radius: 6px;
+}
+.buyBtn :hover{
+  background-color: #CA7842;
+  color: #fff;
 }
 
 .featureBtn {
@@ -70,6 +74,13 @@
   border-radius: 6px;
   color: #fff;
 }
+
+  .featureBtn :hover{
+    background: #628141;
+    color: #fff;
+
+  }
+
 
 /* CARD BODY */
 .cardBody {

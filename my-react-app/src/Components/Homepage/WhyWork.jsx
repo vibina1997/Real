@@ -35,8 +35,9 @@ const Turning = () => {
             </Row>
 
             <Button variant="dark" className={styles.ctaBtn}>
-              Learn More <i className="bi bi-arrow-right-short" />
-            </Button>
+  Learn More <i className="bi bi-arrow-right-short" />
+</Button>
+
           </Col>
 
           {/* Right image card */}
@@ -46,7 +47,6 @@ const Turning = () => {
                 <Card.Img src={cardimg} alt="house" className={styles.cardImage} />
               </div>
 
-              {/* small stat badge bottom-left */}
               <div className={styles.statBadge}>
                 <i className="bi bi-people-fill"></i>
                 <div className={styles.statText}>

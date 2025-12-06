@@ -1,8 +1,8 @@
 .wrapper {
-  background: #0D4715;
+  background: #cad8d0;
   padding: 50px 30px;
  
-  color: white;
+ 
 }
 
 .title {
@@ -13,11 +13,11 @@
 
 .subtitle {
   margin-top: 5px;
-  color: #d9e3df;
+  color: #101010;
 }
 
 .viewAll {
-  color: #d9e3df;
+  color: #0a0a0a;
   cursor: pointer;
   font-weight: 500;
 }
@@ -27,11 +27,11 @@
   justify-content: center;
 }
 
-/* Card UI */
+
 .cityCard {
-  background: #ffffff;
+  background: #114e25;
   width: 100%;
-  height: 160px;
+  height:200px;
   border-radius: 15px;
   padding: 20px;
   text-align: center;
@@ -75,7 +75,7 @@
 
 .cardCount {
   font-size: 13px;
-  color: #555 !important;
+  color: #cac3c3 !important;
 }
 
 /* Responsive */

@@ -21,7 +21,7 @@
   border-radius: 12px;
 }
 
-/* Large Image */
+
 .imgLarge {
   width: 300px;
   height: 360px;
@@ -34,7 +34,7 @@
   position: absolute;
   bottom: -20px;
   left: 20px;
-  background:rgb(17, 43, 78); ;
+  background-color: #628141;
   color: #fff;
   padding: 15px 20px;
   width: 140px;
@@ -166,3 +166,7 @@
   }
 }
 
+.buttonfee{
+  background-color: #628141;
+  
+}

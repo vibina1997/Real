@@ -62,7 +62,11 @@ const Turning = () => {
             </li>
           </ul>
 
-          <button className="btn btn-dark mt-3">Learn More</button>
+        
+    <button className={`${turning.buttonHover} mt-3`}>
+      Learn More
+    </button>
+
         </div>
 
       </div>
