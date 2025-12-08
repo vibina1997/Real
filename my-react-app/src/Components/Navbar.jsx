@@ -11,16 +11,17 @@ import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+
   return (
-    <nav className={`navbar navbar-expand-lg  sticky-top ${styles.navbarCustom}`}>
+    <nav className={`navbar navbar-expand-lg sticky-top container ${styles.navbarCustom}`}>
       <div className="container-fluid">
 
-    
+      
         <Link className={`navbar-brand ${styles.navBrand}`} to="/">
           HomeRetro
         </Link>
 
-       
+        
         <button
           className="navbar-toggler"
           type="button"
@@ -32,7 +33,7 @@ const Navbar = () => {
         {/* Menu */}
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
 
-          <ul className="navbar-nav mx-auto gap-5">
+          <ul className="navbar-nav mx-auto gap-lg-5 gap-3 text-center mt-3 mt-lg-0">
             <li className="nav-item"><Link className={styles.navLink} to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
             <li className="nav-item"><Link className={styles.navLink} to="/buy" onClick={() => setIsOpen(false)}>Buy</Link></li>
             <li className="nav-item"><Link className={styles.navLink} to="/sell" onClick={() => setIsOpen(false)}>Sell</Link></li>
@@ -41,8 +42,8 @@ const Navbar = () => {
             <li className="nav-item"><Link className={styles.navLink} to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
           </ul>
 
-         
-          <div className="d-grid gap-3 d-md-flex">
+          {/* Buttons */}
+          <div className="d-grid gap-3 d-lg-flex mt-3 mt-lg-0">
             <Link to="/signin" onClick={() => setIsOpen(false)}>
               <button className={styles.button}>Signin</button>
             </Link>
@@ -56,8 +57,6 @@ const Navbar = () => {
     </nav>
   );
 };
-
-
 
 export default Navbar;
 

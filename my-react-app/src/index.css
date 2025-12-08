@@ -25,3 +25,8 @@ p {
 section {
   margin-bottom: 70px;
 }
+html, body {
+  height: auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}

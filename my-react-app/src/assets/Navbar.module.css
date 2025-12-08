@@ -1,28 +1,23 @@
 
+/* NAVBAR GLASS EFFECT */
 .navbarCustom {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-
-  width: 100%;              
-  border-radius: 0;         
-  margin: 0;                 
+  width: 100%;
   padding: 12px 25px;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* subtle border line */
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-
-
+/* Brand */
 .navBrand {
   font-size: 28px;
   font-weight: 700;
   color: #0d2617 !important;
-  letter-spacing: 1px;
 }
 
-
+/* Links */
 .navLink {
   text-decoration: none;
   color: #0d2617;
@@ -35,61 +30,43 @@
   color: #b8e3d0;
 }
 
-
-.button {
+/* Buttons */
+.button, .buttons {
   background: #628141;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 8px 22px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.button:hover {
-  background-color: #E67E22;
-  color: #fff;
-}
-
-
-.buttons {
-  background: #628141;
-  color: #ffffff;
   padding: 8px 22px;
   border-radius: 10px;
   font-weight: 600;
   border: none;
   transition: 0.3s;
 }
-.buttons:hover {
-  background-color: #E67E22;
-  color: #fff;
-}
 
 .button:hover,
 .buttons:hover {
+  background-color: #E67E22;
   transform: translateY(-2px);
-  opacity: 0.9;
 }
 
-
+/* Toggler Icon (visible on dark/blur background) */
 .navbar-toggler-icon {
   filter: invert(1);
 }
 
-
+/* MOBILE RESPONSIVE */
 @media (max-width: 992px) {
-  .navbarCustom {
-    width: 100%;
-    border-radius: 0;           
-    margin: 0;
+
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(14px);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 10px;
+    transition: 0.4s ease;
   }
 
   .navLink {
-    text-align: center;
-    padding: 12px 0;
+    padding: 10px 0;
+    display: block;
   }
 
   .button,
@@ -97,3 +74,4 @@
     width: 100%;
   }
 }
+

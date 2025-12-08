@@ -27,8 +27,10 @@ const steps = [
 
 const Steps = () => {
   return (
+
+    <div className="">
     <div className={stepso.bgSection} style={{ backgroundImage: `url(${nature})` }}>
-      <div className={`py-5 text-center ${stepso.stepsContainer}`}>
+      <div className={`py-5 text-center container  ${stepso.stepsContainer}`}>
         <h2 className={`mb-3 ${stepso.heading}`}>Find Your Perfect Place in 3 Easy Steps</h2>
         <p className={`mb-5  ${stepso.subheading}`}>
           Your trusted real estate partner for buying, selling, and renting across Kerala.
@@ -44,6 +46,7 @@ const Steps = () => {
           ))}
         </Row>
       </div>
+    </div>
     </div>
   );
 };

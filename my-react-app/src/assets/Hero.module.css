@@ -1,15 +1,21 @@
 
 
+/* ========================== */
+/* HERO SECTION (FIXED) */
+/* ========================== */
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;   /* FIXED: no cut-off */
+  height: auto;        /* FIXED */
   width: 100%;
-  overflow: hidden;
+  overflow: visible;   /* FIXED: allow page scrolling */
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding-bottom: 120px; /* gives space for search bar */
 }
 
-
+/* Background Image */
 .bannerImage {
   position: absolute;
   top: 0;
@@ -20,7 +26,7 @@
   z-index: -1;
 }
 
-
+/* Overlay */
 .hero::after {
   content: "";
   position: absolute;
@@ -28,7 +34,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: rgba(0, 0, 0, 0.45); */
   z-index: 0;
 }
 
@@ -36,28 +41,28 @@
 .herosec {
   font-size: 42px;
   font-weight: 700;
-  color:white;
+  color: white;
   z-index: 2;
   line-height: 1.3;
+  text-align: center;
 }
 
-
+/* Search Box */
 .inputese {
   position: absolute;
   left: 50%;
-  bottom: 71px;
+  bottom: 40px;         /* FIXED for all screens */
   transform: translateX(-50%);
   width: 100%;
   max-width: 1000px;
   z-index: 10;
-
-  background: rgb(255 255 255 / 3%);
-  backdrop-filter: blur(10px);
+  background: rgb(255 255 255 / 6%);
+  backdrop-filter: blur(14px);
   border-radius: 16px;
   padding: 20px;
 }
 
-
+/* Icon */
 .inputIcon {
   position: absolute;
   right: 12px;
@@ -65,6 +70,10 @@
   transform: translateY(-50%);
   font-size: 18px;
   color: white;
+}
+
+.inputWithIcon {
+  padding-right: 35px;
 }
 
 /* Buttons */
@@ -86,41 +95,22 @@
   margin-top: 25px;
 }
 
-.inputWithIcon {
-  padding-right: 35px;
-}
-
-
+/* Popular Container (Fixed) */
 .popular {
-  margin-bottom: 260px;
+  margin-top: 60px;
+  margin-bottom: 90px; /* FIXED from 260px */
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
-
-
-@media (max-width: 992px) {
-  .herosec { font-size: 34px; }
-  .inputese { bottom: 60px; }
-}
-
-@media (max-width: 768px) {
-  .herosec { font-size: 30px; text-align: center; }
-  .inputese { bottom: 40px; padding: 15px; }
-}
-
-@media (max-width: 600px) {
-  .herosec { font-size: 24px; }
-  .inputese { width: 95%; bottom: 25px; padding: 10px; }
-}
-
-@media (min-width: 1400px) {
-  .inputese { bottom: 120px; }
-}
 /* ========================== */
-/* FADE-UP + SLIDE POPULAR SEARCH */
+/* ANIMATIONS */
+/* ========================== */
+
 .popularFadeUp {
   opacity: 0;
   transform: translateY(20px);
@@ -132,8 +122,7 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* ========================== */
-/* BUTTON HOVER ANIMATION */
+/* Buttons Hover */
 .popular button {
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -144,8 +133,7 @@
   background-color: rgba(255,255,255,0.2);
 }
 
-/* ========================== */
-/* STAGGERED BUTTON ANIMATION */
+/* Staggered Animation */
 .popular button:nth-child(2) { animation: popDelay 0.4s forwards; }
 .popular button:nth-child(3) { animation: popDelay 0.6s forwards; }
 .popular button:nth-child(4) { animation: popDelay 0.8s forwards; }
@@ -153,4 +141,24 @@
 @keyframes popDelay {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 992px) {
+  .herosec { font-size: 34px; }
+  .inputese { bottom: 35px; padding: 18px; }
+}
+
+@media (max-width: 768px) {
+  .herosec { font-size: 30px; }
+  .inputese { bottom: 25px; padding: 14px; width: 92%; }
+}
+
+@media (max-width: 600px) {
+  .herosec { font-size: 24px; }
+  .inputese { bottom: 20px; padding: 10px; width: 94%; }
+}
+
+@media (min-width: 1400px) {
+  .inputese { bottom: 70px; }
 }

@@ -2,11 +2,13 @@
 
 
 
+
 .sectionWrapper {
   padding: 60px 0;
+  margin-top: 70px;
 }
 
-/* LEFT STRUCTURE */
+
 .leftColumn {
   position: relative;
   display: flex;
@@ -14,7 +16,7 @@
   gap: 18px;
 }
 
-/* === DROP DOWN ANIMATION === */
+
 @keyframes dropDown {
   0% {
     opacity: 0;
@@ -34,10 +36,11 @@
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 
-  opacity: 0; /* important */
+  opacity: 0;
   animation: dropDown 0.7s ease forwards;
   animation-delay: 0.1s;
 }
+
 
 .mainImage {
   width: 310px;
@@ -46,14 +49,12 @@
   border-radius: 14px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.12);
 
-  opacity: 0; /* important */
+  opacity: 0;
   animation: dropDown 0.9s ease forwards;
   animation-delay: 0.3s;
 }
 
 
-
-/* STATS CARD */
 .statsCard {
   position: absolute;
   bottom: -18px;
@@ -90,9 +91,9 @@
   font-weight: 700;
 }
 
-/* RIGHT TEXT CONTENT */
+
 .title {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 700;
   color: #10221b;
   margin-bottom: 18px;
@@ -134,7 +135,8 @@
   color: #fff;
 }
 
-/* RESPONSIVE */
+
+/* TABLET */
 @media (max-width: 991px) {
   .smallImage {
     width: 190px;
@@ -156,25 +158,39 @@
   }
 }
 
+
 @media (max-width: 767px) {
-  .sectionWrapper {
+  /* stack columns vertically */
+  .row {
+    flex-direction: column !important;
     text-align: center;
   }
 
-  .leftColumn {
-    flex-direction: row;
-    justify-content: center;
+  
+  .col-md-6.d-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
   }
 
+  .leftColumn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
   .smallImage,
   .mainImage {
-    width: 45%;
+    width: 90%;
     height: auto;
   }
 
+  
   .statsCard {
-    left: 10px;
-    bottom: -10px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: -20px;
   }
 
   .title {
@@ -182,18 +198,20 @@
   }
 }
 
+
 @media (max-width: 480px) {
   .smallImage,
   .mainImage {
-    width: 48%;
+    width: 95%;
   }
 
   .statsCard {
-    width: 110px;
-    padding: 10px 12px;
+    width: 120px;
+    padding: 12px 14px;
   }
 
   .title {
     font-size: 24px;
   }
 }
+

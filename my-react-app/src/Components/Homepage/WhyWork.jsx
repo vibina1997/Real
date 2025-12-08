@@ -11,7 +11,7 @@ import styles from "../../assets/WhyWork.module.css";
 
 const Turning = () => {
   return (
-    <div className="mt-3 py-4 ">
+    <div className="mt-3 py-4 container">
     <section className={styles.heroSection}>
       <Container>
         <Row className="align-items-center">
