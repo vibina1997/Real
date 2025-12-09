@@ -30,6 +30,7 @@ function App() {
      <Route path="/Signi" element={<Signin/>}/>
      <Route path="/Signupoo" element={<Signup/>}/>
      
+     
 
       </Routes>
 <FooterComponent/>

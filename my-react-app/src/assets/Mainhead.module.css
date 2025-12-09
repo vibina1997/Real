@@ -2,7 +2,7 @@
    LIGHT BACKGROUND + SOFT GLASS OVERLAY
 ----------------------------------------- */
 .rSection {
-  background: linear-gradient(135deg, #062f4f, #d6eaf3); /* very light clean background */
+  background: linear-gradient(135deg, #85c389, #d6eaf3);
   padding: 50px 0;
   position: relative;
   overflow: hidden;

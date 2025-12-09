@@ -1,25 +1,57 @@
-import React from 'react'
-import sigup from '../../assets/siup.module.css'
-const Signin = () => {
-  return (
-    <div>
-      <div className="app">
-        <h3>Sign Up</h3>
-        <form className={sigup.Adduserform}></form>
-        <div className={sigup.INputegroup}>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" autoComplete="off" placeholder=""enter your name/>
-          <label htmlFor="email">Email:</label>
-          <input type="text" id="email" autoComplete="off" placeholder=""enter your email/>
-          <label htmlFor="Name">name:</label>
-          <input type="password" id="password" autoComplete="off" placeholder="enter password"/>
-        </div>
-        <button type="submit" className={sigup.ssbutton}></button>
-      </div>
-      
-    </div>
-  )
-}
 
-export default Signin
+import React, { useState } from "react";
+import siing from '../../assets/siin.module.css'
+
+
+const Signin = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Signin data:", formData);
+    // send data to backend
+  };
+
+  return (
+    <div className="app">
+      <h3>Signin</h3>
+      <form className={siing.Adduserform} onSubmit={handleSubmit}>
+        <div className={siing.INputegroup}>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+        </div>
+
+        <button type="submit" className={siing.ssbutton}>
+          Signin
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default Signin;
+
+
 

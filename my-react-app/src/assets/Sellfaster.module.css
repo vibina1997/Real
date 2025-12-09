@@ -33,21 +33,45 @@
     font-size: 22px;
   }
 }
-.buttonone{
-  background-color: rgb(21, 50, 86);
-  border-radius: 11px;
-}
-.buttontwo{
-  background-color: aliceblue;
-  border-radius: 11px;
+
+.tagButtons {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  gap: 8px;
 }
 
-.sebutton {
-  border-radius: 11px;
-background-color: rgb(21, 50, 86);
+/* BUY BUTTON */
+.buyBtn {
+  background: #628141;
+  border: none;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
-.buttontwo{
 
-    background-color: aliceblue;
-  border-radius: 11px;
+.buyBtn:hover {
+  background-color: #CA7842;
+  color: #fff;
+}
+
+/* FEATURED BUTTON */
+.featureBtn {
+  background: #CA7842;
+  border: none;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.featureBtn:hover {
+  background: #628141;
+  color: #fff;
 }

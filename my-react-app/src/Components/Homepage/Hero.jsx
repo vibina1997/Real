@@ -1,6 +1,6 @@
 import React from "react";
 import nav from "../../Components/Navbar.jsx"
-import banner from "../../assets/Imges/citythree.jpg"
+import banner from "../../assets/Imges/nature.jpg"
 
 import styles from "../../assets/Hero.module.css";
 

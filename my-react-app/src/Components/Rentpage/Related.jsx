@@ -8,6 +8,7 @@ import sideimage from "../../assets/Imges/home.jpg";
 import Sidemoo from "../../assets/Imges/apartment.jpg";
 
 
+
 const cards = [
   {
     id: 1,

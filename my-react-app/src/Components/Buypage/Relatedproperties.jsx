@@ -1,7 +1,16 @@
 import React from 'react'
+
+
+
+
 import homecard from '../../assets/Imges/homeimagecard.jpg'
 import sideimage from'../../assets/Imges/home.jpg'
 import sideimag from '../../assets/Imges/apartment.jpg'
+
+
+
+
+
 const RelatedProperties = () => {
   const cards = [
     { 
@@ -48,7 +57,8 @@ const RelatedProperties = () => {
 
   return (
     <div className="container py-5">
-      <h3 className="mb-4 text-center">Related Properties</h3>
+     
+<h3 className="mb-4 text-center font-32px">Related Properties</h3>
 
       <div className="row g-4">
 

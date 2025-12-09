@@ -8,10 +8,15 @@ import chillhome from "../../assets/Imges/chillhome.png";
 import vite from '../../assets/Imges/white.jpg'
 import whatsapp from '../../assets/Imges/whatsapp.jpg'
 import instoo from '../../assets/Imges/instoo.jpg'
+import mnday from '../../assets/Imges/mondayfor.jpg'
+import mango from '../../assets/Imges/mondayone.jpg'
+import orange from '../../assets/Imges/mondaythree.jpg'
+
+
 const propertyData = [
   {
     id: 1,
-    image: sellimage,
+    image: mnday,
     head: "Luxury Family Home",
     price: "450000",
     location: "245/12 MG Road Kochi Ernakulam Kerala 682016",
@@ -21,7 +26,7 @@ const propertyData = [
   },
   {
     id: 2,
-    image: happyhome,
+    image: mango,
     head: "Modern Smart Home",
     price: "520000",
     location: "MG Road Kochi 682016",
@@ -31,7 +36,7 @@ const propertyData = [
   },
   {
     id: 3,
-    image: chillhome,
+    image: mango,
     head: "Cozy Family House",
     price: "380000",
     location: "Palarivattom Kochi 682025",
@@ -41,7 +46,7 @@ const propertyData = [
   },
   {
     id: 4,
-    image: vite,
+    image: orange,
     head: "Premium Villa",
     price: "750000",
     location: "Kaloor Kochi 682017",
@@ -51,7 +56,7 @@ const propertyData = [
   },
   {
     id: 5,
-    image: whatsapp,
+    image: orange,
     head: "Comfort Living Home",
     price: "420000",
     location: "Edappally Kochi 682024",
@@ -74,79 +79,70 @@ const propertyData = [
 
 
 const Sellfaster = () => {
-  return (
-    <section className="mt-4">
-      <div className="container py-5">
+ return (
+  <section className="mt-4">
+    <div className="container py-5">
 
-        {/* Section Title */}
-        <div className={sell.sellfaster}>
-          <h2 className="mb-4 text-center fw-bold">
-            Sell Faster with Trusted Expertise
-          </h2>
-        </div>
-
-        {/* Cards Grid */}
-        <div className="row g-4 mt-3">
-          {propertyData.map((item) => (
-            <div className="col-12 col-sm-6 col-md-4" key={item.id}>
-              <div className="card shadow-sm p-3 rounded-4 h-100">
-
-              
-                <div style={{ position: "relative" }}>
-                  <img
-                    src={item.image}
-                    alt={item.head}
-                    className="img-fluid rounded mb-3"
-                    style={{ height: "200px", width: "100%", objectFit: "cover" }}
-                  />
-
-               
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      display: "flex",
-                      gap: "6px",
-                    }}
-                  >
-                    <div className={sell.buttonone}>
-                    <button className="btn btn-sm text-white">For sell</button>
-                    </div>
-                    <div className={sell.buttontwo}>
-                    <button className="btn btn-sm text-dark">Featured</button>
-                    </div>
-                  </div>
-                </div>
-
-                <h5 className="fw-bold">{item.head}</h5>
-                <h4 className="text-success fw-bold">₹{item.price}</h4>                <p className="text-muted small">{item.location}</p>
-                <div className="d-flex justify-content-between text-center mt-3">
-
-                  <div>
-                    <i className="bi bi-house-door"></i>
-                    <p className="m-0 small">{item.beds} Beds</p>
-                  </div>
-
-                  <div>
-                    <i className="bi bi-droplet"></i>
-                    <p className="m-0 small">{item.baths} Baths</p>
-                  </div>
-
-                  <div>
-                    <i className="bi bi-aspect-ratio"></i>
-                    <p className="m-0 small">{item.sqft} sqft</p>
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
-          ))}
-        </div>
-
+      
+      <div className={sell.sellfaster}>
+        <h2 className="mb-4 text-center fw-bold">
+          Sell Faster with Trusted Expertise
+        </h2>
       </div>
-    </section>
-  );
+
+      
+      <div className="row g-4 mt-3">
+        {propertyData.map((item) => (
+          <div className="col-12 col-sm-6 col-md-4" key={item.id}>
+            <div className="card shadow-sm p-3 rounded-4 h-100">
+
+             
+              <div style={{ position: "relative" }}>
+                <img
+                  src={item.image}
+                  alt={item.head}
+                  className="img-fluid rounded mb-3"
+                  style={{ height: "200px", width: "100%", objectFit: "cover" }}
+                />
+
+            
+                <div className={sell.tagButtons}>
+                  <button className={sell.buyBtn}>For Buy</button>
+                  <button className={sell.featureBtn}>Featured</button>
+                </div>
+              </div>
+
+             
+              <h5 className="fw-bold">{item.head}</h5>
+              <h4 className="text-success fw-bold">₹{item.price}</h4>
+              <p className="text-muted small">{item.location}</p>
+
+            
+              <div className="d-flex justify-content-between text-center mt-3">
+                <div>
+                  <i className="bi bi-house-door"></i>
+                  <p className="m-0 small">{item.beds} Beds</p>
+                </div>
+
+                <div>
+                  <i className="bi bi-droplet"></i>
+                  <p className="m-0 small">{item.baths} Baths</p>
+                </div>
+
+                <div>
+                  <i className="bi bi-aspect-ratio"></i>
+                  <p className="m-0 small">{item.sqft} sqft</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+);
 }
+
 export default Sellfaster;

@@ -1,8 +1,5 @@
 
 
-/* ========================== */
-/* HERO SECTION (FIXED) */
-/* ========================== */
 .hero {
   position: relative;
   min-height: 100vh;   /* FIXED: no cut-off */
@@ -15,7 +12,7 @@
   padding-bottom: 120px; /* gives space for search bar */
 }
 
-/* Background Image */
+
 .bannerImage {
   position: absolute;
   top: 0;

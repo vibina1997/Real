@@ -13,10 +13,10 @@ const Turning = () => {
     <section className={`container ${turning.sectionWrapper}`}>
       <div className="row align-items-center">
 
-        {/* LEFT SIDE */}
+       
         <div className="col-md-6 d-flex gap-4">
 
-          {/* Small Image + Stats */}
+        
           <div className={turning.leftColumn}>
             <img src={subo} className={turning.smallImage} alt="family" />
 
@@ -29,12 +29,11 @@ const Turning = () => {
             </div>
           </div>
 
-          {/* Main Image (correctly placed inside LEFT column) */}
           <img src={tatoo} className={turning.mainImage} alt="home" />
 
         </div>
 
-        {/* RIGHT SIDE */}
+       
         <div className="col-md-6">
           <h2 className={turning.title}>Turning Property Dreams Into Reality</h2>
 

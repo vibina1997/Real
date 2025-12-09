@@ -1,77 +1,81 @@
-
-/* NAVBAR GLASS EFFECT */
+/* GLASS TRANSPARENT NAVBAR */
 .navbarCustom {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   padding: 12px 25px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  width: 100%;
+  transition: 0.4s ease;
 }
 
-/* Brand */
+/* Brand Name */
 .navBrand {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 800;
   color: #0d2617 !important;
+  letter-spacing: 1px;
+  text-decoration: none;
 }
 
-/* Links */
+/* Nav Links */
 .navLink {
   text-decoration: none;
   color: #0d2617;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   transition: 0.3s ease;
 }
 
 .navLink:hover {
-  color: #b8e3d0;
+  color: #6ac59d;
+  transform: translateY(-2px);
 }
 
 /* Buttons */
-.button, .buttons {
-  background: #628141;
+.button,
+.buttons {
+  background: rgba(98, 129, 65, 0.9);
   color: #fff;
   padding: 8px 22px;
-  border-radius: 10px;
+  border-radius: 12px;
   font-weight: 600;
   border: none;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .button:hover,
 .buttons:hover {
-  background-color: #E67E22;
+  background: rgba(230, 126, 34, 0.9);
   transform: translateY(-2px);
 }
 
-/* Toggler Icon (visible on dark/blur background) */
-.navbar-toggler-icon {
-  filter: invert(1);
-}
-
-/* MOBILE RESPONSIVE */
+/* Mobile menu glass */
 @media (max-width: 992px) {
-
   .navbar-collapse {
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(14px);
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    padding: 18px;
     border-radius: 12px;
     margin-top: 10px;
-    transition: 0.4s ease;
   }
 
   .navLink {
-    padding: 10px 0;
+    padding: 12px 0;
     display: block;
+    font-size: 18px;
   }
 
   .button,
   .buttons {
     width: 100%;
   }
+}
+
+/* Toggler icon white */
+.navbar-toggler-icon {
+  filter: invert(1);
 }
 

@@ -16,7 +16,7 @@ const FooterComponent = () => {
     <footer className={styles.footerSection}>
       <div className="container">
 
-        {/* ---------- TOP GRID ---------- */}
+     
         <div className="row g-4">
 
           {/* Logo + About */}

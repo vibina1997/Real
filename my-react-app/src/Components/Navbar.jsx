@@ -11,17 +11,16 @@ import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-
   return (
-    <nav className={`navbar navbar-expand-lg sticky-top container ${styles.navbarCustom}`}>
+    <nav className={`navbar navbar-expand-lg sticky-top ${styles.navbarCustom}`}>
       <div className="container-fluid">
 
-      
-        <Link className={`navbar-brand ${styles.navBrand}`} to="/">
+        {/* Brand */}
+        <Link className={styles.navBrand} to="/">
           HomeRetro
         </Link>
 
-        
+        {/* Toggler */}
         <button
           className="navbar-toggler"
           type="button"
@@ -30,9 +29,8 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Menu */}
+        {/* Collapse Menu */}
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
-
           <ul className="navbar-nav mx-auto gap-lg-5 gap-3 text-center mt-3 mt-lg-0">
             <li className="nav-item"><Link className={styles.navLink} to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
             <li className="nav-item"><Link className={styles.navLink} to="/buy" onClick={() => setIsOpen(false)}>Buy</Link></li>
@@ -42,16 +40,16 @@ const Navbar = () => {
             <li className="nav-item"><Link className={styles.navLink} to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
           </ul>
 
-          {/* Buttons */}
+          
           <div className="d-grid gap-3 d-lg-flex mt-3 mt-lg-0">
             <Link to="/signin" onClick={() => setIsOpen(false)}>
               <button className={styles.button}>Signin</button>
             </Link>
+
             <Link to="/signup" onClick={() => setIsOpen(false)}>
               <button className={styles.buttons}>Signup</button>
             </Link>
           </div>
-
         </div>
       </div>
     </nav>
@@ -59,6 +57,10 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+ 
+
+
 
 
 
