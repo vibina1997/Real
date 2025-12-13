@@ -21,18 +21,17 @@ import ProtectedRoute from "./Components/Sighnf/ProtectedRoute";
 import Mainhero from "./Components/Sighnf/Mainhero";
 
 function App() {
-  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-
   const location = useLocation();
 
-  // Hide Navbar on specific pages
-  const hideNavbarPaths = ["/", "/signin", "/signup"];
-  const hideNavbar = hideNavbarPaths.includes(location.pathname);
+  // Pages where Navbar & Footer should be hidden
+  const hideLayoutPaths = ["/", "/signin", "/signup"];
+
+  const hideLayout = hideLayoutPaths.includes(location.pathname);
 
   return (
     <>
-      {/* Show navbar only if page is NOT inside hideNavbarPaths */}
-      {!hideNavbar && <Navbar />}
+      {/* Navbar */}
+      {!hideLayout && <Navbar />}
 
       <Routes>
         {/* First Screen */}
@@ -64,7 +63,8 @@ function App() {
         />
       </Routes>
 
-      <FooterComponent />
+      {/* Footer */}
+      {!hideLayout && <FooterComponent />}
     </>
   );
 }

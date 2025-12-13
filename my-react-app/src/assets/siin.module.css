@@ -47,7 +47,7 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background: rgba(255, 255, 255, 0.2);
-  color: #fff;
+  color: #090909;
   font-size: 14px;
   margin-bottom: 12px;
   transition: all 0.2s ease-in-out;
@@ -64,24 +64,22 @@
   box-shadow: 0 0 8px rgba(75, 123, 236, 0.5);
   color: #fff;
 }
-
-/* ---------- Buttons ---------- */
 .signBtn {
-  width: 100%;
-  padding: 12px 0;
+  background: linear-gradient(135deg, #628141, #8BAE66);
+  color: #ffffff;
+  padding: 11px 26px;
   border-radius: 10px;
   border: none;
-  background: #4b7bec;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
 .signBtn:hover {
-  background: #3a6ed8;
+  background: linear-gradient(135deg, #E67E22, #EBD5AB);
 }
+
+
 
 /* Social Buttons */
 .socialBtn {
@@ -132,7 +130,7 @@
 
 /* ---------- Text ---------- */
 .text-muted {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(16, 15, 15, 0.7) !important;
 }
 
 /* ---------- Responsive ---------- */
