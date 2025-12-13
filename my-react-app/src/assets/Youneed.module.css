@@ -2,41 +2,49 @@
   background-color: #f8f9fa;
 }
 
+/* Title */
 .title {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
   color: #222;
+  margin-bottom: 20px;
 }
 
+/* Text */
 .text {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: #555;
 }
 
+/* Image – same image, flipped */
 .image {
-  width: 60%;
-  max-width: 300px;
-  border-radius: 12px;
-  object-fit: cover;
+  width: 200px;
   height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+
+  transform: scaleX(-1);   /* 🔁 flip image */
 }
 
-@media (max-width: 500px) {
-  .title {
-    font-size: 1.6rem;
-    text-align: center;
-  }
-
+/* Tablet */
+@media (max-width: 768px) {
   .text {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .image {
-    width: 100%;
-    max-width: 180px;
-    height: 160px; 
+    width: 160px;
+    height: 110px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .image {
+    width: 140px;
+    height: 100px;
   }
 }

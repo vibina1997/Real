@@ -1,58 +1,64 @@
-.hedingg{
- 
-  background: linear-gradient(135deg, #062f4f, #d6eaf3); /* very light clean background */
-  padding: 50px 0;
+
+.bgFull {
+  background-image: url("../assets/Imges/byooo.jpg"); /* UPDATE IMAGE */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 400px;
+  padding: 80px 0;
   position: relative;
-  overflow: hidden;
+}
+
+/* Dark overlay for readability */
+.bgFull::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.bgFull * {
+  position: relative;
+  z-index: 2;
 }
 
 
 .htitle {
-  font-size: 34px;
+  font-size: 38px;
   font-weight: 800;
-  color: #0b0202;
-  margin: 0;
-  line-height: 1.15;
+  color: #ffffff;
+  line-height: 1.2;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.4);
 }
 
-/* ✔ Glass Wrapper Box */
+/* ===========================
+   GLASS BOX
+=========================== */
 .archBox {
-  background: rgba(28, 67, 95, 0.55);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 12px;
-  border: 1px solid rgba(226, 230, 229, 0.4);
-  width: 100%;
-  box-shadow: 0 8px 20px rgba(17, 77, 68, 0.08);
-  transition: 0.3s ease;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.archBox:hover {
-  box-shadow: 0 12px 28px rgba(17, 77, 68, 0.12);
-}
-
-/* ✔ Glass Select/Input Fields */
+/* ===========================
+   GLASS INPUTS
+=========================== */
 .glassInput {
   width: 100%;
   height: 44px;
   padding: 10px 12px;
-
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.45);
-
-  color: white;
-  font-size: 14px;
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
   font-weight: 500;
   transition: 0.3s ease;
-}
-
-.glassInput option {
-  color: #073f38;
-  font-weight: 600;
 }
 
 .glassInput:hover {
@@ -62,55 +68,40 @@
 .glassInput:focus {
   background: rgba(255, 255, 255, 0.45);
   border-color: white;
-  outline: none;
 }
 
-/* ✔ Search Button */
-.btsearchBtn {
+/* dropdown options */
+.glassInput option {
+  color: #033436;
+  font-weight: 600;
+}
 
-  background:rgb(17, 43, 78);;
+/* ===========================
+   SEARCH BUTTON
+=========================== */
+.btsearchBtn {
+  background: #0a2647;
   color: white;
-  border: none;
-  padding: 10px 20px;
   border-radius: 8px;
+  padding: 10px 20px;
   font-weight: 600;
   transition: 0.3s ease;
+  border: none;
 }
 
 .btsearchBtn:hover {
-  background: #9fc1bc;
+  background: #1b6fa8;
 }
 
-/* ✔ Floating Image */
-.hrightImage {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 16px;
-  display: inline-block;
-  animation: float 4s ease-in-out infinite;
-}
-
-/* Floating animation */
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
-}
-
-/* ✔ Responsive */
-@media (max-width: 767.98px) {
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
   .htitle {
-    font-size: 26px;
-    text-align: center;
+    font-size: 28px;
   }
 
   .archBox {
-    margin-top: 18px;
-    padding: 12px;
-  }
-
-  .hrightImage {
-    max-width: 300px;
+    padding: 14px;
   }
 }

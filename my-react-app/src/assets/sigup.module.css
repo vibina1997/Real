@@ -1,0 +1,147 @@
+/* ---------- Full-screen background ---------- */
+.bgWrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ---------- Overlay for dark blur ---------- */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+/* ---------- Glass Card ---------- */
+.glassCard {
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+  width: 90%;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 30px 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Card hover effect */
+.glassCard:hover {
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Inputs ---------- */
+.input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #4b7bec;
+  box-shadow: 0 0 8px rgba(75, 123, 236, 0.5);
+  color: #fff;
+}
+
+/* ---------- Buttons ---------- */
+.signBtn {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 10px;
+  border: none;
+  background: #4b7bec;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.signBtn:hover {
+  background: #3a6ed8;
+}
+
+/* Social Buttons */
+.socialBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.socialBtn img {
+  margin-right: 8px;
+}
+
+.socialBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ---------- Links ---------- */
+.link {
+  color: #ffeaa7;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.link:hover {
+  color: #fab1a0;
+  text-decoration: underline;
+}
+
+/* ---------- Checkbox ---------- */
+.form-check-input:checked {
+  background-color: #4b7bec;
+  border-color: #4b7bec;
+}
+
+.form-check-label {
+  color: #fff;
+}
+
+/* ---------- Text ---------- */
+.text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width: 576px) {
+  .glassCard {
+    padding: 20px 15px;
+  }
+  .signBtn, .socialBtn {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}

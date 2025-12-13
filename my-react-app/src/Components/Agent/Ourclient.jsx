@@ -28,23 +28,28 @@ const dadaservice = [
 
 const Ourclient = () => {
   return (
-    <div className={clip.bagro}>
-    <div className="container ">
-      <div className={clip.clientsection}>
-        <h2 className={clip.centerhead}>Our client’s success is our success.</h2>
-        {dadaservice.map((item, id) => (
-          <div key={id} className={clip.sarvicecard}>
-            <h3>{item.title}</h3>
-            <p>{item.p}</p>
-            <button>{item.button}</button>
-          </div>
-        ))}
+   
+    <div className={`${clip.bagro} py-5`}>
+      <div className="container">
+        <div className={clip.clientsection}>
+          <h2 className={clip.centerhead}>
+            Our client’s success is our success.
+          </h2>
+
+          {dadaservice.map((item, id) => (
+            <div key={id} className={clip.sarvicecard}>
+              <h3>{item.title}</h3>
+              <p>{item.p}</p>
+              <button>{item.button}</button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-    </div>
-
   );
 };
 
 export default Ourclient;
+
+
 

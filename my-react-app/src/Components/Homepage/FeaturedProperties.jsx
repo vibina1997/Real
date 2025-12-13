@@ -82,53 +82,56 @@ const cardData = [
 
 const FeaturedProperties = () => {
   return (
-    <div>
-    <section className={styles.sectionb}>
-<div className="container mt-3 py-4">
-  <div className={styles.feature}>
+    <section className="py-5">  {/* Global spacing */}
+      <div className="container">
 
-    <h2 className={styles.head}>Featured Properties</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div className={styles.feature}>
 
-    <div className="row g-4">
-      {cardData.map((card) => (
-        <div className="col-12 col-sm-6 col-md-4" key={card.id}>
-          
-          <div className={`${styles.cardBox} animateCard`}>
+          <h2 className={`${styles.head} mb-2`}>Featured Properties</h2>
+          <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-            <div className={styles.imageContainer}>
-              <img src={card.img} alt="Property" className={styles.cardImage} />
+          <div className="row g-4">
+            {cardData.map((card) => (
+              <div className="col-12 col-sm-6 col-md-4" key={card.id}>
+                
+                <div className={`${styles.cardBox} animateCard`}>
 
-              <div className={styles.tagButtons}>
-                <button className={styles.buyBtn}>For Buy</button>
-                <button className={styles.featureBtn}>Featured</button>
+                  <div className={styles.imageContainer}>
+                    <img src={card.img} alt="Property" className={styles.cardImage} />
+
+                    <div className={styles.tagButtons}>
+                      <button className={styles.buyBtn}>For Buy</button>
+                      <button className={styles.featureBtn}>Featured</button>
+                    </div>
+                  </div>
+
+                  <div className={styles.cardBody}>
+                    <h4 className={styles.cardTitle}>Apartment</h4>
+                    <p className={styles.price}>₹43,657</p>
+                    <p className={styles.location}>
+                      245/12 MG Road, Kochi, Ernakulam, Kerala – 682016
+                    </p>
+
+                    <p className={styles.details}>
+                      <i className="bi bi-house-door-fill"></i> 3 Beds &nbsp; | &nbsp;
+                      <i className="bi bi-droplet-half"></i> 2 Baths &nbsp; | &nbsp;
+                      <i className="bi bi-bounding-box-circles"></i> 1500 Sqft
+                    </p>
+                  </div>
+
+                </div>
               </div>
-            </div>
-
-            <div className={styles.cardBody}>
-              <h4 className={styles.cardTitle}>Apartment</h4>
-              <p className={styles.price}>₹43,657</p>
-              <p className={styles.location}>
-                245/12 MG Road, Kochi, Ernakulam, Kerala – 682016
-              </p>
-
-              <p className={styles.details}>
-                <i className="bi bi-house-door-fill"></i> 3 Beds &nbsp; | &nbsp;
-                <i className="bi bi-droplet-half"></i> 2 Baths &nbsp; | &nbsp;
-                <i className="bi bi-bounding-box-circles"></i> 1500 Sqft
-              </p>
-            </div>
-
+            ))}
           </div>
+
         </div>
-      ))}
-    </div>
 
-  </div>
-  
-  </div>
-  </section>
-</div>
+      </div>
+    </section>
+  );
+};
 
-  )}
 export default FeaturedProperties;
+
+
+

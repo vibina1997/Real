@@ -1,0 +1,68 @@
+/* Full background */
+.loginBg {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Center wrapper */
+.centerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* PERFECT GLASS CARD */
+.loginCard {
+  width: 380px;
+  border-radius: 28px;
+  padding: 30px !important;
+
+  /* PURE GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
+  color: white !important;
+
+  transition: 0.3s ease;
+}
+
+/* Buttons */
+.primaryBtn {
+  background: white;
+  color: black;
+  padding: 10px 26px;
+  border-radius: 25px;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background: #e9e9e9;
+}
+
+.outlineBtn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: white;
+  padding: 10px 26px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.outlineBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}

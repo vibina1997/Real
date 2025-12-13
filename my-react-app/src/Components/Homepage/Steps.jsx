@@ -27,29 +27,43 @@ const steps = [
 
 const Steps = () => {
   return (
+    <section className="py-5">   {/* Bootstrap spacing */}
+      
+      <div
+        className={stepso.bgSection}
+        style={{ backgroundImage: `url(${nature})` }}
+      >
+        <div className={`container text-center ${stepso.stepsContainer}`}>
+          
+          <h2 className={`${stepso.heading} mb-2`}>
+            Find Your Perfect Place in 3 Easy Steps
+          </h2>
+          
+          <p className={`${stepso.subheading} mb-4`}>
+            Your trusted real estate partner for buying, selling, and renting across Kerala.
+          </p>
 
-    <div className="">
-    <div className={stepso.bgSection} style={{ backgroundImage: `url(${nature})` }}>
-      <div className={`py-5 text-center container  ${stepso.stepsContainer}`}>
-        <h2 className={`mb-3 ${stepso.heading}`}>Find Your Perfect Place in 3 Easy Steps</h2>
-        <p className={`mb-5  ${stepso.subheading}`}>
-          Your trusted real estate partner for buying, selling, and renting across Kerala.
-        </p>
+          <Row className="g-4 mt-2">
+            {steps.map((step, index) => (
+              <Col key={index} md={4}>
+                <div className={stepso.iconWrapper}>{step.icon}</div>
+                <h5 className={stepso.stepTitle}>{step.title}</h5>
+                <p className={stepso.stepDesc}>{step.description}</p>
+              </Col>
+            ))}
+          </Row>
 
-        <Row>
-          {steps.map((step, index) => (
-            <Col key={index} md={4} className="mb-4">
-              <div className={stepso.iconWrapper}>{step.icon}</div>
-              <h5 className={stepso.stepTitle}>{step.title}</h5>
-              <p className={` ${stepso.stepDesc}`}>{step.description}</p>
-            </Col>
-          ))}
-        </Row>
+        </div>
       </div>
-    </div>
-    </div>
+
+    </section>
   );
 };
 
 
+
 export default Steps;
+
+
+
+

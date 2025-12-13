@@ -3,20 +3,20 @@ import { Link } from "react-router-dom";
 
 import buying from '../../assets/buyinggg .module.css'
 
-import tooimg from '../../assets/Imges/tooimage.jpg'
-import wilton from '../../assets/Imges/witton.jpg'
-import kannur from '../../assets/Imges/kannur.jpg'
-import wayannad from '../../assets/Imges/wayanad.jpg'
-import whatsapp from '../../assets/Imges/whatsapp.jpg'
-import gitup from '../../assets/Imges/gitup.jpg'
-import bathery from '../../assets/Imges/bathery.jpg'
-
-
+import buycardo from '../../assets/Imges/buycardtwo.jpg'
+import buycardt from '../../assets/Imges/buycardthee.jpg'
+import buycardth from '../../assets/Imges/buycardten.jpg'
+import buycardl from '../../assets/Imges/buycardnain.jpg'
+import buycardone from '../../assets/Imges/buycardleven.jpg'
+import buycardoo from '../../assets/Imges/buycardsix.jpg'
+import buyyyy from '../../assets/Imges/buycardfor.jpg'
+import buycr from '../../assets/Imges/buycardone.jpg'
+import buinggg from '../../assets/Imges/buycardfive.jpg'
 
 const prodata = [
     {
       id: 1,
-      image: whatsapp,
+      image: buycardo,
       head: "Luxury Family Home",
       price: "450000",
       location: "245/12 MG Road Kochi Ernakulam Kerala 682016",
@@ -26,7 +26,7 @@ const prodata = [
     },
     {
       id: 2,
-      image: gitup,
+      image: buycardt,
       head: "Modern Apartment",
       price: "350000",
       location: "123/45 Park Street Mumbai Maharashtra 400001",
@@ -36,7 +36,7 @@ const prodata = [
     },
     {
       id: 3,
-      image: wayannad,
+      image: buycardth,
       head: "Cozy Cottage",
       price: "250000",
       location: "789/10 Lakeview Drive Bangalore Karnataka 560001",
@@ -46,7 +46,7 @@ const prodata = [
     },
     {
       id: 4,
-      image: kannur,
+      image: buycardl,
       head: "Spacious Villa",
       price: "750000",
       location: "456/78 Ocean Avenue Chennai Tamil Nadu 600001",
@@ -56,7 +56,7 @@ const prodata = [
     },
     {
          id: 5,
-      image:wilton ,
+      image:buycardone ,
       head: "Spacious Villa",
       price: "750000",
       location: "456/78 Ocean Avenue Chennai Tamil Nadu 600001",
@@ -66,7 +66,7 @@ const prodata = [
     },
     {
          id: 6,
-      image: tooimg,
+      image: buycardoo,
       head: "Spacious Villa",
       price: "750000",
       location: "456/78 Ocean Avenue Chennai Tamil Nadu 600001",
@@ -76,7 +76,7 @@ const prodata = [
     },
 {
       id: 7,
-      image: bathery,
+      image: buyyyy,
       head: "Spacious Villa",
       price: "750000",
       location: "456/78 Ocean Avenue Chennai Tamil Nadu 600001",
@@ -86,7 +86,7 @@ const prodata = [
 },
 {
  id: 8,
-      image: whatsapp,
+      image: buycr,
       head: "Spacious Villa",
       price: "750000",
       location: "456/78 Ocean Avenue Chennai Tamil Nadu 600001",
@@ -94,7 +94,7 @@ const prodata = [
       baths: 3,
       sqft: 2000,},
       {id: 9,
-      image: whatsapp,
+      image: buinggg,
       head: "Spacious Villa",
       price: "750000",
       location: "456/78 Ocean Avenue Chennai Tamil Nadu 600001",
@@ -105,77 +105,47 @@ const prodata = [
 
 const Propertyarea = () => {
   return (
-    
-    <section className="mt-4">
-      <div className="container">
+    <section className="py-5">
+      <div className="container ">
 
-        {/* Title */}
-        <h2 className="mb-3 fw-bold mt-3 py-5 text-center">
+        <h2 className="mb-3 fw-bold">
           Premium Communities for Confident Home Buying
         </h2>
+        <p>Unlock confident home buying with thoughtfully designed premium communities.</p>
 
-        {/* Cards */}
         <div className="row g-4">
-          {prodata.map(item => (
+          {prodata.map((item) => (
             <div className="col-12 col-sm-6 col-md-4" key={item.id}>
 
-              <div className="card shadow-sm p-3" style={{ borderRadius: "12px" }}>
+              <div className={buying.card}>
+                
+                <div className={buying.cardImage}>
+                  <img src={item.image} alt={item.head} />
 
-              
-                <div style={{ position: "relative" }}>
-                  <img
-                    src={item.image}
-                    alt={item.head}
-                    className="img-fluid rounded mb-3"
-                    style={{ height: "200px", width: "100%", objectFit: "cover" }}
-                  />
-
-              
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      display: "flex",
-                      gap: "6px",
-                    }}
-                  >
-                   
-                      <div className={buying.sebut}>
-  <Link to="/singlepage">
-    <button className="btn btn-sm text-white">For Buy</button>
-  </Link>
-</div>
-                  <div className={buying.febut}>
-                    <button className="btn btn-sm text-dark">Featured</button>
-                    </div>
+                  <div className={buying.tagButtons}>
+                    <span className={buying.buyBtn}>For Buy</span>
+                    <span className={buying.featureBtn}>Featured</span>
                   </div>
                 </div>
 
-               
-                <h5 className="fw-bold">{item.head}</h5>
+                <div className={buying.cardContent}>
+                  <h5>{item.head}</h5>
+                  <h4>₹ {item.price}</h4>
+                  <p>{item.location}</p>
 
-                
-                <p className="text-succsuss fw-bold">₹{item.price}</p>
-
-                <p className="text-muted">{item.location}</p>
-
-               
-                <div className="d-flex justify-content-between text-center mt-3">
-
-                  <div>
-                    <i className="bi bi-house-door"></i>
-                    <p className="m-0">{item.beds} Beds</p>
-                  </div>
-
-                  <div>
-                    <i className="bi bi-droplet"></i>
-                    <p className="m-0">{item.baths} Baths</p>
-                  </div>
-
-                  <div>
-                    <i className="bi bi-aspect-ratio"></i>
-                    <p className="m-0">{item.sqft} Sqft</p>
+                  <div className={buying.features}>
+                    <div>
+                      <i className="bi bi-house-door"></i>
+                      <span>{item.beds} Bed</span>
+                    </div>
+                    <div>
+                      <i className="bi bi-droplet"></i>
+                      <span>{item.baths} Bath</span>
+                    </div>
+                    <div>
+                      <i className="bi bi-aspect-ratio"></i>
+                      <span>{item.sqft} sqft</span>
+                    </div>
                   </div>
 
                 </div>
@@ -193,3 +163,6 @@ const Propertyarea = () => {
 
 
 export default Propertyarea;
+
+
+

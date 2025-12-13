@@ -2,6 +2,9 @@ import React from "react";
 import single from "../../assets/Imges/Singlebig.jpg";
 import roomone from "../../assets/Imges/Roomone.jpg";
 import threeone from "../../assets/Imges/Rootwo.jpg";
+import city from '../../assets/Imges/citythree.jpg'
+import relatedfiv from "../../assets/Imges/relatedfive.jpg"
+import related from '../../assets/Imges/relatedfor.jpg'
 
 
 import sngcss from '../../assets/Propertygallery.module.css'
@@ -23,7 +26,7 @@ const Propertygallery = () => {
       <div className="row g-4">
         <div className="col-md-8">
           <img
-            src={single}
+            src={city}
             className="img-fluid rounded mb-3"
             style={{ objectFit: "cover", height: "400px", width: "100%" }}
             alt="bigimage"
@@ -135,7 +138,7 @@ const Propertygallery = () => {
         <div className="col-md-4 d-flex flex-column">
           <div className="mb-3">
             <img
-              src={roomone}
+              src={relatedfiv}
               className="img-fluid rounded"
               style={{ objectFit: "cover", height: "190px", width: "100%" }}
               alt="smallimage"
@@ -145,7 +148,7 @@ const Propertygallery = () => {
           {/* Bottom Small Image */}
           <div>
             <img
-              src={threeone}
+              src={ related }
               className="img-fluid rounded"
               style={{ objectFit: "cover", height: "190px", width: "100%" }}
               alt="smallimage2"

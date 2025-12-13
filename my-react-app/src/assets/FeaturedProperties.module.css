@@ -1,9 +1,23 @@
+
+/* Section background (use only if needed) */
+.sec {
+  background-color: #dbdcd9;
+  padding: 120px 0; /* Clean global spacing */
+}
+
+/* Wrapper */
+.feature {
+  text-align: center;
+}
+
+/* Heading */
 .head {
   font-size: 32px;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
-
+/* Card Box */
 .cardBox {
   border-radius: 12px;
   overflow: hidden;
@@ -12,13 +26,12 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .cardBox:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.25);
 }
 
-
+/* Fade animation */
 .animateCard {
   opacity: 0;
   transform: translateY(20px);
@@ -28,11 +41,11 @@
 @keyframes fadeUp {
   to {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 }
 
-
+/* Image Container */
 .imageContainer {
   position: relative;
   height: 220px;
@@ -44,7 +57,7 @@
   object-fit: cover;
 }
 
-
+/* Tag Buttons on Image */
 .tagButtons {
   position: absolute;
   top: 12px;
@@ -60,10 +73,11 @@
   padding: 4px 10px;
   font-size: 12px;
   border-radius: 6px;
+  transition: 0.3s ease;
 }
-.buyBtn :hover{
+
+.buyBtn:hover {
   background-color: #CA7842;
-  color: #fff;
 }
 
 .featureBtn {
@@ -73,18 +87,17 @@
   font-size: 12px;
   border-radius: 6px;
   color: #fff;
+  transition: 0.3s ease;
 }
 
-  .featureBtn :hover{
-    background: #628141;
-    color: #fff;
+.featureBtn:hover {
+  background: #628141;
+}
 
-  }
-
-
-/* CARD BODY */
+/* Card Body */
 .cardBody {
   padding: 14px 16px;
+  text-align: left;
 }
 
 .cardTitle {
@@ -95,11 +108,13 @@
 .price {
   font-weight: 700;
   color: #2e8b57;
+  margin: 6px 0;
 }
 
 .location {
   font-size: 14px;
   color: #555;
+  margin-bottom: 6px;
 }
 
 .details {
@@ -108,7 +123,7 @@
   margin-top: 5px;
 }
 
-/* RESPONSIVE FIXES */
+/* Responsive */
 @media (max-width: 576px) {
   .imageContainer {
     height: 170px;
@@ -117,8 +132,4 @@
   .cardBox {
     border-radius: 10px;
   }
-}
-.sectionb{
-  background-color:#ffffff ;
- 
 }

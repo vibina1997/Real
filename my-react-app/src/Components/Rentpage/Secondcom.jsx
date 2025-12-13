@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 import secondcom from '../../assets/Pagethreecss/Second.module.css'
 
 import proprt from '../../assets/Imges/aproprty.jpg'
@@ -105,78 +107,60 @@ const secondcard = [
 
 const Secondcom = () => {
   return (
-    <section className="mt-4">
-      <div className="container py-5">
-
-        <div className={secondcom.headoo}>
-          <h2 style={{ fontWeight: 700 }}>
-            Trusted Expertise for a Smooth Rental Journey
-          </h2>
-        </div>
-
-        <div className="row g-4 mt-3">
-          {secondcard.map((item) => (
-            <div className="col-md-4" key={item.id}>
-              <div className="card shadow-sm p-3" style={{ borderRadius: "12px" }}>
-
-                {/* Image */}
-                <div style={{ position: "relative" }}>
-                  <img
-                    src={item.image}
-                    alt={item.head}
-                    className="img-fluid rounded mb-3"
-                    style={{ height: "200px", width: "100%", objectFit: "cover" }}
-                  />
-
-                  {/* Tag buttons */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      display: "flex",
-                      gap: "6px",
-                    }}
-                  >
-                    <div className={secondcom. buttonr}>
-                    <button className="btn btn-sm text-white ">For Rent</button>
+    
+        <section className="py-5">
+          <div className="container ">
+    
+            <h2 className="mb-3 fw-bold">
+              Premium Communities for Confident Home Buying
+            </h2>
+            <p>Unlock confident home buying with thoughtfully designed premium communities.</p>
+    
+            <div className="row g-4">
+              {secondcard.map((item) => (
+                <div className="col-12 col-sm-6 col-md-4" key={item.id}>
+    
+                  <div className={secondcom.card}>
+                    
+                    <div className={secondcom.cardImage}>
+                      <img src={item.image} alt={item.head} />
+    
+                      <div className={secondcom.tagButtons}>
+                        <span className={secondcom.buyBtn}>For Rent</span>
+                        <span className={secondcom.featureBtn}>Featured</span>
+                      </div>
                     </div>
-                      <div className={secondcom.buttonf}>
-                    <button className="btn btn-sm text-dark">Featured</button>
+    
+                    <div className={secondcom.cardContent}>
+                      <h5>{item.head}</h5>
+                      <h4>₹ {item.price}</h4>
+                      <p>{item.location}</p>
+    
+                      <div className={secondcom.features}>
+                        <div>
+                          <i className="bi bi-house-door"></i>
+                          <span>{item.beds} Bed</span>
+                        </div>
+                        <div>
+                          <i className="bi bi-droplet"></i>
+                          <span>{item.baths} Bath</span>
+                        </div>
+                        <div>
+                          <i className="bi bi-aspect-ratio"></i>
+                          <span>{item.sqft} sqft</span>
+                        </div>
+                      </div>
+    
                     </div>
+    
                   </div>
+    
                 </div>
-
-                {/* Card Content */}
-                <h5 className="fw-bold">{item.head}</h5>
-                <h4 className="text-primary fw-bold">₹{item.price}</h4>
-
-                <p className="text-muted">{item.location}</p>
-
-                <div className="d-flex justify-content-between text-center mt-3">
-                  <div>
-                    <i className="bi bi-house-door-fill"></i>
-                    <p className="m-0">{item.beds} Beds</p>
-                  </div>
-
-                  <div>
-                    <i className="bi bi-droplet-half"></i>
-                    <p className="m-0">{item.baths} Baths</p>
-                  </div>
-
-                  <div>
-                    <i className="bi bi-bounding-box-circles"></i>
-                    <p className="m-0">{item.sqft} Sqft</p>
-                  </div>
-                </div>
-
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-
-      </div>
-    </section>
+    
+          </div>
+        </section>
   );
 };
 

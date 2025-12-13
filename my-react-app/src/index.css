@@ -1,32 +1,33 @@
-:root{
-   * {
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif !important;
 }
 
+html, body {
+  height: auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+}
 
-h1 {
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
 }
 
 h2 {
-  font-family: 'Poppins', sans-serif;
   font-weight: 600;
 }
 
+/* Paragraphs */
 p {
-  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   line-height: 1.6;
 }
 
-}
-/* index.css */
-section {
-  margin-bottom: 70px;
-}
-html, body {
-  height: auto !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-}
+
+

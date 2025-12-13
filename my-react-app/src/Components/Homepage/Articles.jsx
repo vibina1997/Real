@@ -49,8 +49,8 @@ const articles = [
  
 ];
 
+
 const Articles = () => {
- 
   const [expandedCard, setExpandedCard] = useState(null);
 
   const toggleExpand = (id) => {
@@ -58,43 +58,53 @@ const Articles = () => {
   };
 
   return (
-    <div className="container">
-     <div className="mt-3 py-4">
-    <div className={styles.wrapper}>
-      <h2 className={styles.heading}>Recent Articles & News</h2>
-      <div className={styles.cardContainer}>
-        {articles.map((item) => (
-          <div className={styles.card} key={item.id}>
-            <div className={styles.imageWrapper}>
-              <img src={item.image} alt={item.title} className={styles.image} />
-              <button
-                className={styles.readButton}
-                onClick={() => toggleExpand(item.id)}
-              >
-                {expandedCard === item.id ? "Show Less ↑" : "Read More →"}
-              </button>
+    <section className={`${styles.wrapper} py-5`}>
+      <div className="container">
+        <h2 className={styles.heading}>Recent Articles & News</h2>
+
+        <div className={styles.cardContainer}>
+          {articles.map((item) => (
+            <div className={styles.card} key={item.id}>
+              {/* IMAGE */}
+              <div className={styles.imageWrapper}>
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className={styles.image}
+                />
+
+                <button
+                  className={styles.readButton}
+                  onClick={() => toggleExpand(item.id)}
+                >
+                  {expandedCard === item.id ? "Show Less ↑" : "Read More →"}
+                </button>
+              </div>
+
+              {/* CONTENT */}
+              <div className={styles.cardBody}>
+                <p className={styles.typeDate}>
+                  {item.type} • {item.date}
+                </p>
+
+                <h4 className={styles.cardTitle}>{item.title}</h4>
+
+                {expandedCard === item.id && (
+                  <div className={styles.extraContent}>
+                    <p>{item.content}</p>
+                  </div>
+                )}
+              </div>
             </div>
-            <div className={styles.cardBody}>
-              <p className={styles.typeDate}>
-                {item.type} • {item.date}
-              </p>
-              <h4 className={styles.cardTitle}>{item.title}</h4>
-              {expandedCard === item.id && (
-                <div className={styles.extraContent}>
-                  <p>{item.content}</p>
-                  
-                </div>
-              )}
-            </div>
-          </div>
-         
-        ))}
-         
+          ))}
+        </div>
       </div>
-    </div>
-  </div>
-  </div>
+    </section>
   );
 };
 
 export default Articles;
+
+
+
+

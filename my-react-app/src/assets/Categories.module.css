@@ -1,19 +1,23 @@
+
+/* Wrapper */
 .wrapper {
   background: #cad8d0;
-  padding: 50px 30px;
- 
- 
+  padding: 60px 0; /* same vertical spacing as CitiesRow */
 }
 
+/* ===========================
+   HEADER
+=========================== */
 .title {
   font-size: 32px;
   font-weight: 700;
-  color: black;
+  color: #000;
+  margin-bottom: 16px; /* spacing below title */
 }
 
 .subtitle {
-  margin-top: 5px;
   color: #101010;
+  margin-bottom: 32px; /* spacing below subtitle to cards */
 }
 
 .viewAll {
@@ -22,21 +26,27 @@
   font-weight: 500;
 }
 
+/* ===========================
+   CARDS GRID
+=========================== */
 .cardRow {
-  row-gap: 30px !important;
+  row-gap: 32px; /* spacing between card rows */
   justify-content: center;
 }
 
-
+/* ===========================
+   CATEGORY CARD
+=========================== */
 .cityCard {
   background: #114e25;
   width: 100%;
-  height:200px;
+  height: 200px;
   border-radius: 15px;
   padding: 20px;
   text-align: center;
   transition: 0.3s ease;
   cursor: pointer;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,12 +58,13 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Icon box */
+/* Icon Box */
 .cityIcon {
   width: 55px;
   height: 55px;
   background: #f5f7f9;
   border-radius: 12px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,33 +76,49 @@
   color: #0c4b41;
 }
 
-/* FIXED — TEXT NOW VISIBLE */
+/* Title + Count */
 .cardTitle {
   font-size: 16px;
   font-weight: 600;
-  margin: 0;
-  color: #000 !important;
+  margin: 0 0 6px 0; /* spacing between title and count */
+  color: white;
 }
 
 .cardCount {
   font-size: 13px;
-  color: #cac3c3 !important;
+  color: #e2e2e2;
 }
 
-/* Responsive */
+/* ===========================
+   RESPONSIVE
+=========================== */
 @media (max-width: 992px) {
-  .cityCard { height: 150px; }
+  .cityCard {
+    height: 170px;
+  }
 }
 
 @media (max-width: 768px) {
-  .cityCard { height: 145px; }
+  .cityCard {
+    height: 160px;
+  }
 }
 
 @media (max-width: 576px) {
-  .cityCard { height: 140px; }
+  .cityCard {
+    height: 150px;
+  }
+
   .cityIcon {
     width: 48px;
     height: 48px;
   }
-  .cityIcon i { font-size: 22px; }
+
+  .cityIcon i {
+    font-size: 22px;
+  }
+
+  .cardTitle {
+    font-size: 14px;
+  }
 }

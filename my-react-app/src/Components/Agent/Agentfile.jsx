@@ -49,41 +49,47 @@ const agenntdada = [
 
 const Agentfile = () => {
   return (
-    <div className="container mt-3 py-5">
+ 
+    <div className="container py-5">
+      
+      {/* Heading Section */}
       <div className="text-center mb-5">
         <h2>Our Professional Agents Are Here to Guide You</h2>
         <p>Personalized assistance to help you make confident decisions.</p>
       </div>
 
+      {/* Agent Cards */}
       <div className={agent.agentGrid}>
         {agenntdada.map((item) => (
           <div key={item.id} className={agent.agentCard}>
-            <img src={item.img} alt={item.name} className={agent.agentImg} />
+            <img
+              src={item.img}
+              alt={item.name}
+              className={agent.agentImg}
+            />
 
             <h3>{item.name}</h3>
             <p className={agent.title}>{item.title}</p>
 
             <div className={agent.info}>
-              <p>
-                <strong>Office:</strong> {item.office}
-              </p>
-              <p>
-                <strong>Mobile:</strong> {item.mobile}
-              </p>
-              <p>
-                <strong>Email:</strong> {item.email}
-              </p>
+              <p><strong>Office:</strong> {item.office}</p>
+              <p><strong>Mobile:</strong> {item.mobile}</p>
+              <p><strong>Email:</strong> {item.email}</p>
             </div>
 
-            <button className={agent.contactBtn}>Contact Agent</button>
+            <button className={agent.contactBtn}>
+              Contact Agent
+            </button>
           </div>
         ))}
       </div>
+
     </div>
   );
 };
 
 export default Agentfile;
+
 
 
 

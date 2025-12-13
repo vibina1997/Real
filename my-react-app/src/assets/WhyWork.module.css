@@ -1,136 +1,137 @@
 
 
+
+/* Hero Section without any background color */
 .heroSection {
-  padding: 80px 0;
-  /* background: linear-gradient(180deg, #ffffff, #f4f7f6); */
+ /* same as py-5 in CitiesRow */
+  position: relative;
+  border-radius: 0;
+  overflow: visible;
 }
 
-/* LEFT TEXT */
+/* Optional overlay removed completely */
+.heroSection::before {
+  content: "";
+  display: none;
+}
+
+/* Container content */
+.heroSection .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Titles & Text */
 .title {
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 18px;
-  color: #0f241c;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333; /* Dark text for readability */
+  margin-bottom: 20px;
 }
 
 .lead {
-  color: #5b5b5b;
-  max-width: 520px;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
+  color: #555;
 }
 
-/* small blocks */
 .smallTitle {
-  font-weight: 700;
-  font-size: 15px;
-  margin-bottom: 6px;
-  color: #0b2a22;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 .smallText {
-  font-size: 14px;
-  color: #6b6b6b;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  color: #666;
 }
 
-/* IMAGE CARD */
-.imageCard {
-  width: 350px;
-  border-radius: 18px;
-  overflow: visible;
-  border: none;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-  position: relative;
-  background: transparent;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* card hover effect */
-.imageCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
-}
-
-.cardImageWrap {
-  overflow: hidden;
-  border-radius: 18px;
-}
-
-.cardImage {
-  width: 100%;
-  height: 430px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-/* image slight zoom on hover */
-.imageCard:hover .cardImage {
-  transform: scale(1.05);
-}
-
-.statBadge {
-  position: absolute;
-  left: 22px;
-  bottom: 22px;
-  background: #628141;
-  color: #fff;
-  padding: 12px 16px;
-  border-radius: 10px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  backdrop-filter: blur(3px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
-}
-
-.statBadge i {
-  font-size: 22px;
-}
-
-.statLabel {
-  font-size: 12px;
-  opacity: 0.85;
-}
-
-.statNumber {
-  font-weight: 700;
-  font-size: 15px;
-}
-
-/* BUTTON */
+/* Button */
 .ctaBtn {
-  background-color: #628141 !important;
-  color: #ffffff !important;
-  border: none !important;
-  padding: 12px 28px;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 15px;
-  transition: 0.3s ease;
-}
-
-.ctaBtn i {
-  font-size: 18px;
+  margin-top: 25px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 50px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  transition: all 0.3s;
 }
 
 .ctaBtn:hover {
-  background-color: #E67E22 !important;
-  transform: translateX(5px);
+  background-color: #333;
 }
 
-/* RESPONSIVE */
-@media (max-width: 991px) {
-  .cardImage { height: 360px; }
-  .imageCard { width: 300px; }
-  .title { font-size: 32px; }
+/* Card / Carousel */
+.imageCard {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Slight shadow for floating effect */
 }
 
-@media (max-width: 767px) {
-  .imageCard { width: 100%; max-width: 520px; }
-  .cardImage { height: 300px; }
-  .lead { max-width: 100%; }
-  .title { font-size: 28px; }
-  .heroSection { padding: 50px 0; }
+/* Carousel Images */
+.cardImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Total Clients Badge */
+.statBadge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.statBadge i {
+  font-size: 1.2rem;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  bottom: 10px;
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.carousel-indicators .active {
+  background-color: #333;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 50px 20px; /* responsive smaller padding */
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .cardImage {
+    height: 220px;
+  }
+
+  .statBadge {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
 }

@@ -38,48 +38,65 @@ const cardbox = [
 const CitiesRow = () => {
   const [active, setActive] = useState(1);
 
-  const next = () => setActive((prev) => (prev + 1) % cards.length);
-  const prev = () => setActive((prev) => (prev - 1 + cards.length) % cards.length);
+  // FIXED: changed cards.length → cardbox.length
+  const next = () => setActive((prev) => (prev + 1) % cardbox.length);
+  const prev = () => setActive((prev) => (prev - 1 + cardbox.length) % cardbox.length);
 
   return (
-  <div className="mt-3 py-4">
-    <div className={city.wrapper}>
-      <div className={city.panel}>
-        <h5 className={city.subTitle}>Featured</h5>
-        <h2 className={city.title}>Find Properties in These Cities</h2>
-        <p className={city.desc}>Check out some of the most in-demand spaces</p>
+    <section className="py-5">
+      <div className="container">
 
-        <div className={city.carousel}>
-          {cardbox.map((card, index) => {
-            let position = index - active;
+        <div className={city.panel}>
 
-            if (position < 0) position += cards.length;
-            if (position > 2) position -= cards.length;
+          {/* Heading */}
+          <h5 className={`${city.subTitle} mb-2`}>Featured</h5>
+          <h2 className={`${city.title} mb-3`}>Find Properties in These Cities</h2>
+          <p className={`${city.desc} mb-4`}>
+            Check out some of the most in-demand spaces
+          </p>
 
-            return (
-              <div key={card.id} className={`${city.card} ${city["pos" + position]}`}>
-                <img src={card.img} alt={card.title} className={city.cardImg} />
+          {/* Carousel */}
+          <div className={city.carousel}>
+            {cardbox.map((card, index) => {
+              let position = index - active;
 
-               
-                <div className={city.cardInfo}>
-                  <h4 className={city.cardTitle}>{card.title}</h4>
-                  <p className={city.cardPrice}>{card.price}</p>
+              if (position < 0) position += cardbox.length;
+              if (position > 2) position -= cardbox.length;
+
+              return (
+                <div
+                  key={card.id}
+                  className={`${city.card} ${city["pos" + position]}`}
+                >
+                  <img src={card.img} alt={card.title} className={city.cardImg} />
+
+                  <div className={city.cardInfo}>
+                    <h4 className={city.cardTitle}>{card.title}</h4>
+                    <p className={city.cardPrice}>{card.price}</p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
 
-        <div className={city.dots}>
-          <span onClick={prev} className={city.dot}></span>
-          <span onClick={next} className={city.dot}></span>
+          {/* Dots */}
+          <div className="mt-4 text-center">
+            <span onClick={prev} className={city.dot}></span>
+            <span onClick={next} className={city.dot}></span>
+          </div>
+
         </div>
       </div>
-    </div>
-    </div>
+    </section>
   );
 };
 
- 
 export default CitiesRow;
+
+
+
+
+
+ 
+
 

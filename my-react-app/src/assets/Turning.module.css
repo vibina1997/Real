@@ -1,14 +1,16 @@
 
 
 
-
-
+/* ===========================
+   SECTION SPACING
+=========================== */
 .sectionWrapper {
-  padding: 60px 0;
-  margin-top: 70px;
+  padding: 0;
 }
 
-
+/* ===========================
+   LEFT COLUMN + IMAGES
+=========================== */
 .leftColumn {
   position: relative;
   display: flex;
@@ -16,18 +18,10 @@
   gap: 18px;
 }
 
-
 @keyframes dropDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
-
 
 .smallImage {
   width: 230px;
@@ -35,12 +29,10 @@
   object-fit: cover;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-
   opacity: 0;
   animation: dropDown 0.7s ease forwards;
   animation-delay: 0.1s;
 }
-
 
 .mainImage {
   width: 310px;
@@ -48,13 +40,12 @@
   object-fit: cover;
   border-radius: 14px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.12);
-
   opacity: 0;
   animation: dropDown 0.9s ease forwards;
   animation-delay: 0.3s;
 }
 
-
+/* Stats Card */
 .statsCard {
   position: absolute;
   bottom: -18px;
@@ -91,18 +82,18 @@
   font-weight: 700;
 }
 
-
+/* ===========================
+   TEXT CONTENT
+=========================== */
 .title {
   font-size: 32px;
   font-weight: 700;
   color: #10221b;
-  margin-bottom: 18px;
 }
 
 .subText {
   font-size: 16px;
   color: #444;
-  margin-bottom: 22px;
   max-width: 470px;
 }
 
@@ -132,86 +123,28 @@
 
 .ctaButton:hover {
   background-color: #E67E22;
-  color: #fff;
 }
 
-
-/* TABLET */
+/* ===========================
+   RESPONSIVE
+=========================== */
 @media (max-width: 991px) {
-  .smallImage {
-    width: 190px;
-    height: 230px;
-  }
-
-  .mainImage {
-    width: 260px;
-    height: 320px;
-  }
-
-  .statsCard {
-    padding: 14px 16px;
-    width: 130px;
-  }
-
-  .title {
-    font-size: 30px;
-  }
+  .smallImage { width: 190px; height: 230px; }
+  .mainImage { width: 260px; height: 320px; }
+  .statsCard { width: 130px; padding: 14px 16px; }
+  .title { font-size: 30px; }
 }
-
 
 @media (max-width: 767px) {
-  /* stack columns vertically */
-  .row {
-    flex-direction: column !important;
-    text-align: center;
-  }
-
-  
-  .col-md-6.d-flex {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 20px !important;
-  }
-
-  .leftColumn {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  
-  .smallImage,
-  .mainImage {
-    width: 90%;
-    height: auto;
-  }
-
-  
-  .statsCard {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    margin-top: -20px;
-  }
-
-  .title {
-    font-size: 28px;
-  }
+  .leftColumn { align-items: center; }
+  .smallImage, .mainImage { width: 90%; height: auto; }
+  .statsCard { position: relative; left: 0; margin-top: -20px; }
+  .title { font-size: 28px; text-align: center; }
+  .subText, ul { text-align: center; margin: 0 auto; }
 }
-
 
 @media (max-width: 480px) {
-  .smallImage,
-  .mainImage {
-    width: 95%;
-  }
-
-  .statsCard {
-    width: 120px;
-    padding: 12px 14px;
-  }
-
-  .title {
-    font-size: 24px;
-  }
+  .smallImage, .mainImage { width: 95%; }
+  .statsCard { width: 120px; padding: 12px 14px; }
+  .title { font-size: 24px; }
 }
-

@@ -1,48 +1,50 @@
 .section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
-  padding: 50px 0;
+  text-align: left;
+  padding: 120px 0;
+ 
+
+  /* ⭐ Add your background image here */
+  background-image: url('../assets/Imges/agency.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .sectionLeft {
-  width: 50%;
+  width: 60%;
+  color: #fff; /* optional if bg is dark */
 }
 
 .sectionLeft h1 {
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 700;
   line-height: 1.3;
-  color: #111;
 }
 
 .sectionLeft p {
   margin-top: 15px;
-  font-size: 16px;
-  color: #444;
-}
-
-.sectionRight {
-  width: 50%;
-}
-
-.sectionRight img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
+  font-size: 18px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .section {
-    flex-direction: column;
+    padding: 80px 20px;
     text-align: center;
   }
 
-  .sectionLeft,
-  .sectionRight {
-    width: 50%;
+  .sectionLeft {
+    width: 100%;
+  }
+
+  .sectionLeft h1 {
+    font-size: 32px;
+  }
+
+  .sectionLeft p {
+    font-size: 16px;
   }
 }

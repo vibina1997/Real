@@ -1,63 +1,87 @@
 
    
+/* ===========================
+   BACKGROUND SECTION
+=========================== */
 .bgSection {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 80px 0;
-  position: relative;
-}
-
-/* blur + overlay */
-.bgSection::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding: 120px 0;      /* Space inside the background */
   width: 100%;
-  height: 100%;
-  backdrop-filter: blur(6px);
-  
-  z-index: 1;
 }
 
+/* ===========================
+   TEXT CONTAINER
+=========================== */
 .stepsContainer {
-  position: relative;
-  z-index: 2; /* make sure text is above overlay */
-}
-
-.iconWrapper {
-  font-size: 40px;
+  max-width: 900px;
+  margin: 0 auto;
   color: #ffffff;
-  background: rgba(0, 0, 0, 0.4);
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin: 0 auto 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease;
 }
 
-.iconWrapper:hover {
-  transform: scale(1.1);
-}
-
+/* ===========================
+   TITLES
+=========================== */
 .heading {
-  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .subheading {
- 
-  color: rgb(195 195 195) !important;
+  font-size: 16px;
+  margin-top: 5px;
+  color: #f1f1f1;
+}
+
+/* ===========================
+   STEPS BOX (ICONS + TEXT)
+=========================== */
+.iconWrapper {
+  width: 70px;
+  height: 70px;
+  background: #ffffff;
+  color: #0c4b41;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  font-size: 30px;
+  margin: 0 auto 15px auto;
+
+  box-shadow: 0 4px 18px rgba(255, 255, 255, 0.25);
 }
 
 .stepTitle {
-  color: #fff;
-  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 6px;
 }
 
 .stepDesc {
-  
-   color: rgb(209, 208, 208) !important;}
+  font-size: 15px;
+  color: #eaeaea;
+  margin-top: 6px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 26px;
+  }
+
+  .iconWrapper {
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+  }
+
+  .stepTitle {
+    font-size: 18px;
+  }
+}
+

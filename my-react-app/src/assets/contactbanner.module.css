@@ -1,0 +1,44 @@
+.contactBanner {
+  background: linear-gradient(135deg, #628141, #8BAE66);
+  padding: 80px 0;
+}
+
+.contactTitle {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.contactSubtitle {
+  font-size: 1.1rem;
+  color: #f1f5f0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .contactBanner {
+    padding: 60px 0;
+  }
+
+  .contactTitle {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .contactBanner {
+    padding: 50px 0;
+  }
+
+  .contactTitle {
+    font-size: 1.7rem;
+  }
+
+  .contactSubtitle {
+    font-size: 1rem;
+  }
+}

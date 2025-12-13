@@ -16,50 +16,47 @@ const categories = [
   { title: "Single Family", count: "5 Properties", icon: "bi-people" },
 ];
 
+
+
+
+
 const Categories = () => {
   return (
-    <div className='mt-3 py-4'>
-    <section className={catego.wrapper}>
-      <Container>
-        
-        {/* Header */}
-        <Row className="align-items-center mb-4">
-          <Col>
-            <h3 className={catego.title}>Featured Categories</h3>
-            <p className={catego.subtitle}>
-              Buy, sell, or rent properties effortlessly with expert guidance
-              and verified listings you can trust.
-            </p>
-          </Col>
-          <Col xs="auto">
-            <span className={catego.viewAll}>View All Categories →</span>
-          </Col>
-        </Row>
-
-        {/* Cards */}
-        <Row className={catego.cardRow}>
-          {categories.map((item, index) => (
-            <Col key={index} lg={2} md={4} sm={6} xs={6}>
-              <div className={catego.cityCard}>
-                <div className={catego.cityIcon}>
-                  <i className={`bi ${item.icon}`}></i>
-                </div>
-                <p className={catego.cardTitle}>{item.title}</p>
-                <small className={catego.cardCount}>{item.count}</small>
-              </div>
+    <section className={catego.sectionb}>
+      <div className={catego.wrapper}>
+        <Container>
+          {/* Header */}
+          <Row className="align-items-center mb-4">
+            <Col>
+              <h3 className={catego.title}>Featured Categories</h3>
+              <p className={catego.subtitle}>
+                Buy, sell, or rent properties effortlessly with expert guidance
+                and verified listings you can trust.
+              </p>
             </Col>
-          ))}
-        </Row>
+            <Col xs="auto">
+              <span className={catego.viewAll}>View All Categories →</span>
+            </Col>
+          </Row>
 
-      </Container>
+          {/* Cards */}
+          <Row className={`${catego.cardRow} justify-content-center`}>
+            {categories.map((item, index) => (
+              <Col key={index} lg={2} md={4} sm={6} xs={6} className="mb-4">
+                <div className={catego.cityCard}>
+                  <div className={catego.cityIcon}>
+                    <i className={`bi ${item.icon}`}></i>
+                  </div>
+                  <p className={catego.cardTitle}>{item.title}</p>
+                  <small className={catego.cardCount}>{item.count}</small>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </div>
     </section>
-    </div>
   );
 };
-
-;
-
- 
-
 
 export default Categories;

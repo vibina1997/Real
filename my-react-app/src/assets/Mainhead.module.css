@@ -1,34 +1,32 @@
-/* -----------------------------------------
-   LIGHT BACKGROUND + SOFT GLASS OVERLAY
------------------------------------------ */
+
+
 .rSection {
-  background: linear-gradient(135deg, #85c389, #d6eaf3);
-  padding: 50px 0;
+  background: url("../assets/Imges/subimoo.jpg") 
+              no-repeat center center / cover;
+  padding: 60px 0;
   position: relative;
   overflow: hidden;
+  height: 400px;
 }
 
-/* Soft light overlay + glass feel */
+
 .rSection::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.40);   /* brighter overlay */
-  backdrop-filter: blur(8px);              /* stronger glass blur */
-  -webkit-backdrop-filter: blur(8px);
+  /* background: rgba(255, 255, 255, 0.4); */
+  /* backdrop-filter: blur(8px); */
+  /* -webkit-backdrop-filter: blur(8px); */
   z-index: 0;
 }
 
-/* Make all content appear above overlay */
+
 .rSection * {
   position: relative;
   z-index: 1;
 }
 
 
-/* -----------------------------------------
-   GLASS SEARCH BOX
------------------------------------------ */
 .sBox {
   background: rgba(255, 255, 255, 0.30);
   backdrop-filter: blur(18px);
@@ -36,21 +34,32 @@
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.07);
-  padding: 15px;
+  padding: 20px;
+   margin-top: 50px;
 }
 
 
-/* -----------------------------------------
-   GLASS INPUTS & SELECTS
------------------------------------------ */
+
 .slect {
-  background: rgba(255, 255, 255, 0.25) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(200, 200, 200, 0.5) !important;
-  color: #020d0b !important;
-  border-radius: 12px;
-  padding: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: #fff;
+
+  background-image: 
+    linear-gradient(45deg, transparent 50%, #555 50%),
+    linear-gradient(135deg, #555 50%, transparent 50%);
+  background-position: calc(100% - 15px) center, calc(100% - 10px) center;
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+
+  padding-right: 35px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 45px;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .slect option {
@@ -58,64 +67,25 @@
 }
 
 
-/* -----------------------------------------
-   GLASS BUTTON
------------------------------------------ */
+.thead {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+  margin-top: 20px;
+}
+
 .archBtn {
-  background: rgba(255, 255, 255, 0.35) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 12px;
-  padding: 10px 0;
-  color: #114d44 !important;
-  font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  transition: 0.3s ease;
+  background-color: #628141;
+  color: #fff; /* Optional: white text */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
 }
 
 .archBtn:hover {
-  background: rgba(255, 255, 255, 0.55) !important;
-  transform: translateY(-2px);
-}
-
-
-/* -----------------------------------------
-   HEADING
------------------------------------------ */
-.thead {
-  font-size: 34px;
-  font-weight: 800;
-  color: #0c0c0c;
-  margin: 0;
-  line-height: 1.2;
-}
-
-
-/* -----------------------------------------
-   RIGHT IMAGE
------------------------------------------ */
-.tImage {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
-}
-
-
-/* -----------------------------------------
-   RESPONSIVE
------------------------------------------ */
-@media (max-width: 767px) {
-  .thead {
-    text-align: center;
-    font-size: 28px;
-  }
-
-  .tImage {
-    margin-top: 20px;
-  }
-
-  .sBox {
-    margin-top: 25px;
-  }
+  background-color: #E67E22;
 }

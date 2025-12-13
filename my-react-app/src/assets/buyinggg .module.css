@@ -1,10 +1,109 @@
-.sebut{
-    background-color:  rgb(17, 43, 78);;
-    color: aliceblue;
-    border-radius: 10px;
+/* Card */
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
 }
-.febut{
-    background-color: aliceblue;
-    color: black;
-    border-radius: 10px;
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+/* Image Wrapper */
+.cardImage {
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cardImage img:hover {
+  transform: scale(1.1);
+}
+
+/* Tags */
+.tagButtons {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.buyBtn, .featureBtn {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+}
+
+.buyBtn {
+  background-color: #628141;
+}
+
+.featureBtn {
+  background-color: #CA7842;
+}
+
+.buyBtn:hover { background-color: #CA7842; }
+.featureBtn:hover { background-color: #628141; }
+
+/* Content */
+.cardContent {
+  padding: 15px 20px;
+}
+
+.cardContent h5 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.cardContent h4 {
+  color: #28a745;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.cardContent p {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Features row */
+.features {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.features div {
+  text-align: center;
+}
+
+.features i {
+  font-size: 18px;
+  color: #628141;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.features span {
+  font-size: 0.8rem;
+  color: #555;
 }

@@ -1,21 +1,29 @@
 /* GLASS TRANSPARENT NAVBAR */
+/* ================== Navbar ================== */
 .navbarCustom {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(43, 101, 41, 0.15); /* glass effect */
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 12px 25px;
+  padding: 12px 30px;
   width: 100%;
-  transition: 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 1030;
 }
 
 /* Brand Name */
 .navBrand {
   font-size: 28px;
   font-weight: 800;
-  color: #0d2617 !important;
+  color: #0e0e0e !important;
   letter-spacing: 1px;
   text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.navBrand:hover {
+  color: #6ac59d;
+  transform: scale(1.05);
 }
 
 /* Nav Links */
@@ -24,7 +32,7 @@
   color: #0d2617;
   font-size: 16px;
   font-weight: 600;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .navLink:hover {
@@ -34,24 +42,41 @@
 
 /* Buttons */
 .button,
-.buttons {
-  background: rgba(98, 129, 65, 0.9);
-  color: #fff;
+.buttonSecondary {
   padding: 8px 22px;
   border-radius: 12px;
   font-weight: 600;
   border: none;
-  transition: 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
 
-.button:hover,
-.buttons:hover {
+/* Signin */
+.button {
+  background: rgba(98, 129, 65, 0.9);
+  color: #fff;
+}
+
+.button:hover {
   background: rgba(230, 126, 34, 0.9);
   transform: translateY(-2px);
 }
 
-/* Mobile menu glass */
+/* Signup */
+.buttonSecondary {
+  background:  rgba(98, 129, 65, 0.9);
+  color: #0d2617;
+  border: 1px solid rgba(13, 38, 23, 0.5);
+}
+
+.buttonSecondary:hover {
+  background:rgba(230, 126, 34, 0.9);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Mobile menu */
 @media (max-width: 992px) {
   .navbar-collapse {
     background: rgba(255, 255, 255, 0.25);
@@ -69,7 +94,7 @@
   }
 
   .button,
-  .buttons {
+  .buttonSecondary {
     width: 100%;
   }
 }
@@ -79,3 +104,9 @@
   filter: invert(1);
 }
 
+/* Optional: add shadow on scroll */
+.navbarCustom.scrolled {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+}

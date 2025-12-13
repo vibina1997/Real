@@ -4,12 +4,19 @@ import React from 'react'
 
 
 import homecard from '../../assets/Imges/homeimagecard.jpg'
-import sideimage from'../../assets/Imges/home.jpg'
+import related from '../../assets/Imges/relatedfive.jpg'
+import relate from '../../assets/Imges/relatedfor.jpg'
+import relat from '../../assets/Imges/relatedone.jpg'
+import srelated from '../../assets/Imges/relatedtree.jpg'
+import srelat from '../../assets/Imges/relatedtwo.jpg'
+import srela from '../../assets/Imges/relatedsix.jpg'
+import sreela from '../../assets/Imges/relatedseven.jpg'
+import homyy from '../../assets/Imges/home.jpg'
 import sideimag from '../../assets/Imges/apartment.jpg'
 
 
 
-
+import relttoo from "../../assets/Fist relatedpro.module.css"
 
 const RelatedProperties = () => {
   const cards = [
@@ -25,7 +32,7 @@ const RelatedProperties = () => {
     },
     { 
       id: 2, 
-      image: homecard,
+      image: related,
       head: "Luxury Family Home",
       price: "450000",
       location: "245/12 MG Road Kochi Ernakulam Kerala 682016",
@@ -35,7 +42,7 @@ const RelatedProperties = () => {
     },
     { 
       id: 3, 
-      image: homecard,
+      image: relate,
       head: "Luxury Family Home",
       price: "450000",
       location: "245/12 MG Road Kochi Ernakulam Kerala 682016",
@@ -45,7 +52,7 @@ const RelatedProperties = () => {
     },
     { 
       id: 4,
-      image: homecard,
+      image: relat,
       head: "Luxury Family Home",
       price: "450000",
       location: "245/12 MG Road Kochi Ernakulam Kerala 682016",
@@ -97,17 +104,17 @@ const RelatedProperties = () => {
 
         {/* RIGHT SIDE */}
         <div className="col-lg-5">
-          <img src={sideimage} className="img-fluid rounded-4 mb-3" />
+          <img src={homyy} className="img-fluid rounded-4 mb-3" />
 
           <div className="row g-3 mb-3">
             <div className="col-4">
-              <img src={sideimag} className="img-fluid rounded-3" />
+              <img src={srelat} className="img-fluid rounded-3" />
             </div>
             <div className="col-4">
-              <img src={sideimag} className="img-fluid rounded-3" />
+              <img src={ srela} className="img-fluid rounded-3" />
             </div>
             <div className="col-4">
-              <img src={sideimag} className="img-fluid rounded-3" />
+              <img src={srela} className="img-fluid rounded-3" />
             </div>
           </div>
 
@@ -125,8 +132,7 @@ const RelatedProperties = () => {
               perfect for modern lifestyles. With efficient layouts, ample natural light,
               and essential amenities, it provides a comfortable environment for families.
             </p>
-
-            <button className="btn btn-success px-4 rounded-pill">Buy Now</button>
+  <button className={relttoo.buyNowBtn}>Buy now</button>
           </div>
         </div>
 

@@ -6,7 +6,7 @@ import { div } from 'framer-motion/client'
 
 const Choose = () => {
   return (
-    <div className="container">
+
     <div className={choose.section}>
       <div className={choose.sectionLeft}>
         <h1>
@@ -18,15 +18,9 @@ const Choose = () => {
           your dream property with confidence.
         </p>
       </div>
-
-      <div className={choose.sectionRight}>
-        <img src={agency} alt="Agency Banner" />
-      </div>
-    </div>
     </div>
   );
 };
 
-
-
 export default Choose;
+
