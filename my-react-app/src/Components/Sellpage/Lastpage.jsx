@@ -5,7 +5,7 @@ import sstatoo from '../../assets/Lastpage.module.css'
 import homecard from "../../assets/Imges/homeimagecard.jpg";
 import sideimage from "../../assets/Imges/home.jpg";
 import sideimag from "../../assets/Imges/apartment.jpg";
-
+import { useNavigate } from "react-router-dom";
 
 const cardsdata = [
   {
@@ -51,6 +51,9 @@ const cardsdata = [
 ];
 
 const Lastpage= () => {
+  const navigate = useNavigate();
+
+
   return (
     <div className="container py-5">
 
@@ -60,7 +63,7 @@ const Lastpage= () => {
 
       <div className="row g-4">
 
-        {/* LEFT CARDS */}
+        
         <div className="col-lg-7">
           <div className="row g-4">
             {cardsdata.map((item) => (
@@ -93,7 +96,6 @@ const Lastpage= () => {
           </div>
         </div>
 
-        {/* RIGHT SIDE */}
         <div className="col-lg-5">
           <img src={sideimage} className={`img-fluid rounded-4 mb-3 ${sstatoo.bigImg}`} />
 
@@ -119,7 +121,12 @@ const Lastpage= () => {
               perfect for modern lifestyles.
             </p>
 
-            <button className="btn btn-success px-4 rounded-pill">Buy Now</button>
+            <button
+      className="btn btn-success px-4 rounded-pill"
+      onClick={() => navigate("/contact")}
+    >
+      Buy Now
+    </button>
           </div>
         </div>
       </div>

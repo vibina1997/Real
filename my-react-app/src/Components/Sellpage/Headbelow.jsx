@@ -6,15 +6,15 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 
 import imagoo from '../../assets/Imges/homepeople.jpg'
 
-
-
-
-
+import { useNavigate } from "react-router-dom";
 
 
 
 
 const Headbelow = () => {
+  const navigate = useNavigate();
+
+
   return (
     <section>
       <Container className="py-5">
@@ -42,7 +42,12 @@ const Headbelow = () => {
                 From modern apartments to luxury villas, we offer trusted
                 options that suit your lifestyle and budget.
               </p>
-              <Button className={headbelow.readBtn}>Read More →</Button>
+                <Button
+      className={headbelow.readBtn}
+      onClick={() => navigate("/home")}
+    >
+      Read More →
+    </Button>
             </div>
           </Col>
 

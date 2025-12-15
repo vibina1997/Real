@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      {/* Navbar */}
+   
       {!hideLayout && <Navbar />}
 
       <Routes>
@@ -41,7 +41,7 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
 
-        {/* After Login Home */}
+       
         <Route path="/home" element={<Home />} />
 
         {/* Public Pages */}

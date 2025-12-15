@@ -1,112 +1,102 @@
-/* GLASS TRANSPARENT NAVBAR */
-/* ================== Navbar ================== */
+:root {
+  --primary-green: #386641;
+  --dark-green: #2f5233;
+  --accent-orange: #F97A00;
+}
+
+/* Glass Navbar */
 .navbarCustom {
-  background: rgba(43, 101, 41, 0.15); /* glass effect */
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 12px 30px;
-  width: 100%;
-  transition: all 0.4s ease;
-  z-index: 1030;
+  background: rgba(56, 102, 65, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  border-radius:16px ;
+  margin-top: 25px;
+  height: 70px;
 }
 
-/* Brand Name */
+/* Brand */
 .navBrand {
-  font-size: 28px;
-  font-weight: 800;
-  color: #0e0e0e !important;
-  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
   text-decoration: none;
-  transition: 0.3s ease;
 }
 
-.navBrand:hover {
-  color: #6ac59d;
-  transform: scale(1.05);
+.logo {
+  width: 70px;
+  height: 70px;
+  filter: drop-shadow(0 0 6px rgba(249, 122, 0, 0.6));
+  margin-bottom: 16px;
 }
 
 /* Nav Links */
 .navLink {
+  color: #ffffff !important;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 6px;
   text-decoration: none;
-  color: #0d2617;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all 0.3s ease;
 }
 
-.navLink:hover {
-  color: #6ac59d;
-  transform: translateY(-2px);
+.navLink::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--accent-orange);
+  left: 0;
+  bottom: 0;
+  transition: 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
 }
 
 /* Buttons */
-.button,
-.buttonSecondary {
-  padding: 8px 22px;
-  border-radius: 12px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-}
-
-/* Signin */
 .button {
-  background: rgba(98, 129, 65, 0.9);
+  background: linear-gradient(135deg, #F97A00, #ff9b3d);
   color: #fff;
+  padding: 8px 22px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(249, 122, 0, 0.45);
+  transition: 0.3s ease;
 }
 
 .button:hover {
-  background: rgba(230, 126, 34, 0.9);
   transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(249, 122, 0, 0.6);
 }
 
-/* Signup */
 .buttonSecondary {
-  background:  rgba(98, 129, 65, 0.9);
-  color: #0d2617;
-  border: 1px solid rgba(13, 38, 23, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--accent-orange);
+  border: 1px solid rgba(249, 122, 0, 0.6);
+  padding: 7px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
 }
 
-.buttonSecondary:hover {
-  background:rgba(230, 126, 34, 0.9);
+/* User */
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-orange);
+  box-shadow: 0 0 10px rgba(249, 122, 0, 0.5);
+}
+
+.userName {
   color: #fff;
-  transform: translateY(-2px);
+  font-weight: 500;
 }
 
-/* Mobile menu */
-@media (max-width: 992px) {
-  .navbar-collapse {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    padding: 18px;
-    border-radius: 12px;
-    margin-top: 10px;
-  }
-
-  .navLink {
-    padding: 12px 0;
-    display: block;
-    font-size: 18px;
-  }
-
-  .button,
-  .buttonSecondary {
-    width: 100%;
-  }
-}
-
-/* Toggler icon white */
-.navbar-toggler-icon {
-  filter: invert(1);
-}
-
-/* Optional: add shadow on scroll */
-.navbarCustom.scrolled {
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  backdrop-filter: blur(20px) saturate(180%);
-}

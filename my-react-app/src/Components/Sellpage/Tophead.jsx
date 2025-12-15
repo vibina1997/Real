@@ -2,11 +2,12 @@ import React from 'react'
 import sellpro from '../../assets/buyproperty.module.css'
 import bannu from '../../assets/Imges/buybannertwo.jpg'
 import buybanner from '../../assets/Imges/byooo.jpg'
-
-
+import { useNavigate } from "react-router-dom";
 
 
 const Tophead = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={`${sellpro.bgFull} py-5`}>
 
@@ -59,7 +60,11 @@ const Tophead = () => {
 
                   <div className="col-12 col-md-3 mt-2">
                     <button className={`btn w-100 ${sellpro.btsearchBtn}`}>
-                      <i className="bi bi-search"></i> Search
+                      <i
+      className="bi bi-search"
+      style={{ cursor: "pointer" }}
+      onClick={() => navigate("/singlepage")}
+    ></i>
                     </button>
                   </div>
 

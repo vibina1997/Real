@@ -1,27 +1,47 @@
 import React from "react";
-import heroo from '../Components/Homepage/Hero.jsx'
-import { Link } from "react-router-dom";
-import styles from '../assets/Navbar.module.css';
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import styles from "../assets/Navbar.module.css"; // your CSS
 
-
-import { useState } from "react";
-
+import logo from '../assets/Imges/logouuu.png'
 
 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+    if (loggedIn) {
+      try {
+        const userData = JSON.parse(localStorage.getItem("currentUser"));
+        setUser(userData);
+      } catch {
+        localStorage.removeItem("currentUser");
+      }
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    setUser(null);
+    navigate("/signin");
+  };
 
   return (
-    <nav className={`navbar navbar-expand-lg fixed-top ${styles.navbarCustom}`}>
+    <nav className={` container navbar navbar-expand-lg fixed-top ${styles.navbarCustom}`}>
       <div className="container-fluid">
 
         {/* Brand */}
-        <Link className={styles.navBrand} to="/">
-          HomeRetro
+        <Link className={styles.navBrand} to="/home">
+          <img src={logo} alt="logo" className={styles.logo} />
+          <span>HomeRetro</span>
         </Link>
 
-        {/* Toggler */}
+        {/* Mobile Toggle */}
         <button
           className="navbar-toggler"
           type="button"
@@ -30,26 +50,49 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Collapse */}
+        {/* Menu */}
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
           <ul className="navbar-nav mx-auto gap-lg-5 gap-3 text-center mt-3 mt-lg-0">
-            <li className="nav-item"><Link className={styles.navLink} to="/home">Home</Link></li>
-            <li className="nav-item"><Link className={styles.navLink} to="/buy">Sell</Link></li>
-            <li className="nav-item"><Link className={styles.navLink} to="/sell">Buy</Link></li>
-            <li className="nav-item"><Link className={styles.navLink} to="/rent">Rent</Link></li>
-            <li className="nav-item"><Link className={styles.navLink} to="/agency">Agency</Link></li>
-            <li className="nav-item"><Link className={styles.navLink} to="/contact">Contact</Link></li>
+            {["Home", "Sell", "Buy", "Rent", "Agency", "Contact"].map((item) => (
+              <li className="nav-item" key={item}>
+                <Link
+                  className={styles.navLink}
+                  to={`/${item.toLowerCase()}`}
+                >
+                  {item}
+                </Link>
+              </li>
+            ))}
           </ul>
 
-          <div className="d-grid d-lg-flex gap-3 mt-3 mt-lg-0">
-            <Link to="/signin">
-              <button className={styles.button}>Signin</button>
-            </Link>
-            <Link to="/signup">
-              <button className={styles.buttonSecondary}>Signup</button>
-            </Link>
-          </div>
-
+          {/* Right Side */}
+          {!user ? (
+            <div className="d-grid d-lg-flex gap-3 mt-3 mt-lg-0">
+              <Link to="/signin">
+                <button className={styles.button}>Signin</button>
+              </Link>
+              <Link to="/signup">
+                <button className={styles.buttonSecondary}>Signup</button>
+              </Link>
+            </div>
+          ) : (
+            <div className="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+              <img
+                src={user.avatar || "https://i.pravatar.cc/40"}
+                alt="profile"
+                className={styles.avatar}
+              />
+              <span className={styles.userName}>
+                {user.name || user.email}
+              </span>
+              <button
+                className={styles.buttonSecondary}
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </nav>
@@ -57,23 +100,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-  
-
-
-
-
- 
-
-
-
-
-
-   
-
-
-
- 
-
-
-

@@ -1,8 +1,8 @@
 import React from 'react'
 
 import styles from '../../assets/Related.module.css'
-
-      
+import { useNavigate } from "react-router-dom";
+ import { Link } from "react-router-dom";     
 import homecard from "../../assets/Imges/homeimagecard.jpg";
 import sideimage from "../../assets/Imges/home.jpg";
 import Sidemoo from "../../assets/Imges/apartment.jpg";
@@ -52,7 +52,15 @@ const cards = [
   },
 ];
 
+
+
 const Related = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <div className="container py-5">
 
@@ -121,7 +129,12 @@ const Related = () => {
               perfect for modern lifestyles.
             </p>
 
-            <button className="btn btn-success px-4 rounded-pill">Buy Now</button>
+             <button
+      className="btn btn-success px-4 rounded-pill"
+      onClick={handleClick}
+    >
+      Buy Now
+    </button>
           </div>
         </div>
       </div>

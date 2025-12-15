@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 import secondcom from '../../assets/Pagethreecss/Second.module.css'
 
 import proprt from '../../assets/Imges/aproprty.jpg'
@@ -105,7 +105,14 @@ const secondcard = [
   },
 ];
 
+
 const Secondcom = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/singlepage");
+  };
+
   return (
     
         <section className="py-5">
@@ -126,7 +133,9 @@ const Secondcom = () => {
                       <img src={item.image} alt={item.head} />
     
                       <div className={secondcom.tagButtons}>
-                        <span className={secondcom.buyBtn}>For Rent</span>
+                       <span className={secondcom.buyBtn} onClick={handleClick} style={{ cursor: "pointer" }}>
+      For Rent
+    </span>
                         <span className={secondcom.featureBtn}>Featured</span>
                       </div>
                     </div>

@@ -1,30 +1,48 @@
 
 
+/* ---------- FOOTER ---------- */
 .footerSection {
-background: linear-gradient(135deg, #4a332a, #0D4715);
-
-  padding: 60px 0 20px;
+  background: linear-gradient(135deg, #386641, #0D4715);
+  padding: 60px 0 40px;
   color: #ffffffd9;
   font-size: 15px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* brand / logo */
+/* Brand / Logo */
 .brand {
-  font-size: 32pxpx;
+  font-size: 32px;
   font-weight: 700;
-  color: #fff;
+  background: linear-gradient(45deg, #F97A00, #386641);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
+  animation: logoPulse 4s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
 /* Section Titles */
 .footerTitle {
   font-weight: 600;
-  color: #f8f8f8;
+  background: linear-gradient(45deg, #F97A00, #386641);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 12px;
   font-size: 16px;
 }
 
+/* Highlight text */
+.highlight {
+  color: #F97A00;
+  font-weight: 600;
+}
 
+/* Links */
 .linkList {
   list-style: none;
   padding: 0;
@@ -37,90 +55,206 @@ background: linear-gradient(135deg, #4a332a, #0D4715);
 .navLink {
   color: #e8e8e8;
   text-decoration: none;
-  transition: 0.3s;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navLink::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #F97A00;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
 }
 
 .navLink:hover {
-  color: #628141;
-  padding-left: 4px;
+  color: #F97A00;
 }
 
+.navLink:hover::after {
+  width: 100%;
+}
 
+/* Social Icons */
 .socialIcons i {
   font-size: 22px;
-  transition: 0.3s;
+  transition: all 0.3s;
   opacity: 0.9;
   cursor: pointer;
 }
 
 .socialIcons i:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px) scale(1.15);
   opacity: 1;
-  color: #628141;
+  color: #F97A00;
+  animation: bounce 0.3s;
 }
 
+@keyframes bounce {
+  0%, 100% { transform: translateY(-4px) scale(1.15); }
+  50% { transform: translateY(-8px) scale(1.2); }
+}
+
+/* Newsletter */
+.searchBox {
+  background: rgba(255,255,255,0.08);
+  padding: 5px;
+  border-radius: 50px;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
 
 .searchBox input {
   flex: 1;
   border: none;
   padding: 10px 15px;
-  border-radius: 50px 0 0 50px;
+  border-radius: 50px;
   outline: none;
+  background: transparent;
+  color: #fff;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.searchBox input::placeholder {
+  color: #ddd;
+  animation: shimmer 2s infinite;
 }
 
 .searchBox button {
-  background: #E67E22;
+  background: linear-gradient(45deg, #F97A00, #386641);
   border: none;
   color: #fff;
-  padding: 10px 18px;
-  border-radius: 0 50px 50px 0;
+  padding: 10px 20px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .searchBox button:hover {
-  background: #628141;
+  transform: scale(1.05);
+  animation: pulse 1s infinite;
 }
 
+@keyframes pulse {
+  0%, 100% { transform: scale(1.05); }
+  50% { transform: scale(1.1); }
+}
 
+@keyframes shimmer {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Contact Strip / Need Help */
 .contactStrip {
   margin-top: 50px;
+  border-top: 3px solid;
+  border-image: linear-gradient(90deg, #F97A00, #386641) 1;
+  padding-top: 25px;
 }
 
 .contactBox {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 25px 30px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
   color: #fff;
+  transition: all 0.3s ease;
+}
+
+.contactBox:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.contactTitle {
+  animation: slideFadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideFadeIn {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
 .contactItem {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-weight: 500;
 }
 
 .contactItem i {
   font-size: 18px;
-  color: #E67E22;
+  color: #F97A00;
 }
 
+/* Copyright */
+footer p {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #e8e8e8;
+  animation: fadeIn 2s ease forwards;
+}
 
+/* Floating shapes */
+.floatingShape, .floatingShape2 {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: 1;
+  animation: float 8s ease-in-out infinite;
+}
+
+.floatingShape {
+  width: 120px;
+  height: 120px;
+  background: #F97A00;
+  top: -30px;
+  right: 50px;
+}
+
+.floatingShape2 {
+  width: 80px;
+  height: 80px;
+  background: #386641;
+  bottom: 20px;
+  left: 30px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(15deg); }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .contactBox {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .searchBox input {
+  .searchBox {
+    flex-direction: column;
+  }
+
+  .searchBox input,
+  .searchBox button {
     width: 100%;
+    margin: 5px 0 0 0;
   }
 }
-

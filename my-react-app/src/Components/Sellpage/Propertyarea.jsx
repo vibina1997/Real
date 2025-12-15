@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 import buying from '../../assets/buyinggg .module.css'
 
 import buycardo from '../../assets/Imges/buycardtwo.jpg'
@@ -104,6 +104,9 @@ const prodata = [
 ];
 
 const Propertyarea = () => {
+  const navigate = useNavigate();
+
+
   return (
     <section className="py-5">
       <div className="container ">
@@ -123,7 +126,13 @@ const Propertyarea = () => {
                   <img src={item.image} alt={item.head} />
 
                   <div className={buying.tagButtons}>
-                    <span className={buying.buyBtn}>For Buy</span>
+                   <span
+      className={buying.buyBtn}
+      style={{ cursor: "pointer" }}
+      onClick={() => navigate("/singlepage")}
+    >
+      For Buy
+    </span>
                     <span className={buying.featureBtn}>Featured</span>
                   </div>
                 </div>

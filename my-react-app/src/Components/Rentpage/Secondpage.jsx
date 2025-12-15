@@ -3,8 +3,16 @@ import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import secondp from '../../assets/secondpage.module.css'
 import imagecc from '../../assets/Imges/Rentpage.jpg'
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Secondpage = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/home");
+  };
+
   return (
    <section className={`${secondp.section} py-5`}>
 
@@ -35,9 +43,9 @@ const Secondpage = () => {
                 options that suit your lifestyle and budget.
               </p>
 
-              <Button className={secondp.readBtn}>
-                Read More →
-              </Button>
+             <Button className={secondp.readBtn} onClick={handleClick}>
+      Read More →
+    </Button>
             </div>
           </Col>
 

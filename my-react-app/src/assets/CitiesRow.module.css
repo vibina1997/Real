@@ -1,16 +1,19 @@
 
 
-/* Wrapper */
+
+
+
 .wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-/* Text Panel */
 .panel {
   text-align: center;
 }
+
+
 
 .subTitle {
   font-size: 14px;
@@ -31,26 +34,31 @@
   margin-top: 8px;
 }
 
-/* Carousel */
+
+
 .carousel {
   margin-top: 40px;
   display: flex;
   justify-content: center;
   position: relative;
-  height: 350px;
+  height: 380px;
+  overflow: hidden;
 }
 
-/* Card */
+
+
 .card {
   position: absolute;
   width: 260px;
   height: 330px;
   border-radius: 18px;
   overflow: hidden;
-  transition: all 0.5s ease-in-out;
   background: #fff;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease-in-out;
 }
+
+
 
 .cardImg {
   width: 100%;
@@ -75,23 +83,50 @@
   color: #555;
 }
 
-/* Positions */
-.pos0 {
+
+
+/* FAR FAR LEFT */
+.pos-3 {
+  transform: translateX(-720px) scale(0.6);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* FAR LEFT */
+.pos-2 {
+  transform: translateX(-520px) scale(0.7);
+  opacity: 0.35;
+  z-index: 1;
+}
+
+.pos-1 {
   transform: translateX(-280px) scale(0.85);
   opacity: 0.7;
+  z-index: 2;
 }
 
-.pos1 {
+.pos0 {
   transform: translateX(0) scale(1);
   opacity: 1;
+  z-index: 4;
 }
 
-.pos2 {
+/* RIGHT */
+.pos1 {
   transform: translateX(280px) scale(0.85);
   opacity: 0.7;
+  z-index: 2;
 }
 
-/* Dots */
+/* FAR RIGHT */
+.pos2 {
+  transform: translateX(520px) scale(0.7);
+  opacity: 0.35;
+  z-index: 1;
+}
+
+
+
 .dots {
   margin-top: 25px;
   text-align: center;
@@ -101,7 +136,7 @@
   display: inline-block;
   width: 12px;
   height: 12px;
-  background: #777;
+  background: #386641;
   border-radius: 50%;
   margin: 0 8px;
   cursor: pointer;
@@ -109,17 +144,18 @@
 }
 
 .dot:hover {
-  background: #333;
+  background:#F97A00;
 }
 
 .dot.active {
-  background: #222;
+  background:#386641;
 }
 
-/* Tablet */
+
+
 @media (max-width: 768px) {
   .carousel {
-    height: 300px;
+    height: 330px;
   }
 
   .card {
@@ -127,16 +163,29 @@
     height: 280px;
   }
 
-  .pos0 {
-    transform: translateX(-200px) scale(0.82);
+  .pos-3 {
+    transform: translateX(-560px) scale(0.55);
+  }
+
+  .pos-2 {
+    transform: translateX(-380px) scale(0.65);
+  }
+
+  .pos-1 {
+    transform: translateX(-200px) scale(0.8);
+  }
+
+  .pos1 {
+    transform: translateX(200px) scale(0.8);
   }
 
   .pos2 {
-    transform: translateX(200px) scale(0.82);
+    transform: translateX(380px) scale(0.65);
   }
 }
 
-/* Mobile */
+
+
 @media (max-width: 500px) {
   .carousel {
     height: 260px;
@@ -151,6 +200,9 @@
     opacity: 1;
   }
 
+  .pos-3,
+  .pos-2,
+  .pos-1,
   .pos0,
   .pos1,
   .pos2 {
@@ -159,7 +211,7 @@
   }
 }
 
-/* Extra Small */
+
 @media (max-width: 380px) {
   .carousel {
     height: 220px;
