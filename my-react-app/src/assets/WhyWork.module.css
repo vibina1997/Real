@@ -1,137 +1,175 @@
 
 
 
-/* Hero Section without any background color */
-.heroSection {
- /* same as py-5 in CitiesRow */
-  position: relative;
-  border-radius: 0;
-  overflow: visible;
+/* Section padding */
+.whyWorkSection {
+  padding: 80px 20px;
 }
 
-/* Optional overlay removed completely */
-.heroSection::before {
-  content: "";
-  display: none;
+/* FLEX WRAPPER */
+.whyWorkWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-/* Container content */
-.heroSection .container {
-  position: relative;
-  z-index: 1;
+/* LEFT CONTENT */
+.leftContent {
+  flex: 1 1 500px;
 }
 
-/* Titles & Text */
-.title {
+/* RIGHT CONTENT */
+.rightContent {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+/* HEADINGS & TEXT */
+.whyTitle {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #333; /* Dark text for readability */
   margin-bottom: 20px;
+  line-height: 1.3;
+  color: #0e0d0d;
 }
 
-.lead {
+.whyText {
   font-size: 1rem;
-  line-height: 1.6;
   color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
 }
 
-.smallTitle {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 5px;
+/* FEATURE BOXES */
+.featuresWrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 
-.smallText {
-  font-size: 0.95rem;
-  color: #666;
+.featureBox {
+  flex: 1 1 220px;
 }
 
-/* Button */
-.ctaBtn {
-  margin-top: 25px;
-  padding: 12px 30px;
+.featureBox h6 {
   font-size: 1rem;
-  border-radius: 50px;
-  background-color: #000;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.featureBox p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.buttonsss {
+  display: inline-block;
+  margin-top: 25px;
+}
+
+.buttonsss button {
+  background: linear-gradient(135deg, #628141, #8BAE66);
   color: #fff;
+  padding: 12px 28px;
+  border-radius: 12px;
   border: none;
-  transition: all 0.3s;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.ctaBtn:hover {
-  background-color: #333;
+.buttonsss button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #E67E22, #EBD5AB);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Card / Carousel */
+/* IMAGE CARD */
 .imageCard {
   border-radius: 20px;
   overflow: hidden;
   position: relative;
   max-width: 400px;
   width: 100%;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Slight shadow for floating effect */
+ 
 }
 
-/* Carousel Images */
+/* CAROUSEL IMAGE */
 .cardImage {
   width: 100%;
   height: 300px;
   object-fit: cover;
+  display: none;
   border-radius: 20px;
 }
 
-/* Total Clients Badge */
+.cardImageActive {
+  display: block;
+}
+
+
 .statBadge {
   position: absolute;
   bottom: 15px;
   left: 15px;
-  background: rgba(0, 0, 0, 0.7);
+  background:  #628141;
   color: #fff;
-  padding: 10px 15px;
-  border-radius: 12px;
+  padding: 10px 14px;
+  border-radius: 14px;
   display: flex;
-  align-items: center;
   gap: 10px;
-  font-size: 0.9rem;
+  align-items: center;
 }
 
 .statBadge i {
   font-size: 1.2rem;
 }
 
-/* Carousel Indicators */
-.carousel-indicators {
-  bottom: 10px;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .whyTitle {
+    font-size: 1.9rem;
+  }
 }
 
-.carousel-indicators button {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ccc;
-}
-
-.carousel-indicators .active {
-  background-color: #333;
-}
-
-/* Mobile responsive */
 @media (max-width: 768px) {
-  .heroSection {
-    padding: 50px 20px; /* responsive smaller padding */
+  .whyWorkWrapper {
+    flex-direction: column;
+    gap: 30px;
   }
 
-  .title {
-    font-size: 1.8rem;
+  .whyTitle, .whyText {
+    text-align: center;
+  }
+
+  .buttonsss {
+    display: flex;
+    justify-content: center;
   }
 
   .cardImage {
-    height: 220px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whyTitle {
+    font-size: 1.5rem;
   }
 
-  .statBadge {
-    font-size: 0.8rem;
-    padding: 8px 12px;
+  .featureBox h6 {
+    font-size: 0.95rem;
+  }
+
+  .featureBox p {
+    font-size: 0.85rem;
   }
 }

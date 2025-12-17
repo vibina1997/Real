@@ -1,26 +1,26 @@
-/* ---------- WRAPPER ---------- */
+
 .wrapper {
-  padding-top: 3rem;   /* matches py-5 spacing */
+  padding-top: 3rem;   
   padding-bottom: 3rem;
 }
 
-/* ---------- Heading ---------- */
+
 .heading {
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 700;
   color: #0f241c;
   margin-bottom: 40px;
   text-align: center;
 }
 
-/* ---------- Cards Container ---------- */
+
 .cardContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
 }
 
-/* ---------- Card ---------- */
+
 .card {
   background: #ffffff;
   border-radius: 18px;
@@ -35,7 +35,7 @@
   box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
 }
 
-/* ---------- Image Wrapper ---------- */
+
 .imageWrapper {
   position: relative;
   height: 220px;
@@ -86,8 +86,8 @@
 
 /* Title */
 .cardTitle {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   color: #0d1f18;
   margin-bottom: 12px;
 }

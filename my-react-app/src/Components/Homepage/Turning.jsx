@@ -15,18 +15,22 @@ import tatoo from "../../assets/Imges/subimoo.jpg"
 
 
 
-    const Turning = () => {
+ 
+
+const Turning = () => {
   return (
-    <section className="py-5">   {/* Added Bootstrap spacing */}
-      
+    <section className={`${turning.section} py-5 overflow-hidden`}>
       <div className={`container ${turning.sectionWrapper}`}>
         <div className="row align-items-center g-4">
 
-          {/* LEFT IMAGES */}
-          <div className="col-md-6 d-flex gap-4 justify-content-center">
-
+          {/* IMAGE COLUMN */}
+          <div className={`col-lg-6 d-flex gap-4 justify-content-center ${turning.leftAnim}`}>
             <div className={turning.leftColumn}>
-              <img src={subo} className={turning.smallImage} alt="family" />
+              <img
+                src={subo}
+                className={turning.smallImage}
+                alt="family"
+              />
 
               <div className={turning.statsCard}>
                 <p className={turning.iconBox}>
@@ -37,11 +41,15 @@ import tatoo from "../../assets/Imges/subimoo.jpg"
               </div>
             </div>
 
-            <img src={tatoo} className={turning.mainImage} alt="home" />
+            <img
+              src={tatoo}
+              className={turning.mainImage}
+              alt="home"
+            />
           </div>
 
-          {/* RIGHT CONTENT */}
-          <div className="col-md-6">
+          {/* TEXT COLUMN */}
+          <div className={`col-lg-6 ${turning.rightAnim}`}>
             <h2 className={`${turning.title} mb-3`}>
               Turning Property Dreams Into Reality
             </h2>
@@ -53,10 +61,18 @@ import tatoo from "../../assets/Imges/subimoo.jpg"
             </p>
 
             <ul className="list-unstyled mb-4">
-              <li className={turning.point}><i className="bi bi-check-circle-fill"></i> Secure & Verified</li>
-              <li className={turning.point}><i className="bi bi-check-circle-fill"></i> Wide Property Selection</li>
-              <li className={turning.point}><i className="bi bi-check-circle-fill"></i> Buy / Rent Options</li>
-              <li className={turning.point}><i className="bi bi-check-circle-fill"></i> Trusted Agents</li>
+              <li className={turning.point}>
+                <i className="bi bi-check-circle-fill"></i> Secure & Verified
+              </li>
+              <li className={turning.point}>
+                <i className="bi bi-check-circle-fill"></i> Wide Property Selection
+              </li>
+              <li className={turning.point}>
+                <i className="bi bi-check-circle-fill"></i> Buy / Rent Options
+              </li>
+              <li className={turning.point}>
+                <i className="bi bi-check-circle-fill"></i> Trusted Agents
+              </li>
             </ul>
 
             <button className={turning.ctaButton}>Learn More</button>
@@ -64,10 +80,10 @@ import tatoo from "../../assets/Imges/subimoo.jpg"
 
         </div>
       </div>
-
     </section>
   );
 };
 
-
 export default Turning;
+
+

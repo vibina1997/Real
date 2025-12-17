@@ -6,7 +6,6 @@ import styles from "../assets/Navbar.module.css"; // your CSS
 import logo from '../assets/Imges/logouuu.png'
 
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [user, setUser] = useState(null);
@@ -14,6 +13,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+
     if (loggedIn) {
       try {
         const userData = JSON.parse(localStorage.getItem("currentUser"));
@@ -31,17 +31,26 @@ const Navbar = () => {
     navigate("/signin");
   };
 
-  return (
-    <nav className={` container navbar navbar-expand-lg fixed-top ${styles.navbarCustom}`}>
-      <div className="container-fluid">
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "Sell", path: "/sell" },
+    { name: "Buy", path: "/buy" },
+    { name: "Rent", path: "/rent" },
+    { name: "Agency", path: "/agency" },
+    { name: "Contact", path: "/contact" },
+  ];
 
-        {/* Brand */}
-        <Link className={styles.navBrand} to="/home">
+  return (
+    <nav className={`navbar navbar-expand-lg fixed-top ${styles.navbarCustom}`}>
+      <div className="container">
+
+        {/* BRAND */}
+        <Link className={styles.navBrand} to="/">
           <img src={logo} alt="logo" className={styles.logo} />
           <span>HomeRetro</span>
         </Link>
 
-        {/* Mobile Toggle */}
+        {/* TOGGLE */}
         <button
           className="navbar-toggler"
           type="button"
@@ -50,22 +59,23 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Menu */}
+        {/* MENU */}
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
           <ul className="navbar-nav mx-auto gap-lg-5 gap-3 text-center mt-3 mt-lg-0">
-            {["Home", "Sell", "Buy", "Rent", "Agency", "Contact"].map((item) => (
-              <li className="nav-item" key={item}>
+            {navLinks.map((item) => (
+              <li className="nav-item" key={item.name}>
                 <Link
                   className={styles.navLink}
-                  to={`/${item.toLowerCase()}`}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
                 >
-                  {item}
+                  {item.name}
                 </Link>
               </li>
             ))}
           </ul>
 
-          {/* Right Side */}
+          {/* RIGHT SIDE */}
           {!user ? (
             <div className="d-grid d-lg-flex gap-3 mt-3 mt-lg-0">
               <Link to="/signin">
@@ -100,3 +110,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+

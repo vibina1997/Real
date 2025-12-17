@@ -37,10 +37,10 @@ const Statuse = () => {
 
   return (
     <div>
-      <div className={`${mainstatus.statussection} `}>
+      <div className={`${mainstatus.statussection} py-5 `}>
 
         <div className="text-center">
-          <i className="bi bi-building fs-1 mb-2"></i>
+          <i className="bi bi-building fs-1 mb-2 "></i>
           <h2>{properties}</h2>
           <p>Properties sold</p>
         </div>

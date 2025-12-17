@@ -13,66 +13,94 @@ import sell from '../../assets/Imges/subimoo.jpg'
    
 
 
+
+
+
 const Mainhead = () => {
   return (
-    <section className={`${buy.rSection} py-5`}>
+    <section className={buy.bgFul}>
+      <div className={buy.heroConten}>
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-md-10 text-center">
 
-  <div className="container">
-    <div className="row justify-content-center">
+              {/* TITLE */}
+              <h1 className={buy.htitl}>
+                Sell your property the smart way with{" "}
+                <span>Homeretro</span>
+              </h1>
 
-      <div className="col-md-10 text-center">
-        <h1 className={buy.thead}>
-          <h1 className="display-5 fw-bold mb-3" style={{ color: '#ffffffff' }}>
-      Sell your property the smart way with <span style={{ color: '#E67E22' }}>Homeretro</span>
-    </h1>
-        </h1>
+              {/* SEARCH BOX */}
+              <div className={buy.archBo}>
+                <div className="row g-3">
 
-        <div className={`${buy.sBox} `}>
-          <div className="row g-3">
+                  {/* CATEGORY */}
+                  <div className="col-md-3 col-6">
+                    <div className={buy.inputWra}>
+                      <select required className={buy.glassInpu}>
+                        <option value="" hidden></option>
+                        <option>Residential</option>
+                        <option>Commercial</option>
+                        <option>Land</option>
+                        <option>Other</option>
+                      </select>
+                      <label className={buy.floatLabe}>
+                        Category
+                      </label>
+                    </div>
+                  </div>
 
-            <div className="col-md-3 col-6">
-              <select className={`form-select ${buy.slect}`}>
-                <option value="">Select Category</option>
-                <option value="residential">Residential</option>
-                <option value="commercial">Commercial</option>
-                <option value="land">Land</option>
-                <option value="other">Other</option>
-              </select>
+                  {/* TYPE */}
+                  <div className="col-md-3 col-6">
+                    <div className={buy.inputWra}>
+                      <select required className={buy.glassInpu}>
+                        <option value="" hidden></option>
+                        <option>House</option>
+                        <option>Apartment</option>
+                        <option>Villa</option>
+                        <option>Plot</option>
+                      </select>
+                      <label className={buy.floatLabe}>
+                        Type
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* LOCATION */}
+                  <div className="col-md-3 col-6">
+                    <div className={buy.inputWra}>
+                      <select required className={buy.glassInpu}>
+                        <option value="" hidden></option>
+                        <option>Wayanad</option>
+                        <option>Kochi</option>
+                        <option>Palakkad</option>
+                        <option>Kannur</option>
+                      </select>
+                      <label className={buy.floatLabe}>
+                        Location
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* SEARCH BUTTON */}
+                  <div className="col-md-3 col-6">
+                    <button className={buy.btsearchBt}>
+                      <i className="bi bi-search me-2"></i>
+                      Search
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+
             </div>
-
-            <div className="col-md-3 col-6">
-              <select className={`form-select ${buy.slect}`}>
-                <option value="">Select Type</option>
-                <option value="house">House</option>
-                <option value="apartment">Apartment</option>
-                <option value="villa">Villa</option>
-                <option value="plot">Plot</option>
-              </select>
-            </div>
-
-            <div className="col-md-3 col-6">
-              <select className={`form-select ${buy.slect}`}>
-                <option value="">Select Location</option>
-                <option value="wayanad">Wayanad</option>
-                <option value="kochi">Kochi</option>
-                <option value="palakkad">Palakkad</option>
-                <option value="kannur">Kannur</option>
-              </select>
-            </div>
-
-           <div className="col-md-3 col-6">
-  <button className={`w-100 ${buy.archBtn}`}>
-    <i className="bi bi-search"></i> Search
-  </button>
-</div>
-
           </div>
         </div>
       </div>
+    </section>
+ 
 
-    </div>
-  </div>
-</section>
+
 
   );
 };

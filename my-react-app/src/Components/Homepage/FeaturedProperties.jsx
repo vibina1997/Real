@@ -88,7 +88,7 @@ const FeaturedProperties = () => {
         <div className={styles.feature}>
 
           <h2 className={`${styles.head} mb-2`}>Featured Properties</h2>
-          <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p className="mb-4">Explore a curated selection of properties that closely match your preferences, location, and lifestyle needs..</p>
 
           <div className="row g-4">
             {cardData.map((card) => (

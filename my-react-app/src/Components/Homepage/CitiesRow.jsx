@@ -1,6 +1,6 @@
 
 
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import city from '../../assets/CitiesRow.module.css'
 
 import cityon from '../../assets/Imges/cityone.jpg'
@@ -9,7 +9,8 @@ import citytr from '../../assets/Imges/citythree.jpg'
 import cityf from '../../assets/Imges/cityfore.jpg'
 import  light from '../../assets/Imges/lighthome.jpg'
 import lighoo from '../../assets/Imges/lighthouse.jpg'
-import { div, title } from "framer-motion/client";
+
+
 
 
 const cardbox = [
@@ -51,40 +52,54 @@ const cardbox = [
   },
 ];
 
+
+
 const CitiesRow = () => {
   const [active, setActive] = useState(0);
+  const [pause, setPause] = useState(false);
+
+  const total = cardbox.length;
 
   const next = () => {
-    setActive((prev) => (prev + 1) % cardbox.length);
+    setActive((prev) => (prev + 1) % total);
   };
 
   const prev = () => {
-    setActive((prev) => (prev - 1 + cardbox.length) % cardbox.length);
+    setActive((prev) => (prev - 1 + total) % total);
   };
 
+  
+  useEffect(() => {
+    if (pause) return;
+
+    const timer = setInterval(() => {
+      next();
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, [pause]);
+
   return (
-    <section className="py-5">
-      <div className="container">
+    <section className={city.wrapper}>
+      <div className="container py-5">
         <div className={city.panel}>
-        
           <h5 className={city.subTitle}>Featured</h5>
           <h2 className={city.title}>Find Properties in These Cities</h2>
           <p className={city.desc}>
             Check out some of the most in-demand spaces
           </p>
 
-        
-          <div className={city.carousel}>
+          {/* CAROUSEL */}
+          <div
+            className={city.carousel}
+            onMouseEnter={() => setPause(true)}
+            onMouseLeave={() => setPause(false)}
+          >
             {cardbox.map((card, index) => {
               let position = index - active;
 
-             
-              if (position > cardbox.length / 2) {
-                position -= cardbox.length;
-              }
-              if (position < -cardbox.length / 2) {
-                position += cardbox.length;
-              }
+              if (position > total / 2) position -= total;
+              if (position < -total / 2) position += total;
 
               return (
                 <div
@@ -108,8 +123,8 @@ const CitiesRow = () => {
             })}
           </div>
 
-         
-          <div className="mt-4 text-center">
+          {/* CONTROLS */}
+          <div className={city.dots}>
             <span onClick={prev} className={city.dot}></span>
             <span onClick={next} className={city.dot}></span>
           </div>
@@ -120,6 +135,8 @@ const CitiesRow = () => {
 };
 
 export default CitiesRow;
+
+
 
 
 

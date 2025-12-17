@@ -1,15 +1,41 @@
+.herosec {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+/* ORANGE SLIDE TEXT */
+.highlight {
+  display: inline-block;
+  color: #F97A00;
+  font-weight: 700;
+  position: relative;
+
+  animation: slideUpFade 1s ease-out forwards;
+}
+
+/* SLIDE + FADE ANIMATION */
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 .hero {
   position: relative;
-  min-height: 100vh;   /* FIXED: no cut-off */
-  height: auto;        /* FIXED */
+  min-height: 100vh;   
+  height: auto;        
   width: 100%;
-  overflow: visible;   /* FIXED: allow page scrolling */
+  overflow: visible;   
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 120px; /* gives space for search bar */
+  padding-bottom: 120px; 
 }
 
 
@@ -23,7 +49,7 @@
   z-index: -1;
 }
 
-/* Overlay */
+
 .hero::after {
   content: "";
   position: absolute;
@@ -34,7 +60,7 @@
   z-index: 0;
 }
 
-/* Heading */
+
 .herosec {
   font-size: 42px;
   font-weight: 700;
@@ -44,22 +70,22 @@
   text-align: center;
 }
 
-/* Search Box */
+
 .inputese {
   position: absolute;
   left: 50%;
-  bottom: 40px;         /* FIXED for all screens */
+  bottom: 40px;         
   transform: translateX(-50%);
   width: 100%;
   max-width: 1000px;
   z-index: 10;
-  background: rgb(255 255 255 / 6%);
+  /* background: rgb(255 255 255 / 6%);
   backdrop-filter: blur(14px);
-  border-radius: 16px;
+  border-radius: 16px; */
   padding: 20px;
 }
 
-/* Icon */
+
 .inputIcon {
   position: absolute;
   right: 12px;
@@ -73,13 +99,15 @@
   padding-right: 35px;
 }
 
-/* Buttons */
+
 .serch {
-  padding: 8px;
+  /* padding: 8px; */
   border: 1px solid white;
   background-color: transparent;
   border-radius: 10px;
   color: white;
+  height: 40px;
+  margin-top:25px ;
 }
 
 .fillte {
@@ -92,10 +120,10 @@
   margin-top: 25px;
 }
 
-/* Popular Container (Fixed) */
+
 .popular {
   margin-top: 60px;
-  margin-bottom: 90px; /* FIXED from 260px */
+  margin-bottom: 90px; 
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -117,7 +145,7 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Buttons Hover */
+
 .popular button {
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -128,7 +156,7 @@
   background-color: rgba(255,255,255,0.2);
 }
 
-/* Staggered Animation */
+
 .popular button:nth-child(2) { animation: popDelay 0.4s forwards; }
 .popular button:nth-child(3) { animation: popDelay 0.6s forwards; }
 .popular button:nth-child(4) { animation: popDelay 0.8s forwards; }
@@ -156,4 +184,32 @@
 
 @media (min-width: 1400px) {
   .inputese { bottom: 70px; }
+}
+/* Text slide animation */
+.slideText {
+  overflow: hidden;
+}
+
+.slideText span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: textSlideUp 0.6s ease forwards;
+}
+
+/* Delay one by one */
+.slideText span:nth-child(1) { animation-delay: 0.2s; }
+.slideText span:nth-child(2) { animation-delay: 0.4s; }
+.slideText span:nth-child(3) { animation-delay: 0.6s; }
+.slideText span:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes textSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

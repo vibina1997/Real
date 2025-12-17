@@ -1,6 +1,5 @@
 import React from "react";
-
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import FooterComponent from "./Components/FooterComponent";
 
@@ -23,26 +22,24 @@ import Mainhero from "./Components/Sighnf/Mainhero";
 function App() {
   const location = useLocation();
 
-  // Pages where Navbar & Footer should be hidden
-  const hideLayoutPaths = ["/", "/signin", "/signup"];
-
+  // Hide layout ONLY on auth pages
+  const hideLayoutPaths = ["/signin", "/signup"];
   const hideLayout = hideLayoutPaths.includes(location.pathname);
 
   return (
     <>
-   
       {!hideLayout && <Navbar />}
 
       <Routes>
-        {/* First Screen */}
-        <Route path="/" element={<Mainhero />} />
+        {/* MAIN HOME PAGE */}
+        <Route path="/" element={<Home />} />
+
+        {/* Optional intro page */}
+        <Route path="/welcome" element={<Mainhero />} />
 
         {/* Auth Pages */}
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
-
-       
-        <Route path="/home" element={<Home />} />
 
         {/* Public Pages */}
         <Route path="/buy" element={<Buy />} />
@@ -63,7 +60,6 @@ function App() {
         />
       </Routes>
 
-      {/* Footer */}
       {!hideLayout && <FooterComponent />}
     </>
   );

@@ -119,9 +119,9 @@ const Secondcom = () => {
           <div className="container ">
     
             <h2 className="mb-3 fw-bold">
-              Premium Communities for Confident Home Buying
+              Experience Premium Communities Designed for Renters
             </h2>
-            <p>Unlock confident home buying with thoughtfully designed premium communities.</p>
+            <p>Unlock a confident rental experience in thoughtfully designed premium communities..</p>
     
             <div className="row g-4">
               {secondcard.map((item) => (

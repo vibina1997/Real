@@ -1,7 +1,7 @@
 
 /* Wrapper */
 .wrapper {
-  background: #cad8d0;
+  background: #ebf0ed;
   padding: 60px 0; /* same vertical spacing as CitiesRow */
 }
 
@@ -38,7 +38,7 @@
    CATEGORY CARD
 =========================== */
 .cityCard {
-  background: #114e25;
+  background:  #628141;
   width: 100%;
   height: 200px;
   border-radius: 15px;
@@ -46,6 +46,7 @@
   text-align: center;
   transition: 0.3s ease;
   cursor: pointer;
+
 
   display: flex;
   flex-direction: column;
@@ -73,7 +74,7 @@
 
 .cityIcon i {
   font-size: 26px;
-  color: #0c4b41;
+  color: #E67E22,;
 }
 
 /* Title + Count */

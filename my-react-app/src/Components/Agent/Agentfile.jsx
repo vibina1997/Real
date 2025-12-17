@@ -53,7 +53,7 @@ const Agentfile = () => {
     <div className="container py-5">
       
       {/* Heading Section */}
-      <div className="text-center mb-5">
+      <div className="text-center ">
         <h2>Our Professional Agents Are Here to Guide You</h2>
         <p>Personalized assistance to help you make confident decisions.</p>
       </div>

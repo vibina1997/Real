@@ -8,7 +8,7 @@ const Guidance = () => {
       
   
     <div>
-      <div className="container mt-5 py-5">
+      <div className="container  py-5">
         <div className={guid.propertysection}>
           
           <img 

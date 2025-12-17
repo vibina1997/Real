@@ -1,27 +1,54 @@
 import React from 'react'
 
-import { Container, Row, Col, Button } from 'react-bootstrap'
-import secondp from '../../assets/secondpage.module.css'
-import imagecc from '../../assets/Imges/Rentpage.jpg'
-import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+
+import secondp from "../../assets/secondpage.module.css";
+import imagecc from "../../assets/Imges/Rentpage.jpg";
 
 const Secondpage = () => {
   const navigate = useNavigate();
+  const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
 
   const handleClick = () => {
     navigate("/home");
   };
 
-  return (
-   <section className={`${secondp.section} py-5`}>
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect(); // run once
+        }
+      },
+      { threshold: 0.3 }
+    );
 
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      className={`${secondp.section} py-5`}
+    >
       <Container>
         <Row className="align-items-center gy-4">
 
-          {/* Left Image */}
+          {/* LEFT IMAGE */}
           <Col md={6}>
-            <div className={secondp.slideLeft}>
+            <div
+              className={`${secondp.slideLeft} ${
+                visible ? secondp.active : ""
+              }`}
+            >
               <img
                 src={imagecc}
                 alt="Home"
@@ -30,9 +57,13 @@ const Secondpage = () => {
             </div>
           </Col>
 
-          {/* Right Content */}
+          {/* RIGHT CONTENT */}
           <Col md={6}>
-            <div className={secondp.slideRight}>
+            <div
+              className={`${secondp.slideRight} ${
+                visible ? secondp.active : ""
+              }`}
+            >
               <h2 className={secondp.title}>
                 Start Your Home-Buying Journey Today
               </h2>
@@ -43,18 +74,19 @@ const Secondpage = () => {
                 options that suit your lifestyle and budget.
               </p>
 
-             <Button className={secondp.readBtn} onClick={handleClick}>
-      Read More →
-    </Button>
+              <Button
+                className={secondp.readBtn}
+                onClick={handleClick}
+              >
+                Read More →
+              </Button>
             </div>
           </Col>
 
         </Row>
       </Container>
     </section>
-  )
-}
+  );
+};
 
-export default Secondpage
-
-
+export default Secondpage;

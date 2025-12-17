@@ -1,91 +1,170 @@
-
-
-.rSection {
-  background: url("../assets/Imges/subimoo.jpg") 
-              no-repeat center center / cover;
-  padding: 60px 0;
+/* =========================
+   HERO BACKGROUND
+========================= */
+.bgFul {
+  background-image: url("../assets/Imges/subimoo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
   position: relative;
   overflow: hidden;
-  height: 400px;
 }
 
-
-.rSection::before {
+/* Dark overlay */
+.bgFul::before {
   content: "";
   position: absolute;
   inset: 0;
-  /* background: rgba(255, 255, 255, 0.4); */
-  /* backdrop-filter: blur(8px); */
-  /* -webkit-backdrop-filter: blur(8px); */
-  z-index: 0;
-}
-
-
-.rSection * {
-  position: relative;
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
-
-.sBox {
-  background: rgba(255, 255, 255, 0.30);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.07);
-  padding: 20px;
-   margin-top: 50px;
+/* =========================
+   CONTENT
+========================= */
+.heroConten {
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
 
-
-
-.slect {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  background-color: #fff;
-
-  background-image: 
-    linear-gradient(45deg, transparent 50%, #555 50%),
-    linear-gradient(135deg, #555 50%, transparent 50%);
-  background-position: calc(100% - 15px) center, calc(100% - 10px) center;
-  background-size: 5px 5px;
-  background-repeat: no-repeat;
-
-  padding-right: 35px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  height: 45px;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-.slect option {
-  color: #000;
-}
-
-
-.thead {
-  font-size: 36px;
+/* =========================
+   TITLE
+========================= */
+.htitl {
+  font-size: 42px;
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.3;
-  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-.archBtn {
-  background-color: #628141;
-  color: #fff; /* Optional: white text */
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.highligh {
+  color: #f97a00;
+}
+
+/* =========================
+   GLASS SEARCH BOX
+========================= */
+.archBo {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  max-width: 900px;
+  margin: auto;
+}
+
+/* =========================
+   INPUT WRAPPER
+========================= */
+.inputWra {
+  position: relative;
+  width: 100%;
+}
+
+/* =========================
+   GLASS SELECT INPUT
+========================= */
+.glassInpu {
+  width: 100%;
+  height: 46px;
+  padding: 12px 40px 12px 14px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 10px;
+  color: #ffffff;
+  font-weight: 500;
+  outline: none;
+  appearance: none;
+  transition: all 0.25s ease;
+
+  /* dropdown arrow */
+  background-image: url("data:image/svg+xml,%3Csvg fill='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px;
 }
 
-.archBtn:hover {
-  background-color: #E67E22;
+/* =========================
+   DROPDOWN OPTION FIX
+========================= */
+.glassInpu option {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 500;
 }
+
+/* =========================
+   FLOATING LABEL
+========================= */
+.floatLabe {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+/* FLOAT WHEN ACTIVE */
+.glassInpu:focus + .floatLabe,
+.glassInpu:valid + .floatLabe {
+  top: -9px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+/* =========================
+   INTERACTIONS
+========================= */
+.glassInpu:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.glassInpu:focus {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   SEARCH BUTTON
+========================= */
+.btsearchBt {
+  width: 100%;
+  height: 46px;
+  background: linear-gradient(135deg, #628141, #8bae66);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btsearchBt:hover {
+  background: linear-gradient(135deg, #4f6d34, #6e8f4b);
+  transform: translateY(-1px);
+}
+
+
+@media (max-width: 768px) {
+  .htitl {
+    font-size: 28px;
+  }
+
+  .archBo {
+    padding: 16px;
+  }
+}
+

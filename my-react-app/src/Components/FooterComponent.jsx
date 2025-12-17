@@ -76,14 +76,14 @@ const FooterComponent = () => {
 
           <div className={styles.contactItem}>
             <i className="bi bi-envelope-fill"></i>
-            <span>support@yourbrand.com</span>
+            <span>support@Xenproperties.in</span>
           </div>
         </div>
       </div>
 
       {/* ---------- COPYRIGHT ---------- */}
       <p className="text-center mt-4 mb-0 small">
-        © 2025 HomeRetro. All Rights Reserved.
+        © 2025 Xenproperties. All Rights Reserved.
       </p>
 
       {/* ---------- Floating Shapes ---------- */}

@@ -1,13 +1,97 @@
-.buyNowBtn {
-  background-color: #628141;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 14px; /* pill style */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-.buyNowBtn:hover {
-  background-color: #E67E22;
+.subheading {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 30px;
+}
+
+/* Card */
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.imageWrapper {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text */
+.title {
+  font-weight: 700;
+}
+.price {
+  color: #628141;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Right Side */
+.bigImg {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.sideBigImgWrapper {
+  perspective: 1000px;
+}
+
+.rotateAnimation {
+  animation: rotateFade 0.7s ease;
+}
+
+@keyframes rotateFade {
+  from { transform: rotateY(90deg); opacity: 0; }
+  to { transform: rotateY(0); opacity: 1; }
+}
+
+.smallImg {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.titleRight {
+  font-weight: 700;
+}
+
+/* Button */
+.buttonsss {
+  background: linear-gradient(135deg, #628141, #8bae66);
+  border: none;
+  padding: 12px 28px;
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* Pagination */
+.page {
+  padding: 6px 14px;
+  border: none;
+ 
+  border-radius: 6px;
+}
+.active {
+  background: #628141;
+  color: white;
 }

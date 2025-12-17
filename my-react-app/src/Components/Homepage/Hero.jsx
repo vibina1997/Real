@@ -25,13 +25,22 @@ return(
    <div className="text-white">
     <div className="row text-center text-md-start pt-5">
       <div className="col-md-8 mx-auto">
-        <h1 className={`${styles.herosec} fw-bold`}>
-          Explore. Buy. Sell. Rent. All in One Place.
-        </h1>
+       <h1 className={`${styles.herosec} fw-bold`}>
+  Explore. Buy. Sell. Rent.
+  
+  <span className={styles.highlight}>
+    All in One Place
+  </span>
+</h1>
 
-        <p className="text-light text-white mt-2 fs-5">
-          Find your dream property with ease — trusted listings, verified agents, and smart search tools.
-        </p>
+
+      <p className={`${styles.slideText} mt-2 fs-5 text-white slideText`}>
+  <span>Find your dream property with ease —</span>
+  <span> trusted listings,</span>
+  <span> verified agents,</span>
+  <span> and smart search tools.</span>
+</p>
+
       </div>
     </div>
 </div>
@@ -43,11 +52,12 @@ return(
           <div className="col-12 col-sm-6 col-md-3 position-relative">
             <p className="mb-1 text-white">Keyword</p>
             <input
-              type="text"
-              className={`form-control ${styles.inputWithIcon}`}
-              placeholder="Enter Keyword"
-            />
-            <i className={`bi bi-search ${styles.inputIcon}`}></i>
+  type="text"
+  className={`form-control ${styles.inputWithIcon}`}
+  placeholder="Search location, property..."
+/>
+<i className={`bi bi-search ${styles.inputIcon}`}></i>
+
           </div>
 
           <div className="col-12 col-sm-6 col-md-3">
@@ -72,7 +82,7 @@ return(
           </div>
 
           <div className="col-12 col-sm-6 col-md-3 d-flex gap-2">
-            <button className={`${styles.fillte} flex-fill`}>Filter</button>
+           
             <button className={`${styles.serch} flex-fill`}>Search</button>
           </div>
 
@@ -81,16 +91,7 @@ return(
     </div>
 
     
- <div className={`popular-search mt-4 ${styles.popular}`}>
-  <div className="d-flex align-items-center justify-content-center gap-3 flex-wrap text-center">
-    <h6 className="mb-0 text-light">Popular Search:</h6>
-
-    <button className="btn btn-outline-light">Modern Villa</button>
-    <button className="btn btn-outline-light">Studio Apartment</button>
-    <button className="btn btn-outline-light">Town House</button>
-    <button className="btn btn-light">More</button>
-  </div>
-</div>
+ 
 
 
   </div>

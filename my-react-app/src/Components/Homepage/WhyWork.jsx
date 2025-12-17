@@ -8,81 +8,70 @@ import styles from "../../assets/WhyWork.module.css";
 
 
 
+
+
 const WhyWork = () => {
   return (
-    <section className="py-5">
-      <Container>
-        <Row className="align-items-center">
-          {/* Left Text Column */}
-          <Col xs={12} md={7} lg={6}>
-            <h2 className="mb-3">
-              Why You Should Work
-              <br />
-              With Us
+    <section className={`${styles.whyWorkSection} py-5 overflow-hidden`}>
+
+      <div className="container">
+        <div className={styles.whyWorkWrapper}>
+
+          {/* LEFT CONTENT */}
+          <div className={styles.leftContent}>
+            <h2 className={styles.whyTitle}>
+              Why You Should Work <br /> With Us
             </h2>
-            <p className="mb-4">
+
+            <p className={styles.whyText}>
               Finding your perfect property has never been easier. Explore a wide range of
               homes, apartments, and plots designed to fit your lifestyle and budget.
             </p>
 
-            <Row className="mt-4">
-              <Col xs={12} sm={6} className="mb-3 mb-sm-0">
-                <h6 className="fw-semibold">Buy or Rent Your Dream Home</h6>
-                <p className="small text-muted mb-0">
-                  Get the best price for your property in less time with our trusted real estate
-                  experts.
-                </p>
-              </Col>
-              <Col xs={12} sm={6}>
-                <h6 className="fw-semibold">Your Trusted Real Estate Partner</h6>
-                <p className="small text-muted mb-0">
-                  We guide you through every step — from search to loan approval.
-                </p>
-              </Col>
-            </Row>
+            <div className={styles.featuresWrapper}>
+              <div className={styles.featureBox}>
+                <h6>Buy or Rent Your Dream Home</h6>
+                <p>Get the best price for your property in less time.</p>
+              </div>
 
-            <Button variant="dark" className="mt-3">
-              Learn More <i className="bi bi-arrow-right-short"></i>
-            </Button>
-          </Col>
+              <div className={styles.featureBox}>
+                <h6>Your Trusted Real Estate Partner</h6>
+                <p>We guide you through every step — from search to loan approval.</p>
+              </div>
+            </div>
 
-          {/* Right Image Carousel Column */}
-          <Col xs={12} md={5} lg={6} className="mt-4 mt-md-0 d-flex justify-content-center">
-            <Card className="border-0 shadow-sm rounded" style={{ maxWidth: "400px", width: "100%" }}>
-              <Carousel indicators={true}>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100 rounded"
-                    src={cardimg}
-                    alt="house 1"
-                    style={{ height: "300px", objectFit: "cover" }}
-                  />
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100 rounded"
-                    src={homecard}
-                    alt="house 2"
-                    style={{ height: "300px", objectFit: "cover" }}
-                  />
-                </Carousel.Item>
-              </Carousel>
+            <div className={styles.buttonsss}>
+              <button>
+                Learn More <i className="bi bi-arrow-right-short"></i>
+              </button>
+            </div>
+          </div>
 
-              {/* Badge */}
-              <div className="position-absolute bottom-0 start-0 bg-dark text-white px-3 py-2 m-3 rounded d-flex align-items-center gap-2">
+          {/* RIGHT IMAGE */}
+          <div className={styles.rightContent}>
+            <div className={styles.imageCard}>
+              <div className={styles.carouselWrapper}>
+                <img src={cardimg} alt="house" className={`${styles.cardImage} ${styles.cardImageActive}`} />
+                <img src={homecard} alt="house" className={styles.cardImage} />
+              </div>
+
+              <div className={styles.statBadge}>
                 <i className="bi bi-people-fill"></i>
                 <div>
                   <div className="small">Total Clients</div>
                   <div className="fw-bold">25,000</div>
                 </div>
               </div>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
   );
 };
 
 export default WhyWork;
+
+
 

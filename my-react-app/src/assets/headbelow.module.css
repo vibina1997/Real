@@ -1,7 +1,7 @@
 /* Image Styling */
 .imageStyle {
-  width: 80%;       /* decrease image size */
-  max-width: 420px; /* optional */
+  width: 80%;      
+  max-width: 420px; 
   height: auto;
   border-radius: 10px;
   object-fit: cover;
@@ -22,25 +22,26 @@
   line-height: 1.6;
 }
 
-/* BUTTON STYLING */
-.readBtn {
-  background-color: #628141;
+
+
+.contactBtn {
+  background: linear-gradient(135deg, #628141, #8BAE66);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 10px;
   border: none;
-  padding: 10px 25px;
-  border-radius: 6px;
-  color: #fff;
-  font-weight: 500;
-  transition: 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
-.readBtn:hover {
-  background-color: #ff6347;
-  transform: translateY(-2px);
+.contactBtn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #E67E22, #EBD5AB);
 }
 
-/* ------------------ */
-/* SIMPLE SLIDE ANIMATION */
-/* ------------------ */
+
 
 .slideLeft {
   animation: slideFromLeft 0.8s ease forwards;

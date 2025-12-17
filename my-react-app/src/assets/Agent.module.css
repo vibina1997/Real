@@ -1,9 +1,9 @@
-/* ===== Section Base ===== */
+
 .agentSection {
   background-color: #f8fafc;
 }
 
-/* ===== Grid Layout ===== */
+
 .agentGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -11,7 +11,7 @@
   justify-items: center;
 }
 
-/* ===== Card ===== */
+
 .agentCard {
   background: #ffffff;
   border-radius: 18px;
@@ -28,7 +28,7 @@
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
 }
 
-/* ===== Image ===== */
+
 .agentImg {
   width: 130px;
   height: 130px;
@@ -38,7 +38,7 @@
   border: 4px solid #e5e7eb;
 }
 
-/* ===== Name ===== */
+
 .name {
   font-size: 1.15rem;
   font-weight: 700;
@@ -46,14 +46,14 @@
   margin-bottom: 4px;
 }
 
-/* ===== Title ===== */
+
 .title {
   font-size: 0.9rem;
   color: #6b7280;
   margin-bottom: 18px;
 }
 
-/* ===== Info ===== */
+
 .info {
   text-align: left;
   width: 100%;
@@ -66,7 +66,7 @@
   color: #374151;
 }
 
-/* ===== Button ===== */
+
 .contactBtn {
   background: linear-gradient(135deg, #628141, #8BAE66);
   color: #ffffff;
@@ -84,7 +84,6 @@
   background: linear-gradient(135deg, #E67E22, #EBD5AB);
 }
 
-/* ===== Headings Safety (IMPORTANT) ===== */
 h2 {
   color: #0d2e44;
   font-weight: 800;
@@ -94,7 +93,6 @@ p {
   color: #475569;
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .agentCard {
     padding: 22px 18px;
