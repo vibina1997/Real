@@ -64,15 +64,16 @@ const FooterComponent = () => {
         <div className={styles.contactBox}>
           <h6 className={styles.contactTitle}>Need Help?</h6>
 
-          <div className={styles.contactItem}>
-            <i className="bi bi-telephone-fill"></i>
-            <span>+91 98765 43210</span>
-          </div>
+         <div className={styles.contactItem}>
+  <i className="bi bi-instagram"></i>
+  <span>@xenproperty</span>
+</div>
 
           <div className={styles.contactItem}>
-            <i className="bi bi-whatsapp"></i>
-            <span>+91 98765 43210</span>
-          </div>
+  <i className="bi bi-whatsapp"></i>
+  <span>Chat with us on WhatsApp</span>
+</div>
+
 
           <div className={styles.contactItem}>
             <i className="bi bi-envelope-fill"></i>
