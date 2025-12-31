@@ -66,7 +66,7 @@ const FooterComponent = () => {
 
          <div className={styles.contactItem}>
   <i className="bi bi-instagram"></i>
-  <span>@xenproperty</span>
+  <span>@xenproperties</span>
 </div>
 
           <div className={styles.contactItem}>

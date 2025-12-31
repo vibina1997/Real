@@ -11,43 +11,45 @@ import { useNavigate } from "react-router-dom";
 
 
 
+
+
 const Headbelow = () => {
   const navigate = useNavigate();
 
-
   return (
-    <section>
-      <Container className="py-5">
+    <section className={headbelow.sectionWrap}>
+      <Container>
         <Row className="align-items-center">
 
-          {/* Left Image */}
-          <Col md={6}>
+          {/* Image */}
+          <Col md={6} className="mb-4 mb-md-0">
             <div className={headbelow.slideLeft}>
               <img
                 src={imagoo}
-                alt="Room 1"
+                alt="Home preview"
                 className={headbelow.imageStyle}
               />
             </div>
           </Col>
 
-          {/* Right Content */}
+          {/* Content */}
           <Col md={6}>
             <div className={headbelow.slideRight}>
               <h2 className={headbelow.title}>
-                Start Your Home-Buying Journey Today
+                Start Your Home-Selling Journey Today
               </h2>
+
               <p className={headbelow.description}>
-                Find your perfect home with our premium property listings.
-                From modern apartments to luxury villas, we offer trusted
-                options that suit your lifestyle and budget.
+                Sell your property faster with trusted listings, verified
+                buyers, and a smooth selling experience designed for you.
               </p>
-                <Button
-      className={headbelow.readBtn}
-      onClick={() => navigate("/home")}
-    >
-      Read More →
-    </Button>
+
+              <Button
+                className={headbelow.readBtn}
+                onClick={() => navigate("/home")}
+              >
+                Read More →
+              </Button>
             </div>
           </Col>
 
@@ -57,7 +59,9 @@ const Headbelow = () => {
   );
 };
 
+export default Headbelow;
 
 
 
-export default Headbelow
+
+

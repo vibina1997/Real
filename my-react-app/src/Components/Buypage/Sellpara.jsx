@@ -18,7 +18,7 @@ const Sellpara = () => {
       {/* RIGHT TEXT */}
       <div className={`col-md-5 ${sellpara.fadeInRight}`}>
         <h2 className={sellpara.heading}>
-          Sell Your Property Easily with <span className={sellpara.highlight}>Homeretro</span>
+          Buy Your Property Easily with <span className={sellpara.highlight}>XenProperties</span>
         </h2>
         <p className={sellpara.paragraph}>
           Homeretro helps you sell your property quickly and effortlessly. 

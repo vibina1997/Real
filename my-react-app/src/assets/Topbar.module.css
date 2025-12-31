@@ -1,0 +1,12 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: white;
+}
+
+.topbar input {
+  width: 300px;
+  padding: 8px;
+}
+

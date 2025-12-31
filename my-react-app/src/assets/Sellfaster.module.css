@@ -1,123 +1,248 @@
-/* Section Title */
-h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #333;
+/* ===============================
+   PAGE LAYOUT
+================================ */
+.buySection {
+  padding: 40px 0;
 }
 
-/* Card */
-.card {
-  border-radius: 20px;
-  overflow: hidden;
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ===============================
+   HEADING
+================================ */
+.heading h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.heading p {
+  color: #555;
+  font-size: 15px;
+}
+
+/* ===============================
+   FLEX LAYOUT
+================================ */
+.flexContainer {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* ===============================
+   FILTER BOX (GLASS UI)
+================================ */
+.filterBox {
+  width: 280px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 22px;
+  position: sticky;
+  top: 90px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* FILTER TITLE */
+.filterBox h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+/* LABELS */
+.filterBox label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* INPUTS & SELECT */
+.filterBox select,
+.filterBox input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
   background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
+  color: #111;
+  font-size: 14px;
+  margin-bottom: 14px;
+  transition: all 0.25s ease;
+}
+
+/* PLACEHOLDER */
+.filterBox input::placeholder {
+  color: #777;
+}
+
+/* FOCUS STATE */
+.filterBox select:focus,
+.filterBox input:focus {
+  outline: none;
+  border-color: #628141;
+  box-shadow: 0 0 0 3px rgba(98, 129, 65, 0.25);
+  background: #fff;
+}
+
+/* RANGE SLIDER */
+.filterBox input[type="range"] {
+  width: 100%;
+  margin-top: 6px;
+  accent-color: #628141;
+}
+
+/* RANGE TEXT */
+.filterBox strong {
+  color: #628141;
+  font-weight: 700;
+}
+
+/* ===============================
+   PROPERTY GRID
+================================ */
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* ===============================
+   PROPERTY CARD
+================================ */
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
 }
 
-/* Image wrapper */
+/* IMAGE */
 .cardImage {
   position: relative;
-  overflow: hidden;
+  height: 200px;
 }
 
 .cardImage img {
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
- 
 }
 
-.cardImage img:hover {
- 
-}
-
-/* Tag Buttons */
+/* TAGS */
 .tagButtons {
   position: absolute;
   top: 12px;
   left: 12px;
   display: flex;
-  gap: 8px;
+  gap: 6px;
 }
 
-.buyBtn,
 .featureBtn {
-  font-size: 12px;
-  padding: 5px 12px;
-  border-radius: 6px;
-  font-weight: 600;
+  background: #628141;
   color: #fff;
-  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
 }
 
-.buyBtn {
-  background-color: #628141;
-}
-
-.featureBtn {
-  background-color: #CA7842;
-}
-
-.buyBtn:hover {
-  background-color: #CA7842;
-}
-
-.featureBtn:hover {
-  background-color: #628141;
-}
-
-/* Card Content */
+/* ===============================
+   CARD CONTENT
+================================ */
 .cardContent {
-  padding: 15px 20px;
-}
-
-.cardContent h5 {
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: 6px;
-  color: #222;
+  padding: 16px;
 }
 
 .cardContent h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.cardContent .price {
   color: #628141;
   font-weight: 700;
-  margin-bottom: 6px;
-  font-size: 19px;
+  font-size: 15px;
 }
 
-.cardContent p {
-  font-size: 0.85rem;
-  color: #555;
-  margin-bottom: 12px;
+.cardContent .location {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
 }
 
-/* Features Row */
+/* FEATURES */
 .features {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #eee;
-  padding-top: 10px;
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 12px;
 }
 
-.features div {
-  text-align: center;
+/* BUY BUTTON */
+.buyBtn {
+  width: 100px;
+  background: #628141;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease;
 }
 
-.features i {
-  font-size: 18px;
-  color: #628141;
-  display: block;
-  margin-bottom: 4px;
+.buyBtn:hover {
+  background: #4f6b32;
 }
 
-.features span {
-  font-size: 0.8rem;
-  color: #555;
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+@media (max-width: 768px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+
+  .filterBox {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+

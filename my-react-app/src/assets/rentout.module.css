@@ -1,0 +1,199 @@
+/* =========================
+   PAGE HEADING
+========================= */
+.heading {
+  text-align: center;
+}
+
+.heading h2 {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.heading p {
+  color: #666;
+  font-size: 15px;
+}
+
+/* =========================
+   FILTER SIDEBAR
+========================= */
+.filterBox {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  position: sticky;
+  top: 90px;
+}
+
+.filterBox h5 {
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.filterBox label {
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+  font-weight: 500;
+}
+
+.filterBox select,
+.filterBox input {
+  width: 100%;
+  padding: 7px 10px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.filterBox input[type="range"] {
+  padding: 0;
+}
+
+/* =========================
+   PROPERTY CARD
+========================= */
+.card {
+  position: relative;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGE */
+.cardImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.cardContent {
+  padding: 15px;
+}
+
+.cardContent h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.cardContent p {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+/* DETAILS ROW */
+.detailsRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* EXTRA INFO */
+.extra {
+  font-size: 13px;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.buyBtn {
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buyBtn:hover {
+  background-color: #628141;
+}
+
+/* =========================
+   MODAL
+========================= */
+.modalContent {
+  border-radius: 14px;
+}
+
+.modalTitle {
+  font-weight: 600;
+}
+
+/* =========================
+   STICKY ADD BUTTON (OPTIONAL)
+========================= */
+.stickyButtonContainer {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem 0;
+  backdrop-filter: blur(8px);
+  background: rgba(248, 249, 244, 0.75);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.addButton {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  color: white;
+  background: rgba(98, 129, 65, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addButton:hover {
+  background: rgba(98, 129, 65, 1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  .filterBox {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardImage {
+    height: 180px;
+  }
+
+  .detailsRow {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

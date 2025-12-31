@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+
+/* Customer Pages */
 import Navbar from "./Components/Navbar";
 import FooterComponent from "./Components/FooterComponent";
-
-// Pages
 import Home from "./Components/Homepage/Home";
 import Buy from "./Components/Buypage/Buy";
 import Pagethree from "./Components/Rentpage/Pagethree";
@@ -12,52 +12,105 @@ import Cannectsigle from "./Components/Singlepage/Cannectsigle";
 import Partagency from "./Components/Agent/Partagency";
 import Mainfail from "./Components/Contact/Mainfail";
 
-// Auth
+/* Auth Pages */
 import Signin from "./Components/Sighnf/Signin";
 import Signup from "./Components/Sighnf/Signup";
-import Dashboard from "./Components/Sighnf/Dashboard";
-import ProtectedRoute from "./Components/Sighnf/ProtectedRoute";
 import Mainhero from "./Components/Sighnf/Mainhero";
 
+/* Admin Dashboard */
+import AdminLayout from "./Components/Admin/AdminLayout";
+import AdminDashboard from "./Components/Admin/AdminDashboard";
+
+/* Protected Route */
+import ProtectedRoute from "./Components/Sighnf/ProtectedRoute";
 function App() {
   const location = useLocation();
 
-  // Hide layout ONLY on auth pages
-  const hideLayoutPaths = ["/signin", "/signup"];
-  const hideLayout = hideLayoutPaths.includes(location.pathname);
+  // Hide Navbar/Footer for login/signup and admin pages
+  const hideLayout =
+    location.pathname === "/signin" ||
+    location.pathname === "/signup" ||
+    location.pathname.startsWith("/admin");
 
   return (
     <>
       {!hideLayout && <Navbar />}
 
       <Routes>
-        {/* MAIN HOME PAGE */}
-        <Route path="/" element={<Home />} />
-
-        {/* Optional intro page */}
-        <Route path="/welcome" element={<Mainhero />} />
-
-        {/* Auth Pages */}
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
-
-        {/* Public Pages */}
-        <Route path="/buy" element={<Buy />} />
-        <Route path="/rent" element={<Pagethree />} />
-        <Route path="/sell" element={<Mainpart />} />
-        <Route path="/singlepage" element={<Cannectsigle />} />
-        <Route path="/agency" element={<Partagency />} />
-        <Route path="/contact" element={<Mainfail />} />
-
-        {/* Protected Dashboard */}
+        {/* Customer Pages */}
         <Route
-          path="/dashboard"
+          path="/"
           element={
-            <ProtectedRoute>
-              <Dashboard />
+            <ProtectedRoute role="customer">
+              <Home />
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/buy"
+          element={
+            <ProtectedRoute role="customer">
+              <Buy />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/rent"
+          element={
+            <ProtectedRoute role="customer">
+              <Pagethree />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/sell"
+          element={
+            <ProtectedRoute role="customer">
+              <Mainpart />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/singlepage"
+          element={
+            <ProtectedRoute role="customer">
+              <Cannectsigle />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/agency"
+          element={
+            <ProtectedRoute role="customer">
+              <Partagency />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <ProtectedRoute role="customer">
+              <Mainfail />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Auth Pages */}
+        <Route path="/welcome" element={<Mainhero />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+
+        {/* Admin Routes */}
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute role="admin">
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route path="dashboard" element={<AdminDashboard />} />
+        </Route>
       </Routes>
 
       {!hideLayout && <FooterComponent />}
@@ -66,3 +119,6 @@ function App() {
 }
 
 export default App;
+
+
+

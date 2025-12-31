@@ -1,0 +1,24 @@
+.rentTabs {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.rentTabButton {
+  padding: 10px 20px;
+  border: 1px solid #628141;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.rentTabButtonActive {
+  background: #628141;
+  color: #fff;
+}
+
+.rentContent {
+  margin-top: 20px;
+}

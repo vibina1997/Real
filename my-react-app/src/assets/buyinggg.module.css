@@ -1,0 +1,82 @@
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.15);
+}
+
+.cardImage {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.readButton {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: #628141;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.readButton:hover {
+  background: #e67e22;
+}
+
+.cardContent {
+  padding: 15px;
+}
+
+.cardContent h5 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.cardContent h4 {
+  color: #628141;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Sticky Button */
+.stickyButtonContainer {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  padding: 8px 0;
+}
+
+.addButton {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  background: rgba(98,129,65,0.85);
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+}

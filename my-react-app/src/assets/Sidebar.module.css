@@ -1,0 +1,23 @@
+.sidebar {
+  width: 240px;
+  background: linear-gradient(#1f3c88, #152b5b);
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.active {
+  background: #3a66d6;
+}
+
