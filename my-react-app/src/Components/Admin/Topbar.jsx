@@ -4,7 +4,7 @@ const Topbar = () => (
   <header className={tob.topbar}>
     <input placeholder="Search properties..." />
     <div>
-    <div className={tob.user}>John Doee</div>
+    <div className={tob.user}>John Doe</div>
     </div>
   </header>
 );
