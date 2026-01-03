@@ -1,4 +1,4 @@
-import side from '../../assets/sidebar.module.css';
+import side from '../../assets/Sidebar.module.css';
 
 const Sidebar = () => (
   <aside className={side.sidebar}>
