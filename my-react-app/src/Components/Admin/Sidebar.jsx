@@ -1,4 +1,4 @@
-
+import side from '../../assets/Sidebar.module.css';
 
 const Sidebar = () => (
   <aside className={side.sidebar}>
@@ -6,7 +6,7 @@ const Sidebar = () => (
 
     <nav>
       <a className={side.active}>Overview</a>
-      <a>My Propertie</a>
+      <a>My Properties</a>
       <a>Sell Property</a>
       <a>Rent Property</a>
       <a>Leads</a>
