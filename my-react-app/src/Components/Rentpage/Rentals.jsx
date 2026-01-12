@@ -1,11 +1,10 @@
 
     import React from 'react'
-   
-   
-   import rent from '../../assets/./Pagethreecss/Rental.module.css'
-   import rentoo from '../../assets/Imges/subimoo.jpg'
-   import { useNavigate } from "react-router-dom";
+    import { useNavigate } from "react-router-dom";
 
+   import rent from '../../assets/./Pagethreecss/Rental.module.css'
+   import rentoo from '../../assets/Imges/restooo.jpg'
+  
 
 ;
 
